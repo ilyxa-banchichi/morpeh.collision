@@ -18,7 +18,7 @@ namespace Samples.Scripts
 
             var obb = new OBB(aabb, transform.rotation);
             
-            GizmoExtensions.DrawAABB(aabb, Color.green);
+            // GizmoExtensions.DrawAABB(aabb, Color.green);
             GizmoExtensions.DrawOBB(obb, Color.blue);
             GizmoExtensions.DrawAABB((AABB)obb, Color.red);
         }

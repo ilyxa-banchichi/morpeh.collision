@@ -11,6 +11,9 @@ namespace NativeTrees
         public float3 X;
         public float3 Y;
         public float3 Z;
+        
+        public OBB(AABB aabb, float3 position, quaternion rotation) 
+            : this(new AABB(aabb.min + position, aabb.max + position), rotation) { }
 
         public OBB(AABB aabb, quaternion rotation)
         {
