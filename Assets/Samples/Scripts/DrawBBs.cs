@@ -12,6 +12,8 @@ namespace Samples.Scripts
 
         protected void OnDrawGizmos()
         {
+            if (Application.isPlaying) return;
+            
             var aabb = new AABB(
                 Center + (float3)transform.position - Size * .5f,
                 Center + (float3)transform.position + Size * .5f);

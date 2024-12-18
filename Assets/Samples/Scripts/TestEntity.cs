@@ -20,16 +20,13 @@ namespace Samples.Scripts
         {
             _entity = World.Default.CreateEntity();
             ref var c = ref _entity.AddComponent<CreateBoxColliderRequest>();
+            
+            c.OnValidate(gameObject);
 
             c.Center = Center;
             c.Size = Size;
-            c.Layer = 0;
             c.Weight = 1;
             c.FreezePosition = false;
-            c.IsStatic = IsStatic;
-
-            c.InitPosition = transform.position;
-            c.InitRotation = transform.rotation;
         }
 
         protected void Update()

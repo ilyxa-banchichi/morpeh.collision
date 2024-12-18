@@ -43,8 +43,9 @@ namespace Scellecs.Morpeh.Collision.Systems
                 var fp = request.FreezePosition;
                 collider.FreezePosition = new int3(fp.x ? 0 : 1, fp.y ? 0 : 1, fp.z ? 0: 1);
 
+                var capacity = request.IsStatic ? 0 : 5;
                 if (!collider.OverlapResult.IsCreated)
-                    collider.OverlapResult = new NativeParallelHashSet<EntityHolder<Entity>>(5, Allocator.Persistent);
+                    collider.OverlapResult = new NativeParallelHashSet<EntityHolder<Entity>>(capacity, Allocator.Persistent);
 
                 var extents = request.Size * 0.5f;
                 collider.OriginalBounds = new AABB(request.Center - extents, request.Center + extents);

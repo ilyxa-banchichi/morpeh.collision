@@ -26,6 +26,22 @@ namespace Scellecs.Morpeh.Collision.Components
         
         [ShowInInspector]
         private float3 _size => WorldBounds.Extents * 2f;
+
+        [ShowInInspector]
+        private int _overlapCount => OverlapResult.Count();
+
+        [ShowInInspector]
+        private EntityHolder<Entity>[] _overlapEntities
+        {
+            get
+            {
+                var array = OverlapResult.ToNativeArray(Allocator.Temp);
+                EntityHolder<Entity>[] e = array.ToArray();
+                array.Dispose();
+
+                return e;
+            }
+        }
 #endif
 
         public void Dispose()

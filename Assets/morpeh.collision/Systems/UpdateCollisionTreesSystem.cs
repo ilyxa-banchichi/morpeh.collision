@@ -43,7 +43,9 @@ namespace Scellecs.Morpeh.Collision.Systems
             _octreeComponents = World.GetStash<OctreeComponent>();
 
             var octree = World.CreateEntity();
-            _octreeComponents.Add(octree);
+            ref var component = ref _octreeComponents.Add(octree);
+            component.DynamicRigidbodies = CreateEmptyTree(1);
+            component.StaticRigidbodies = CreateEmptyTree(1);
         }
 
         public override void OnUpdate(float deltaTime)
@@ -70,12 +72,7 @@ namespace Scellecs.Morpeh.Collision.Systems
 
         private NativeOctree<EntityHolder<Entity>> BuildTree(NativeFilter filter)
         {
-            var octree = new NativeOctree<EntityHolder<Entity>>(
-                WorldBounds,
-                (int)math.ceil(math.sqrt(filter.length)),
-                10,
-                Allocator.Persistent);
-
+            var octree = CreateEmptyTree((int)math.ceil(math.sqrt(filter.length)));
             var job = new PopulateJob()
             {
                 Colliders = filter,
@@ -86,6 +83,15 @@ namespace Scellecs.Morpeh.Collision.Systems
             job.Run();
 
             return octree;
+        }
+
+        private NativeOctree<EntityHolder<Entity>> CreateEmptyTree(int objectsPerNode)
+        {
+            return new NativeOctree<EntityHolder<Entity>>(
+                WorldBounds,
+                objectsPerNode,
+                10,
+                Allocator.Persistent);
         }
 
         [BurstCompile(CompileSynchronously = true)]

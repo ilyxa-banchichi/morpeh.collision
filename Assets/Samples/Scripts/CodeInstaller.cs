@@ -1,4 +1,6 @@
 using System;
+using NativeTrees;
+using NativeTrees.Unity;
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Addons.Feature;
 using Scellecs.Morpeh.Addons.Feature.Unity;
@@ -45,6 +47,14 @@ namespace Samples.Scripts
                 Gizmos.color = Color.yellow;
                 if (tree.StaticRigidbodies.IsValid)
                     tree.StaticRigidbodies.DrawGizmos();
+            }
+            
+            foreach (var entity in defaultWorld.Filter.With<BoxColliderComponent>().Build())
+            {
+                ref var collider = ref entity.GetComponent<BoxColliderComponent>();
+                // GizmoExtensions.DrawAABB(collider.OriginalBounds, Color.green);
+                GizmoExtensions.DrawOBB(collider.WorldBounds, Color.blue);
+                GizmoExtensions.DrawAABB((AABB)collider.WorldBounds, Color.red);
             }
         }
     }

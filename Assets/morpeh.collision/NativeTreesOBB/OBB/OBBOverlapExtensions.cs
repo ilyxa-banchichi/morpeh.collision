@@ -1,3 +1,4 @@
+using System;
 using Unity.Mathematics;
 using static Unity.Mathematics.math;
 
@@ -8,11 +9,18 @@ namespace NativeTrees
         public static bool Overlaps(this OBB obb1, OBB obb2)
         {
             // Получаем оси обеих рамок
-            float3[] axes1 = { obb1.X, obb1.Y, obb1.Z };
-            float3[] axes2 = { obb2.X, obb2.Y, obb2.Z };
+            Span<float3> axes1 = stackalloc float3[3];
+            axes1[0] = obb1.X;
+            axes1[1] = obb1.Y;
+            axes1[2] = obb1.Z;
+            
+            Span<float3> axes2 = stackalloc float3[3];
+            axes2[0] = obb2.X;
+            axes2[1] = obb2.Y;
+            axes2[2] = obb2.Z;
 
             // Все оси для проверки (3 от obb1, 3 от obb2, 9 крестов между ними)
-            float3[] testAxes = new float3[15];
+            Span<float3> testAxes = stackalloc float3[15];
             int index = 0;
 
             // Добавляем оси OBB1 и OBB2
@@ -57,16 +65,16 @@ namespace NativeTrees
             float radius2 = ProjectRadius(obb2, axis);
 
             // Проверяем расстояние между центрами против суммы радиусов
-            return abs(projection1 - projection2) <= (radius1 + radius2);
+            return math.abs(projection1 - projection2) <= (radius1 + radius2);
         }
         
         private static float ProjectRadius(OBB obb, float3 axis)
         {
             // Радиус OBB на данной оси — это сумма проекций локальных осей, умноженных на размеры
             return
-                abs(dot(obb.X, axis)) * obb.Extents.x +
-                abs(dot(obb.Y, axis)) * obb.Extents.y +
-                abs(dot(obb.Z, axis)) * obb.Extents.z;
+                math.abs(dot(obb.X, axis)) * obb.Extents.x +
+                math.abs(dot(obb.Y, axis)) * obb.Extents.y +
+                math.abs(dot(obb.Z, axis)) * obb.Extents.z;
         }
     }
 }

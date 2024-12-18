@@ -51,7 +51,7 @@ namespace NativeTrees
             public NativeParallelHashSet<T> results;
             public OBB queryOBB;
             
-            public bool OnVisit(T obj, AABB _, AABB __e)
+            public bool OnVisit(T obj, AABB _, AABB __)
             {
                 if (obj.OBB.Overlaps(queryOBB))
                     results.Add(obj);

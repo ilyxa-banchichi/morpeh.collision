@@ -1,10 +1,11 @@
+using System;
 using Unity.Mathematics;
 using static Unity.Mathematics.math;
 using quaternion = Unity.Mathematics.quaternion;
 
 namespace NativeTrees
 {
-    public struct OBB
+    public struct OBB : IEquatable<OBB>
     {
         public float3 Center;
         public float3 Extents;
@@ -51,6 +52,21 @@ namespace NativeTrees
             float3 max = obb.Center + radius;
 
             return new AABB(min, max);
+        }
+
+        public bool Equals(OBB other)
+        {
+            return Center.Equals(other.Center) && Extents.Equals(other.Extents) && X.Equals(other.X) && Y.Equals(other.Y) && Z.Equals(other.Z);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is OBB other && Equals(other);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Center, Extents, X, Y, Z);
         }
     }
 }
