@@ -14,6 +14,7 @@ namespace Scellecs.Morpeh.Collision
             AddSystem(new CreateColliderSystem());
             AddSystem(new UpdateCollisionTreesSystem());
             AddSystem(new TreeTraversalSystem());
+            AddSystem(new PushOutSystem());
 
             MarkComponentsDisposable();
         }

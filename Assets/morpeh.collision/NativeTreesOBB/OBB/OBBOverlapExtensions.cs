@@ -1,12 +1,20 @@
 using System;
 using Unity.Mathematics;
 using static Unity.Mathematics.math;
+using float3 = Unity.Mathematics.float3;
 
 namespace NativeTrees
 {
     public static class OBBOverlapExtensions
     {
-        public static bool Overlaps(this OBB obb1, OBB obb2)
+        public struct OverlapResult
+        {
+            public bool IsIntersecting;
+            public float3 Axis;
+            public float Depth;
+        }
+        
+        public static OverlapResult Overlaps(this OBB obb1, OBB obb2)
         {
             // Получаем оси обеих рамок
             Span<float3> axes1 = stackalloc float3[3];
@@ -35,6 +43,9 @@ namespace NativeTrees
                     testAxes[index++] = cross(axes1[i], axes2[j]);
                 }
             }
+            
+            float minOverlapDepth = float.MaxValue;
+            float3 overlapAxis = float3.zero;
 
             // Проверяем все оси
             foreach (float3 axis in testAxes)
@@ -47,25 +58,38 @@ namespace NativeTrees
                 float3 normalizedAxis = normalize(axis);
 
                 // Проецируем оба OBB на текущую ось
-                if (!OverlapOnAxis(obb1, obb2, normalizedAxis))
-                    return false; // Если нет перекрытия на этой оси, OBB не пересекаются
+                if (!OverlapOnAxis(obb1, obb2, normalizedAxis, out var overlapDepth))
+                    return new OverlapResult() { IsIntersecting = false };
+                
+                if (overlapDepth < minOverlapDepth)
+                {
+                    minOverlapDepth = overlapDepth;
+                    overlapAxis = normalizedAxis;
+                }
             }
 
-            return true; // Если перекрытие есть на всех осях, OBB пересекаются
+            return new OverlapResult()
+            {
+                IsIntersecting = true,
+                Axis = overlapAxis,
+                Depth = minOverlapDepth
+            };
         }
         
-        private static bool OverlapOnAxis(OBB obb1, OBB obb2, float3 axis)
+        private static bool OverlapOnAxis(OBB obb1, OBB obb2, float3 axis, out float overlapDepth)
         {
-            // Проекция центра первого и второго OBB на ось
-            float projection1 = dot(obb1.Center, axis);
-            float projection2 = dot(obb2.Center, axis);
+            float projection1 = math.dot(obb1.Center, axis);
+            float projection2 = math.dot(obb2.Center, axis);
 
-            // Проекция половины размеров (радиус OBB) на ось
             float radius1 = ProjectRadius(obb1, axis);
             float radius2 = ProjectRadius(obb2, axis);
 
-            // Проверяем расстояние между центрами против суммы радиусов
-            return math.abs(projection1 - projection2) <= (radius1 + radius2);
+            float distance = abs(projection1 - projection2);
+            float overlap = (radius1 + radius2) - distance;
+
+            overlapDepth = overlap;
+
+            return overlap > 0;
         }
         
         private static float ProjectRadius(OBB obb, float3 axis)

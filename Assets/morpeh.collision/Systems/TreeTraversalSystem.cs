@@ -6,7 +6,6 @@ using Unity.Burst;
 using Unity.Collections;
 using Unity.IL2CPP.CompilerServices;
 using Unity.Jobs;
-using Unity.Mathematics;
 
 namespace Scellecs.Morpeh.Collision.Systems
 {
@@ -15,6 +14,7 @@ namespace Scellecs.Morpeh.Collision.Systems
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     public sealed class TreeTraversalSystem : LateUpdateSystem
     {
+        private Filter _colliders;
         private Filter _dynamicColliders;
         private Filter _octrees;
         
@@ -23,6 +23,7 @@ namespace Scellecs.Morpeh.Collision.Systems
 
         public override void OnAwake()
         {
+            _colliders = World.Filter.With<BoxColliderComponent>().Build();
             _dynamicColliders = World.Filter
                 .With<BoxColliderComponent>()
                 .Without<StaticColliderTag>()
@@ -36,19 +37,40 @@ namespace Scellecs.Morpeh.Collision.Systems
         
         public override void OnUpdate(float deltaTime)
         {
-            var nativeFilter = _dynamicColliders.AsNative();
+            var collidersNative = _colliders.AsNative();
+            var dynamicCollidersNative = _dynamicColliders.AsNative();
+
+            World.JobHandle = new CleanUpJob()
+            {
+                Colliders = collidersNative,
+                ColliderComponents = _colliderComponents.AsNative()
+            }.Schedule(collidersNative.length, 64, World.JobHandle);
 
             foreach (var octree in _octrees)
             {
                 ref var cOctree = ref _octreeComponents.Get(octree);
-                var job = new Job()
+                World.JobHandle = new Job()
                 {
-                    Colliders = nativeFilter,
+                    Colliders = dynamicCollidersNative,
                     ColliderComponents = _colliderComponents.AsNative(),
                     Octree = cOctree,
-                };
-
-                job.Schedule(nativeFilter.length, 64).Complete();
+                }.Schedule(dynamicCollidersNative.length, 64, World.JobHandle);
+            }
+        }
+        
+        [BurstCompile]
+        private struct CleanUpJob : IJobParallelFor
+        {
+            [ReadOnly]
+            public NativeFilter Colliders;
+            
+            public NativeStash<BoxColliderComponent> ColliderComponents;
+            
+            public void Execute(int index)
+            {
+                var entity = Colliders[index];
+                ref var collider = ref ColliderComponents.Get(entity);
+                collider.OverlapResult.Clear();
             }
         }
         
@@ -71,10 +93,12 @@ namespace Scellecs.Morpeh.Collision.Systems
                 collider.OverlapResult.Clear();
                 Octree.DynamicRigidbodies.RangeOBBUnique(collider.WorldBounds, collider.OverlapResult);
                 Octree.StaticRigidbodies.RangeOBBUnique(collider.WorldBounds, collider.OverlapResult);
-
+                
                 var e = new EntityHolder<Entity>(entity, collider.Layer, collider.WorldBounds);
-                if (collider.OverlapResult.Contains(e))
-                    collider.OverlapResult.Remove(e);
+                var o = new OverlapHolder<EntityHolder<Entity>>() { Obj = e };
+                
+                if (collider.OverlapResult.Contains(o))
+                    collider.OverlapResult.Remove(o);
             }
         }
     }

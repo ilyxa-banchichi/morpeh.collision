@@ -47,6 +47,14 @@ namespace Samples.Scripts
                 Gizmos.color = Color.yellow;
                 if (tree.StaticRigidbodies.IsValid)
                     tree.StaticRigidbodies.DrawGizmos();
+                
+                // Gizmos.color = Color.magenta;
+                // if (tree.DynamicRigidbodies.IsValid)
+                //     tree.DynamicTriggers.DrawGizmos();
+                //
+                // Gizmos.color = Color.cyan;
+                // if (tree.StaticRigidbodies.IsValid)
+                //     tree.StaticTriggers.DrawGizmos();
             }
             
             foreach (var entity in defaultWorld.Filter.With<BoxColliderComponent>().Build())
@@ -54,7 +62,7 @@ namespace Samples.Scripts
                 ref var collider = ref entity.GetComponent<BoxColliderComponent>();
                 // GizmoExtensions.DrawAABB(collider.OriginalBounds, Color.green);
                 GizmoExtensions.DrawOBB(collider.WorldBounds, Color.blue);
-                GizmoExtensions.DrawAABB((AABB)collider.WorldBounds, Color.red);
+                // GizmoExtensions.DrawAABB((AABB)collider.WorldBounds, Color.red);
             }
         }
     }

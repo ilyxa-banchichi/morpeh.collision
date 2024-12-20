@@ -16,9 +16,7 @@ namespace Scellecs.Morpeh.Collision.Components
          public AABB OriginalBounds;
          public OBB WorldBounds;
          public int Layer;
-         public int Weight;
-         public int3 FreezePosition;
-         public NativeParallelHashSet<EntityHolder<Entity>> OverlapResult;
+         public NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>> OverlapResult;
 
 #if UNITY_EDITOR
         [ShowInInspector]
@@ -31,12 +29,12 @@ namespace Scellecs.Morpeh.Collision.Components
         private int _overlapCount => OverlapResult.Count();
 
         [ShowInInspector]
-        private EntityHolder<Entity>[] _overlapEntities
+        private OverlapHolder<EntityHolder<Entity>>[] _overlapEntities
         {
             get
             {
                 var array = OverlapResult.ToNativeArray(Allocator.Temp);
-                EntityHolder<Entity>[] e = array.ToArray();
+                OverlapHolder<EntityHolder<Entity>>[] e = array.ToArray();
                 array.Dispose();
 
                 return e;

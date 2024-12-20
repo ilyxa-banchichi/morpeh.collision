@@ -80,7 +80,8 @@ namespace Scellecs.Morpeh.Collision.Systems
                 ColliderComponents = _colliderComponents.AsNative(),
             };
 
-            job.Run();
+            var handle = job.Schedule();
+            World.JobHandle = JobHandle.CombineDependencies(World.JobHandle, handle);
 
             return octree;
         }

@@ -1,3 +1,4 @@
+using TriInspector;
 using Unity.IL2CPP.CompilerServices;
 using Unity.Mathematics;
 using UnityEngine;
@@ -10,17 +11,29 @@ namespace Scellecs.Morpeh.Collision.Requests
     [System.Serializable]
     public struct CreateBoxColliderRequest : IComponent, IValidatableWithGameObject
     {
-        public int Layer;
-        public int Weight;
-        
         public float3 Center;
         public float3 Size;
         
-        public bool3 FreezePosition;
+        [ReadOnly]
+        public int Layer;
+        
+        [ReadOnly]
         public bool IsStatic;
-
+        
+        [ReadOnly]
         public float3 InitPosition;
+        
+        [ReadOnly]
         public quaternion InitRotation;
+        
+        public bool IsTrigger;
+        
+        [Title("Rigidbody")]
+        [ShowIf(nameof(IsTrigger), false)]
+        public int Weight;
+        
+        [ShowIf(nameof(IsTrigger), false)]
+        public bool3 FreezePosition;
 
         public void OnValidate(GameObject gameObject)
         {
@@ -28,6 +41,7 @@ namespace Scellecs.Morpeh.Collision.Requests
             IsStatic = gameObject.isStatic;
             InitPosition = gameObject.transform.position;
             InitRotation = gameObject.transform.rotation;
+            Weight = math.clamp(Weight, 1, int.MaxValue);
         }
     }
 }

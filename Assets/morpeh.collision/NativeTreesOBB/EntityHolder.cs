@@ -15,13 +15,13 @@ namespace NativeTrees
     public struct EntityHolder<T> : IEquatable<EntityHolder<T>>, ILayerProvider, IOBBProvider 
         where T : unmanaged, IEquatable<T>
     {
-        public T Obj;
+        public T Entity;
         public int Layer { get; }
         public OBB OBB { get; }
 
-        public EntityHolder(T obj, int layer, OBB obb)
+        public EntityHolder(T entity, int layer, OBB obb)
         {
-            Obj = obj;
+            Entity = entity;
             Layer = layer;
             OBB = obb;
         }
@@ -33,12 +33,12 @@ namespace NativeTrees
 
         public bool Equals(EntityHolder<T> other)
         {
-            return Obj.Equals(other.Obj) && Layer == other.Layer && OBB.Equals(other.OBB);
+            return Entity.Equals(other.Entity) && Layer == other.Layer && OBB.Equals(other.OBB);
         }
 
         public override int GetHashCode()
         {
-            return Obj.GetHashCode();
+            return Entity.GetHashCode();
         }
     }
 }

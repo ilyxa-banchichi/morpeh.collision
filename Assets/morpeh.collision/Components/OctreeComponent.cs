@@ -12,5 +12,9 @@ namespace Scellecs.Morpeh.Collision.Components
         public NativeOctree<EntityHolder<Entity>> DynamicRigidbodies;
         public NativeOctree<EntityHolder<Entity>> StaticRigidbodies;
         public int LastStaticRigidbodiesCount;
+        
+        // public NativeOctree<EntityHolder<Entity>> DynamicTriggers;
+        // public NativeOctree<EntityHolder<Entity>> StaticTriggers;
+        // public int LastStaticTriggersCount;
     }
 }
