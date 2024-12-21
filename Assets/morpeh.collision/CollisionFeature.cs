@@ -15,6 +15,7 @@ namespace Scellecs.Morpeh.Collision
             AddSystem(new UpdateCollisionTreesSystem());
             AddSystem(new TreeTraversalSystem());
             AddSystem(new PushOutSystem());
+            AddSystem(new UpdateCollisionEventsSystem());
 
             MarkComponentsDisposable();
         }
@@ -22,6 +23,7 @@ namespace Scellecs.Morpeh.Collision
         private void MarkComponentsDisposable()
         {
             World.Default.GetStash<BoxColliderComponent>().AsDisposable();
+            World.Default.GetStash<CollisionEventsComponent>().AsDisposable();
         }
     }
 }

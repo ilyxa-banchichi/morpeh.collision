@@ -51,10 +51,10 @@ namespace Scellecs.Morpeh.Collision.Systems
                 ref var cOctree = ref _octreeComponents.Get(octree);
                 World.JobHandle = new Job()
                 {
-                    Colliders = dynamicCollidersNative,
+                    Colliders = collidersNative,
                     ColliderComponents = _colliderComponents.AsNative(),
                     Octree = cOctree,
-                }.Schedule(dynamicCollidersNative.length, 64, World.JobHandle);
+                }.Schedule(collidersNative.length, 64, World.JobHandle);
             }
         }
         
@@ -89,16 +89,16 @@ namespace Scellecs.Morpeh.Collision.Systems
             {
                 var entity = Colliders[index];
                 ref var collider = ref ColliderComponents.Get(entity);
+                var overlapHolder = new OverlapHolder<EntityHolder<Entity>>()
+                {
+                    Obj = new EntityHolder<Entity>(entity, collider.Layer, collider.WorldBounds)
+                };
                 
-                collider.OverlapResult.Clear();
-                Octree.DynamicRigidbodies.RangeOBBUnique(collider.WorldBounds, collider.OverlapResult);
                 Octree.StaticRigidbodies.RangeOBBUnique(collider.WorldBounds, collider.OverlapResult);
+                Octree.DynamicRigidbodies.RangeOBBUnique(collider.WorldBounds, collider.OverlapResult);
                 
-                var e = new EntityHolder<Entity>(entity, collider.Layer, collider.WorldBounds);
-                var o = new OverlapHolder<EntityHolder<Entity>>() { Obj = e };
-                
-                if (collider.OverlapResult.Contains(o))
-                    collider.OverlapResult.Remove(o);
+                if (collider.OverlapResult.Contains(overlapHolder))
+                    collider.OverlapResult.Remove(overlapHolder);
             }
         }
     }

@@ -20,6 +20,7 @@ namespace Scellecs.Morpeh.Collision.Systems
         private Stash<StaticColliderTag> _staticColliderTags;
         private Stash<TriggerTag> _triggerTags;
         private Stash<RigidbodyComponent> _rigidbodyComponents;
+        private Stash<CollisionEventsComponent> _collisionEventsComponents;
         
         public override void OnAwake()
         {
@@ -30,6 +31,7 @@ namespace Scellecs.Morpeh.Collision.Systems
             _staticColliderTags = World.GetStash<StaticColliderTag>();
             _triggerTags = World.GetStash<TriggerTag>();
             _rigidbodyComponents = World.GetStash<RigidbodyComponent>();
+            _collisionEventsComponents = World.GetStash<CollisionEventsComponent>();
         }
 
         public override void OnUpdate(float deltaTime)
@@ -39,6 +41,7 @@ namespace Scellecs.Morpeh.Collision.Systems
                 ref var request = ref _createBoxColliderRequests.Get(entity);
                 
                 AddBoxColliderComponent(entity, request);
+                AddCollisionEventsComponent(entity, request);
                 
                 if (request.IsStatic)
                     _staticColliderTags.Add(entity);
@@ -54,9 +57,13 @@ namespace Scellecs.Morpeh.Collision.Systems
         {
             ref var collider = ref _boxColliderComponents.Add(entity);
             collider.Layer = request.Layer;
-            var capacity = request.IsStatic ? 0 : 5;
+            var capacity = request.IsStatic ? 5 : 5;
+            
             if (!collider.OverlapResult.IsCreated)
                 collider.OverlapResult = new NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>>(capacity, Allocator.Persistent);
+            
+            if (!collider.LastOverlapResult.IsCreated)
+                collider.LastOverlapResult = new NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>>(capacity, Allocator.Persistent);
                 
             var extents = request.Size * 0.5f;
             collider.OriginalBounds = new AABB(request.Center - extents, request.Center + extents);
@@ -65,6 +72,20 @@ namespace Scellecs.Morpeh.Collision.Systems
                 position: request.InitPosition,
                 rotation: request.InitRotation
             );
+        }
+        
+        private void AddCollisionEventsComponent(Entity entity, CreateBoxColliderRequest request)
+        {
+            ref var events = ref _collisionEventsComponents.Add(entity);
+            var capacity = request.IsStatic ? 5 : 5;
+            if (!events.OnCollisionEnter.IsCreated)
+                events.OnCollisionEnter = new NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>>(capacity, Allocator.Persistent);
+            
+            if (!events.OnCollisionStay.IsCreated)
+                events.OnCollisionStay = new NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>>(capacity, Allocator.Persistent);
+            
+            if (!events.OnCollisionExit.IsCreated)
+                events.OnCollisionExit = new NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>>(capacity, Allocator.Persistent);
         }
         
         private void AddRigidbodyComponent(Entity entity, CreateBoxColliderRequest request)

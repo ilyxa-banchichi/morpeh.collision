@@ -1,4 +1,5 @@
 using Scellecs.Morpeh;
+using Scellecs.Morpeh.Collision.Components;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -39,6 +40,20 @@ namespace Samples.Scripts
             
             //transform.Translate(_jumpForce * deltaTime * Vector3.up + deltaTime * Vector3.down);
 
+            ref var events = ref entity.GetComponent<CollisionEventsComponent>();
+            foreach (var e in events.OnCollisionEnter)
+            {
+                Debug.Log("Enter");
+            }
+            foreach (var e in events.OnCollisionStay)
+            {
+                Debug.Log("Stay");
+            }
+            foreach (var e in events.OnCollisionExit)
+            {
+                Debug.Log("Exit");
+            }
+            
             base.Update();
         }
     }
