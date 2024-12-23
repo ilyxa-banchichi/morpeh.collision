@@ -33,6 +33,7 @@ namespace Samples.Scripts
             return new LateUpdateFeature[]
             {
                 new CollisionFeature(),
+                new HierarchyFeature(),
                 new TransformFeature(),
                 new SampleLateFeature(),
             };

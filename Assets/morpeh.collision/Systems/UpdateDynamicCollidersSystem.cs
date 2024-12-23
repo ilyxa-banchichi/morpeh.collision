@@ -2,6 +2,7 @@ using NativeTrees;
 using Scellecs.Morpeh.Addons.Systems;
 using Scellecs.Morpeh.Collision.Components;
 using Scellecs.Morpeh.Native;
+using Scellecs.Morpeh.Transform.Systems;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.IL2CPP.CompilerServices;

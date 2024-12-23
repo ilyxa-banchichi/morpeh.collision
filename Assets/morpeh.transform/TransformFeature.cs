@@ -1,4 +1,5 @@
 using Scellecs.Morpeh.Addons.Feature;
+using Scellecs.Morpeh.Transforms;
 
 namespace Scellecs.Morpeh
 {
@@ -6,7 +7,8 @@ namespace Scellecs.Morpeh
     {
         protected override void Initialize()
         {
-            AddSystem(new TransformSystem());
+            TransformCache.RefreshCache(World.Default);
+            AddSystem(new LocalToWorldSystem());
         }
     }
 }

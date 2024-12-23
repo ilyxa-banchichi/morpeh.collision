@@ -1,4 +1,6 @@
+using Scellecs.Morpeh.Hierarchy.Systems;
 using Scellecs.Morpeh.Providers;
+using Scellecs.Morpeh.Transform.Systems;
 using TriInspector;
 using UnityEngine;
 
@@ -13,11 +15,11 @@ namespace Scellecs.Morpeh
         {
             get
             {
-                if (!Entity.IsNullOrDisposed())
+                if (!Entity.IsNullOrDisposed() && Entity.Has<ParentComponent>())
                 {
-                    var data = Entity.GetComponent<TransformComponent>();
-                    if (data.Parent != default)
-                        return data.Parent.ToString();
+                    var data = Entity.GetComponent<ParentComponent>();
+                    if (data.Value != default)
+                        return data.Value.ToString();
                 }
 
                 return "None";
@@ -29,11 +31,11 @@ namespace Scellecs.Morpeh
         {
             get
             {
-                if (!Entity.IsNullOrDisposed())
+                if (!Entity.IsNullOrDisposed() && Entity.Has<ChildComponent>())
                 {
-                    var data = Entity.GetComponent<TransformComponent>();
-                    var children = data.Children;
-
+                    var data = Entity.GetComponent<ChildComponent>();
+                    var children = data.Value;
+                
                     if (children.IsCreated)
                         return children.Length;
                 }

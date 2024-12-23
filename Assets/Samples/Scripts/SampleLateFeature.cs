@@ -1,6 +1,7 @@
 using Scellecs.Morpeh;
 using Scellecs.Morpeh.Addons.Feature;
 using Scellecs.Morpeh.Addons.Systems;
+using Scellecs.Morpeh.Transform.Systems;
 using Unity.IL2CPP.CompilerServices;
 
 namespace Samples.Scripts
