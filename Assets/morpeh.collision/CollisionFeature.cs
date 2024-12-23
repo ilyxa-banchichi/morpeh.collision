@@ -12,6 +12,7 @@ namespace Scellecs.Morpeh.Collision
             RegisterRequest<CreateBoxColliderRequest>();
             
             AddSystem(new CreateColliderSystem());
+            AddSystem(new UpdateDynamicCollidersSystem());
             AddSystem(new UpdateCollisionTreesSystem());
             AddSystem(new TreeTraversalSystem());
             AddSystem(new PushOutSystem());

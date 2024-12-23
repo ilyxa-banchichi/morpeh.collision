@@ -212,16 +212,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -7.572
-          y: 0.48
-          z: 14.898001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -387,16 +377,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -18.887999
-          y: 0.48
-          z: 9.0720005
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -562,16 +542,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 2.462
-          y: 0.48
-          z: 19.802002
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -802,16 +772,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -16.792
-          y: 0.48
-          z: -1.2020001
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -912,16 +872,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 1
-        InitPosition:
-          x: 6.5
-          y: 0
-          z: -6.97
-        InitRotation:
-          value:
-            x: 0
-            y: -0.4902193
-            z: 0
-            w: 0.87159914
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -1087,16 +1037,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 11.642
-          y: 0.48
-          z: -9.978
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -1327,16 +1267,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -6.5
-          y: 0.48
-          z: 9.97
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -1437,16 +1367,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -12.952
-          y: 0.48
-          z: 9.488
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -1612,16 +1532,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -14.38
-          y: 0.48
-          z: -3.5500002
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -1787,16 +1697,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 0.97399974
-          y: 0.48
-          z: -13.456
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -1962,16 +1862,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 6.9839997
-          y: 0.48
-          z: 12.304001
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -2137,16 +2027,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -5.5160003
-          y: 0.48
-          z: 4.8240004
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -2312,16 +2192,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -15.584
-          y: 0.48
-          z: 10.176001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -2487,16 +2357,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -7.168
-          y: 0.48
-          z: 4.1120005
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -2662,16 +2522,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -1.872
-          y: 0.48
-          z: -2.3719997
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -2837,16 +2687,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -9
-          y: 0.48
-          z: 12.1
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -3012,16 +2852,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -2.51
-          y: 0.48
-          z: -6.1800003
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -3231,16 +3061,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 1.2
-          y: 0.48
-          z: 10.300001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -3406,16 +3226,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -17.402
-          y: 0.48
-          z: 5.928
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -3581,16 +3391,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 4.378
-          y: 0.48
-          z: -0.10199976
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -3756,16 +3556,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -19.292
-          y: 0.48
-          z: 0.928
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -3931,16 +3721,6 @@ MonoBehaviour:
           z: 5
         Layer: 0
         IsStatic: 1
-        InitPosition:
-          x: -7.68
-          y: 0
-          z: -9.75
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -4106,16 +3886,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 2.0219998
-          y: 0.48
-          z: -5.368
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -4281,16 +4051,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 15.984
-          y: 0.48
-          z: -8.776
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -4456,16 +4216,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 0.572
-          y: 0.48
-          z: 14.802001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -4631,16 +4381,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -3.368
-          y: 0.48
-          z: -14.658
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -4871,16 +4611,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 3.072
-          y: 0.48
-          z: 12.672001
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -4981,16 +4711,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 2.412
-          y: 0.48
-          z: -2.348
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -5156,16 +4876,6 @@ MonoBehaviour:
           z: 50
         Layer: 0
         IsStatic: 1
-        InitPosition:
-          x: 0
-          y: 0
-          z: 0
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -5331,16 +5041,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -4.0880003
-          y: 0.48
-          z: 7.622
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -5506,16 +5206,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -1.0719999
-          y: 0.48
-          z: 4.928
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -5681,16 +5371,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 5.094
-          y: 0.48
-          z: 7.304001
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -5856,16 +5536,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 7.0099998
-          y: 0.48
-          z: -12.6
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -6031,16 +5701,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -17.236
-          y: 0.48
-          z: 9.784
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -6206,16 +5866,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 0.76
-          y: 0.48
-          z: -3.06
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -6381,16 +6031,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 6.746
-          y: 0.48
-          z: 8.016001
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -6556,16 +6196,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 8.9
-          y: 0.48
-          z: -7.6
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -6731,16 +6361,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -15.57
-          y: 0.48
-          z: -2.06
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -6904,16 +6524,6 @@ MonoBehaviour:
           z: 2
         Layer: 0
         IsStatic: 1
-        InitPosition:
-          x: 8.12
-          y: 0.94
-          z: 2.99
-        InitRotation:
-          value:
-            x: 0
-            y: -0.22750118
-            z: 0
-            w: 0.9737779
         IsTrigger: 1
         Weight: 1
         FreezePosition:
@@ -7029,16 +6639,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 14.722
-          y: 0.48
-          z: -6.468
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -7204,16 +6804,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -0.63199997
-          y: 0.48
-          z: 18.288002
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -7379,16 +6969,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 5.9719996
-          y: 0.48
-          z: -12.378
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -7621,18 +7201,8 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 0
-          y: 0.48
-          z: 0
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
-        Weight: 1
+        Weight: 2
         FreezePosition:
           x: 0
           y: 0
@@ -7734,16 +7304,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 8.606001
-          y: 0.48
-          z: 1.4960003
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -7909,16 +7469,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -0.61
-          y: 0.48
-          z: 7.13
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -8084,16 +7634,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 8.662
-          y: 0.48
-          z: -11.8880005
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -8259,16 +7799,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 5.748
-          y: 0.48
-          z: -10.292
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -8434,16 +7964,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -20.72
-          y: 0.48
-          z: 17.060001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -8703,16 +8223,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 5.178
-          y: 0.48
-          z: -4.612
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -8878,16 +8388,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -9.468
-          y: 0.48
-          z: 2.212
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -9053,16 +8553,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -1.7160002
-          y: 0.48
-          z: -13.946
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -9228,16 +8718,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 2
-          y: 0.48
-          z: 17.6
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -9403,16 +8883,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -17.46
-          y: 0.48
-          z: -7.06
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -9578,16 +9048,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 3.916
-          y: 0.48
-          z: -2.304
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -9753,16 +9213,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -12.1
-          y: 0.48
-          z: 2.9
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -9928,16 +9378,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 13.070001
-          y: 0.48
-          z: -7.18
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -10103,16 +9543,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 5.484
-          y: 0.48
-          z: 10.324001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -10278,16 +9708,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -4.572
-          y: 0.48
-          z: -11.172
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -10453,16 +9873,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -3.31
-          y: 0.48
-          z: -1.6700001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -10628,16 +10038,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 4.3199997
-          y: 0.48
-          z: -13.09
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -10803,16 +10203,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -12.88
-          y: 0.48
-          z: -1.5700002
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -10978,16 +10368,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -2.5880003
-          y: 0.48
-          z: 9.602
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -11153,16 +10533,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -21.924
-          y: 0.48
-          z: 20.546001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -11328,16 +10698,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 1.2219999
-          y: 0.48
-          z: -0.8579998
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -11503,16 +10863,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 11.238001
-          y: 0.48
-          z: 0.8080001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -11678,16 +11028,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -17.012
-          y: 0.48
-          z: -2.862
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -11853,16 +11193,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -6.72
-          y: 0.48
-          z: 8.31
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -12028,16 +11358,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -17.46
-          y: 0.48
-          z: 11.87
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -12203,16 +11523,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -16.198
-          y: 0.48
-          z: 9.562
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -12378,16 +11688,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 3.832
-          y: 0.48
-          z: 9.612001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -12553,16 +11853,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -16.602
-          y: 0.48
-          z: 1.4179997
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -12820,16 +12110,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -0.6780002
-          y: 0.48
-          z: -14.168
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -12995,16 +12275,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 4.2939997
-          y: 0.48
-          z: 11.814001
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -13170,16 +12440,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -18.439999
-          y: 0.48
-          z: 13.27
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -13345,16 +12605,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -14.77
-          y: 0.48
-          z: -6.57
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -13520,16 +12770,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 14.332001
-          y: 0.48
-          z: -9.488
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -13695,16 +12935,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -7.9680004
-          y: 0.48
-          z: 4.192
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -13870,16 +13100,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -1.94
-          y: 0.48
-          z: -11.860001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -14045,16 +13265,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -0.6680001
-          y: 0.48
-          z: -5.858
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -14220,16 +13430,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -6.31
-          y: 0.48
-          z: 12.59
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -14395,16 +13595,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 12.09
-          y: 0.48
-          z: -5.7799997
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -14570,16 +13760,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -17.864
-          y: 0.48
-          z: 3.7259998
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -14810,16 +13990,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -11.88
-          y: 0.48
-          z: 4.56
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -14920,16 +14090,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -5.74
-          y: 0.48
-          z: 6.9100003
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -15095,16 +14255,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -10.896
-          y: 0.48
-          z: -0.58599997
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -15270,16 +14420,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -13.752
-          y: 0.48
-          z: 2.1880002
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -15510,16 +14650,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -18.22
-          y: 0.48
-          z: 14.93
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -15620,16 +14750,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -6.4040003
-          y: 0.48
-          z: -3.184
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -15795,16 +14915,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -2.5
-          y: 0.48
-          z: 2.13
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -15970,16 +15080,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 0.98399985
-          y: 0.48
-          z: -5.146
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -16145,16 +15245,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 9.81
-          y: 0.48
-          z: -1.9899998
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -16320,16 +15410,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -3.704
-          y: 0.48
-          z: 5.616
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -16495,16 +15575,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -16.032
-          y: 0.48
-          z: -4.262
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -16670,16 +15740,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 4.0559998
-          y: 0.48
-          z: 7.526001
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -16845,16 +15905,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -5.278
-          y: 0.48
-          z: 9.112
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -17020,16 +16070,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -9.858
-          y: 0.48
-          z: -0.8080001
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -17195,16 +16235,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -13.118
-          y: 0.48
-          z: -5.8580003
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -17370,16 +16400,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -11.12
-          y: 0.48
-          z: 1.5
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -17545,16 +16565,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 13.294001
-          y: 0.48
-          z: -9.266
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -17720,16 +16730,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -8.206
-          y: 0.48
-          z: -0.096000195
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -17895,16 +16895,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -14.546
-          y: 0.48
-          z: 10.274
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -18070,16 +17060,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -18.029999
-          y: 0.48
-          z: 17.55
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -18245,16 +17225,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 10.438001
-          y: 0.48
-          z: -6.4919996
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -18420,16 +17390,6 @@ MonoBehaviour:
           z: 2
         Layer: 0
         IsStatic: 1
-        InitPosition:
-          x: 0.18
-          y: 0
-          z: -11.87
-        InitRotation:
-          value:
-            x: 0
-            y: -0.3599967
-            z: 0
-            w: 0.9329536
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -18595,16 +17555,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -18.664
-          y: 0.48
-          z: -3.574
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -18770,16 +17720,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -11.690001
-          y: 0.48
-          z: 7.18
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -18945,16 +17885,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -3.7719998
-          y: 0.48
-          z: -3.8720002
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -19120,16 +18050,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -15.808
-          y: 0.48
-          z: -6.348
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -19295,16 +18215,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -20.092
-          y: 0.48
-          z: 12.558001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -19470,16 +18380,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 13.532001
-          y: 0.48
-          z: -4.9779997
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -19645,16 +18545,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -12.49
-          y: 0.48
-          z: 11.690001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -19820,16 +18710,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 16.222
-          y: 0.48
-          z: -4.488
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -19995,16 +18875,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -7.11
-          y: 0.48
-          z: 17.1
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -20170,16 +19040,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 2.4039998
-          y: 0.48
-          z: 6.814001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -20345,16 +19205,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 1.2119997
-          y: 0.48
-          z: -9.168
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -20520,16 +19370,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -14.38
-          y: 0.48
-          z: 6.69
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -20695,16 +19535,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -0.2880001
-          y: 0.48
-          z: -11.148001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -20870,16 +19700,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -2.8260002
-          y: 0.48
-          z: 5.314
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -21045,16 +19865,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -8.372
-          y: 0.48
-          z: 7.5980005
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -21220,16 +20030,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 0.19
-          y: 0.48
-          z: 2.62
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -21395,16 +20195,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -16.998
-          y: 0.48
-          z: 14.0720005
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -21570,16 +20360,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -19.292
-          y: 0.48
-          z: 19.858
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -21745,16 +20525,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 3.9119997
-          y: 0.48
-          z: -0.36800003
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -21920,16 +20690,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 11.700001
-          y: 0.48
-          z: 3.0100002
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -22095,16 +20855,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -2.92
-          y: 0.48
-          z: -10.46
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -22270,16 +21020,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -14.308
-          y: 0.48
-          z: 14.562
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -22445,16 +21185,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -1.4780002
-          y: 0.48
-          z: -9.658
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -22620,16 +21350,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -18.83
-          y: 0.48
-          z: 22.060001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -22860,16 +21580,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 4.988
-          y: 0.48
-          z: -7.232
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -23035,16 +21745,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 12.31
-          y: 0.48
-          z: -4.12
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -23145,16 +21845,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -15.808
-          y: 0.48
-          z: 12.582001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -23320,16 +22010,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 4.768
-          y: 0.48
-          z: -8.892
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -23495,16 +22175,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 2.488
-          y: 0.48
-          z: -5.1019998
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -23670,16 +22340,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -12.548
-          y: 0.48
-          z: -1.2979999
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -23845,16 +22505,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 1.2839999
-          y: 0.48
-          z: -1.6159997
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -24020,16 +22670,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -10.658
-          y: 0.48
-          z: 3.7020001
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -24195,16 +22835,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -20.496
-          y: 0.48
-          z: 4.414
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -24370,16 +23000,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -10.204
-          y: 0.48
-          z: 15.586
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -24543,16 +23163,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 4.17
-          y: 1.09
-          z: 3.49
-        InitRotation:
-          value:
-            x: 0.02111119
-            y: -0.77389205
-            z: 0.49631608
-            w: 0.39283064
         IsTrigger: 1
         Weight: 1
         FreezePosition:
@@ -24668,16 +23278,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -0.22
-          y: 0.48
-          z: -1.66
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -24843,16 +23443,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 6.21
-          y: 0.48
-          z: -8.09
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -25018,16 +23608,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 3.262
-          y: 0.48
-          z: 15.292001
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -25193,16 +23773,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 3.116
-          y: 0.48
-          z: -9.604
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -25368,16 +23938,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -5.2
-          y: 0.48
-          z: -6.67
-        InitRotation:
-          value:
-            x: -0
-            y: -0.88253754
-            z: 0
-            w: -0.470242
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -25543,16 +24103,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 3.6739998
-          y: 0.48
-          z: -4.656
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -25718,16 +24268,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 12.5
-          y: 0.48
-          z: -1.5
-        InitRotation:
-          value:
-            x: -0
-            y: -0.46027705
-            z: 0
-            w: -0.8877753
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -25893,16 +24433,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 7.3999996
-          y: 0.48
-          z: -9.58
-        InitRotation:
-          value:
-            x: -0
-            y: -0.3821187
-            z: 0
-            w: -0.9241133
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -26068,16 +24598,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -4.478
-          y: 0.48
-          z: 4.602
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -26308,16 +24828,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: -2.7
-          y: 0.48
-          z: -8.8
-        InitRotation:
-          value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
         IsTrigger: 0
         Weight: 1
         FreezePosition:
@@ -26418,16 +24928,6 @@ MonoBehaviour:
           z: 1
         Layer: 0
         IsStatic: 0
-        InitPosition:
-          x: 2.852
-          y: 0.48
-          z: 11.012001
-        InitRotation:
-          value:
-            x: 0
-            y: 0.46097437
-            z: 0
-            w: 0.88741344
         IsTrigger: 0
         Weight: 1
         FreezePosition:

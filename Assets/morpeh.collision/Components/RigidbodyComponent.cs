@@ -11,6 +11,5 @@ namespace Scellecs.Morpeh.Collision.Components
     {
         public int Weight;
         public int3 FreezePosition;
-        public float3 Delta;
     }
 }

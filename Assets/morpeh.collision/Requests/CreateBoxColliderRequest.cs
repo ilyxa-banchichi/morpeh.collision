@@ -20,12 +20,6 @@ namespace Scellecs.Morpeh.Collision.Requests
         [ReadOnly]
         public bool IsStatic;
         
-        [ReadOnly]
-        public float3 InitPosition;
-        
-        [ReadOnly]
-        public quaternion InitRotation;
-        
         public bool IsTrigger;
         
         [Title("Rigidbody")]
@@ -39,8 +33,6 @@ namespace Scellecs.Morpeh.Collision.Requests
         {
             Layer = gameObject.layer;
             IsStatic = gameObject.isStatic;
-            InitPosition = gameObject.transform.position;
-            InitRotation = gameObject.transform.rotation;
             Weight = math.clamp(Weight, 1, int.MaxValue);
         }
     }

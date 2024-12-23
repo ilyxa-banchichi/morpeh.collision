@@ -21,10 +21,14 @@ namespace Scellecs.Morpeh.Collision.Systems
         private Stash<TriggerTag> _triggerTags;
         private Stash<RigidbodyComponent> _rigidbodyComponents;
         private Stash<CollisionEventsComponent> _collisionEventsComponents;
+        private Stash<TransformComponent> _transformComponents;
         
         public override void OnAwake()
         {
-            _requests = World.Filter.With<CreateBoxColliderRequest>().Build();
+            _requests = World.Filter
+                .With<CreateBoxColliderRequest>()
+                .With<TransformComponent>()
+                .Build();
 
             _createBoxColliderRequests = World.GetStash<CreateBoxColliderRequest>();
             _boxColliderComponents = World.GetStash<BoxColliderComponent>();
@@ -32,6 +36,7 @@ namespace Scellecs.Morpeh.Collision.Systems
             _triggerTags = World.GetStash<TriggerTag>();
             _rigidbodyComponents = World.GetStash<RigidbodyComponent>();
             _collisionEventsComponents = World.GetStash<CollisionEventsComponent>();
+            _transformComponents = World.GetStash<TransformComponent>();
         }
 
         public override void OnUpdate(float deltaTime)
@@ -56,6 +61,7 @@ namespace Scellecs.Morpeh.Collision.Systems
         private void AddBoxColliderComponent(Entity entity, CreateBoxColliderRequest request)
         {
             ref var collider = ref _boxColliderComponents.Add(entity);
+            ref var transform = ref _transformComponents.Get(entity);
             collider.Layer = request.Layer;
             var capacity = request.IsStatic ? 5 : 5;
             
@@ -69,8 +75,8 @@ namespace Scellecs.Morpeh.Collision.Systems
             collider.OriginalBounds = new AABB(request.Center - extents, request.Center + extents);
             collider.WorldBounds = new OBB(
                 aabb: collider.OriginalBounds,
-                position: request.InitPosition,
-                rotation: request.InitRotation
+                position: transform.Position(),
+                rotation: transform.Rotation()
             );
         }
         
