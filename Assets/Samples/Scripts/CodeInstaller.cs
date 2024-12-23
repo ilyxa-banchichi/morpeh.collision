@@ -16,6 +16,10 @@ namespace Samples.Scripts
 
         protected override UpdateFeature[] InitializeUpdateFeatures()
         {
+            return new UpdateFeature[]
+            {
+                new SampleFeature()
+            };
             return Array.Empty<UpdateFeature>();
         }
 
@@ -26,9 +30,11 @@ namespace Samples.Scripts
 
         protected override LateUpdateFeature[] InitializeLateUpdateFeatures()
         {
-            return new[]
+            return new LateUpdateFeature[]
             {
-                new CollisionFeature()
+                new CollisionFeature(),
+                new TransformFeature(),
+                new SampleLateFeature(),
             };
         }
         
