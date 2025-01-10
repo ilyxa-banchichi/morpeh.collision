@@ -12,6 +12,7 @@ namespace NativeTrees
         OBB OBB { get; }
     }
     
+    [Serializable]
     public struct EntityHolder<T> : IEquatable<EntityHolder<T>>, ILayerProvider, IOBBProvider 
         where T : unmanaged, IEquatable<T>
     {

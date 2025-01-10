@@ -1,7 +1,7 @@
 using Scellecs.Morpeh.Collections;
 using Scellecs.Morpeh.Hierarchy;
 using Scellecs.Morpeh.Providers;
-using Scellecs.Morpeh.Transform.Systems;
+using Scellecs.Morpeh.Transform.Components;
 using Unity.Collections;
 using Unity.Mathematics;
 using UnityEngine;
@@ -29,10 +29,9 @@ namespace Scellecs.Morpeh
 
         private static void SetHierarchy(GameObject gameObject)
         {
-            if (!gameObject.transform.parent)
-                return;
+            if (!gameObject.transform.parent) return;
             
-            var parentProvider = gameObject.transform.parent.GetComponent<HierarchyCodeUniversalProvider>();
+            var parentProvider = gameObject.transform.parent.GetComponentInParent<HierarchyCodeUniversalProvider>();
             if (parentProvider)
             {
                 if (EntityProvider.map.TryGetValue(gameObject.GetInstanceID(), out var item))

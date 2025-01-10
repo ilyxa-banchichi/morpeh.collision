@@ -1,8 +1,9 @@
-﻿using Unity.IL2CPP.CompilerServices;
+﻿using System;
+using Unity.IL2CPP.CompilerServices;
 using Unity.Mathematics;
 using UnityEngine;
 
-namespace Scellecs.Morpeh.Transform.Systems
+namespace Scellecs.Morpeh.Transform.Components 
 {
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]

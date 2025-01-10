@@ -1,7 +1,7 @@
 using Scellecs.Morpeh.Addons.Systems;
 using Scellecs.Morpeh.Collision.Components;
 using Scellecs.Morpeh.Native;
-using Scellecs.Morpeh.Transform.Systems;
+using Scellecs.Morpeh.Transform.Components;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.IL2CPP.CompilerServices;
@@ -13,7 +13,7 @@ namespace Scellecs.Morpeh.Collision.Systems
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
-    public sealed class PushOutSystem : LateUpdateSystem
+    public sealed class CollisionResolutionSystem : LateUpdateSystem
     {
         private Filter _dynamicRigidbodies;
         
@@ -45,6 +45,8 @@ namespace Scellecs.Morpeh.Collision.Systems
                 RigidbodyComponents = _rigidbodyComponents.AsNative(),
                 TransformComponents = _transformComponents.AsNative()
             }.Schedule(dynamicRigidbodiesNative.length, 64, World.JobHandle);
+            
+            World.JobHandle.Complete();
         }
         
         [BurstCompile]
@@ -60,7 +62,7 @@ namespace Scellecs.Morpeh.Collision.Systems
             public NativeStash<RigidbodyComponent> RigidbodyComponents;
             
             public NativeStash<TransformComponent> TransformComponents;
-            
+
             public void Execute(int index)
             {
                 var entity = Colliders[index];
@@ -73,6 +75,7 @@ namespace Scellecs.Morpeh.Collision.Systems
                     var other = overlap.Obj.Entity;
                     var o = overlap.Overlap;
 
+                    if (o.Depth < 0.001f) continue;
                     if (!RigidbodyComponents.Has(other)) continue;
                     if (!ColliderComponents.Has(other)) continue;
                     
@@ -81,8 +84,14 @@ namespace Scellecs.Morpeh.Collision.Systems
 
                     ref var otherCollider = ref ColliderComponents.Get(other);
                     var vec = collider.WorldBounds.Center - otherCollider.WorldBounds.Center;
-                    var dir = math.dot(vec, o.Axis);
-                    transform.LocalPosition += dir * o.Axis * o.Depth;
+                    var dir = math.sign(math.dot(vec, o.Axis));
+
+                    o.Axis *= rigidbody.FreezePosition;
+                    var delta = dir * o.Axis * o.Depth;
+                    if (rigidbody.Weight == otherRigidbody.Weight)
+                        delta *= .5f;
+                    
+                    transform.Translate(delta);
                 }
             }
         }

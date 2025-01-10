@@ -21,7 +21,8 @@ namespace Scellecs.Morpeh.Providers
             base.OnEnable();
 
 #if UNITY_EDITOR
-            // viewer.getter = () => this.Entity;
+            viewer.world = World.Default;
+            viewer.entity = this.Entity;
 #endif
         }
 

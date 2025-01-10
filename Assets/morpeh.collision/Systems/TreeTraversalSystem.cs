@@ -46,16 +46,21 @@ namespace Scellecs.Morpeh.Collision.Systems
                 ColliderComponents = _colliderComponents.AsNative()
             }.Schedule(collidersNative.length, 64, World.JobHandle);
 
+            var layerCollisionMasks = LayerUtils.GetMasksNative(Allocator.TempJob);
             foreach (var octree in _octrees)
             {
                 ref var cOctree = ref _octreeComponents.Get(octree);
                 World.JobHandle = new Job()
                 {
-                    Colliders = collidersNative,
+                    Colliders = dynamicCollidersNative,
                     ColliderComponents = _colliderComponents.AsNative(),
                     Octree = cOctree,
-                }.Schedule(collidersNative.length, 64, World.JobHandle);
+                    LayerCollisionMasks = layerCollisionMasks
+                }.Schedule(dynamicCollidersNative.length, 64, World.JobHandle);
             }
+            
+            World.JobHandle.Complete();
+            layerCollisionMasks.Dispose();
         }
         
         [BurstCompile]
@@ -82,6 +87,9 @@ namespace Scellecs.Morpeh.Collision.Systems
             
             [ReadOnly]
             public OctreeComponent Octree;
+
+            [ReadOnly]
+            public NativeArray<int> LayerCollisionMasks;
             
             public NativeStash<BoxColliderComponent> ColliderComponents;
             
@@ -94,8 +102,14 @@ namespace Scellecs.Morpeh.Collision.Systems
                     Obj = new EntityHolder<Entity>(entity, collider.Layer, collider.WorldBounds)
                 };
                 
-                Octree.StaticRigidbodies.RangeOBBUnique(collider.WorldBounds, collider.OverlapResult);
-                Octree.DynamicRigidbodies.RangeOBBUnique(collider.WorldBounds, collider.OverlapResult);
+                Octree.StaticColliders.RangeOBBUnique(collider.WorldBounds, collider.OverlapResult, LayerCollisionMasks[collider.Layer]);
+                foreach (var o in collider.OverlapResult)
+                {
+                    ref var otherCollider = ref ColliderComponents.Get(o.Obj.Entity);
+                    otherCollider.OverlapResult.Add(overlapHolder);
+
+                }
+                Octree.DynamicColliders.RangeOBBUnique(collider.WorldBounds, collider.OverlapResult, LayerCollisionMasks[collider.Layer]);
                 
                 if (collider.OverlapResult.Contains(overlapHolder))
                     collider.OverlapResult.Remove(overlapHolder);

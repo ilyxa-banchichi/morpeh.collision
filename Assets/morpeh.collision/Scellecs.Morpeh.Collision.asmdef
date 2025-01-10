@@ -1,0 +1,22 @@
+{
+    "name": "Scellecs.Morpeh.Collision",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3377deebfb0acde45876d12c6e3d27cc",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:e0cd26848372d4e5c891c569017e11f1",
+        "GUID:2665a8d13d1b3f18800f46e256720795",
+        "GUID:a4bd2d7da271c41e3ba8f05d220d1bdb",
+        "GUID:324caed91501a9c47a04ebfd87b68794",
+        "GUID:17f495d31df1b4f1c90363273beccc77"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

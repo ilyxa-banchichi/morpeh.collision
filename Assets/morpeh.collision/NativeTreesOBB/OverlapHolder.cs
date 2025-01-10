@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace NativeTrees
 {
+    [Serializable]
     public struct OverlapHolder<T> : IEquatable<OverlapHolder<T>>
         where T : unmanaged, IEquatable<T>, ILayerProvider, IOBBProvider
     {

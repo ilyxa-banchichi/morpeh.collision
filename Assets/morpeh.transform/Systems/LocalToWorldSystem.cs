@@ -1,12 +1,12 @@
 using Scellecs.Morpeh.Addons.Systems;
 using Scellecs.Morpeh.Hierarchy.Systems;
 using Scellecs.Morpeh.Native;
-using Scellecs.Morpeh.Transform.Systems;
+using Scellecs.Morpeh.Transform.Components;
 using Unity.Burst;
 using Unity.Jobs;
 using Unity.Mathematics;
 
-namespace Scellecs.Morpeh.Transforms
+namespace Scellecs.Morpeh.Transforms.Systems
 {
     public sealed class LocalToWorldSystem : LateUpdateSystem
     {

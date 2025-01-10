@@ -10,12 +10,16 @@ namespace Scellecs.Morpeh.Collision
         protected override void Initialize()
         {
             RegisterRequest<CreateBoxColliderRequest>();
+            RegisterRequest<RemoveColliderRequest>();
             
             AddSystem(new CreateColliderSystem());
+            AddSystem(new RemoveColliderSystem());
+            
             AddSystem(new UpdateDynamicCollidersSystem());
             AddSystem(new UpdateCollisionTreesSystem());
+            
             AddSystem(new TreeTraversalSystem());
-            AddSystem(new PushOutSystem());
+            AddSystem(new CollisionResolutionSystem());
             AddSystem(new UpdateCollisionEventsSystem());
 
             MarkComponentsDisposable();
@@ -25,6 +29,7 @@ namespace Scellecs.Morpeh.Collision
         {
             World.Default.GetStash<BoxColliderComponent>().AsDisposable();
             World.Default.GetStash<CollisionEventsComponent>().AsDisposable();
+            World.Default.GetStash<OctreeComponent>().AsDisposable();
         }
     }
 }

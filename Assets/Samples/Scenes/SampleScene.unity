@@ -184,7 +184,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 4971877}
     - rid: 468194574112129475
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -349,7 +349,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 10297541}
     - rid: 468194574112129476
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -514,7 +514,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 33293837}
     - rid: 468194574112129477
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -744,7 +744,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 70133094}
     - rid: 468194574112129478
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -844,7 +844,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 116669645}
     - rid: 468194574112129479
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -1009,7 +1009,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 117312518}
     - rid: 468194574112129480
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -1239,7 +1239,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 139678780}
     - rid: 468194574112129481
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -1339,7 +1339,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 147659039}
     - rid: 468194574112129482
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -1504,7 +1504,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 168649104}
     - rid: 468194574112129483
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -1669,7 +1669,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 182570616}
     - rid: 468194574112129484
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -1834,7 +1834,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 192524255}
     - rid: 468194574112129485
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -1999,7 +1999,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 196426019}
     - rid: 468194574112129486
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -2164,7 +2164,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 200947170}
     - rid: 468194574112129487
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -2329,7 +2329,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 237219961}
     - rid: 468194574112129488
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -2494,7 +2494,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 240922244}
     - rid: 468194574112129489
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -2659,7 +2659,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 251233348}
     - rid: 468194574112129490
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -2824,7 +2824,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 268112008}
     - rid: 468194574112129491
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -3033,7 +3033,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 318383838}
     - rid: 468194574112129492
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -3198,7 +3198,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 328380252}
     - rid: 468194574112129493
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -3363,7 +3363,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 330471763}
     - rid: 468194574112129494
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -3528,7 +3528,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 338347791}
     - rid: 468194574112129495
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -3693,7 +3693,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 343841230}
     - rid: 468194574112129496
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -3858,7 +3858,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 347371301}
     - rid: 468194574112129497
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -4023,7 +4023,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 354561311}
     - rid: 468194574112129498
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -4188,7 +4188,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 355397638}
     - rid: 468194574112129499
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -4353,7 +4353,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 361632912}
     - rid: 468194574112129500
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -4583,7 +4583,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 372230035}
     - rid: 468194574112129501
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -4683,7 +4683,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 373288997}
     - rid: 468194574112129502
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -4849,7 +4849,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 374783927}
     - rid: 468194574112129503
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -5014,7 +5014,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 389050246}
     - rid: 468194574112129504
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -5179,7 +5179,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 398742999}
     - rid: 468194574112129505
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -5344,7 +5344,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 407504605}
     - rid: 468194574112129506
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -5509,7 +5509,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 415812515}
     - rid: 468194574112129507
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -5674,7 +5674,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 425283732}
     - rid: 468194574112129508
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -5839,7 +5839,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 448404963}
     - rid: 468194574112129509
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -6004,7 +6004,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 458963573}
     - rid: 468194574112129510
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -6169,7 +6169,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 466770670}
     - rid: 468194574112129511
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -6334,7 +6334,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 471778404}
     - rid: 468194574112129512
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -6497,7 +6497,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 472682143}
     - rid: 468194574112129513
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -6612,7 +6612,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 475550038}
     - rid: 468194574112129514
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -6777,7 +6777,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 488807118}
     - rid: 468194574112129515
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -6942,7 +6942,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 499273712}
     - rid: 468194574112129516
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -7178,7 +7178,7 @@ MonoBehaviour:
       type: {class: PlayerTag, ns: Samples.Scripts, asm: Assembly-CSharp}
       data: 
     - rid: 468194574112129624
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -7278,7 +7278,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 559383949}
     - rid: 468194574112129517
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -7443,7 +7443,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 561198120}
     - rid: 468194574112129518
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -7608,7 +7608,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 638074135}
     - rid: 468194574112129519
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -7773,7 +7773,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 674178485}
     - rid: 468194574112129520
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -7938,7 +7938,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 700771995}
     - rid: 468194574112129521
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -8197,7 +8197,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 717804818}
     - rid: 468194574112129522
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -8362,7 +8362,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 719646565}
     - rid: 468194574112129523
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -8527,7 +8527,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 729002133}
     - rid: 468194574112129524
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -8692,7 +8692,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 730647120}
     - rid: 468194574112129525
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -8857,7 +8857,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 739265645}
     - rid: 468194574112129526
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -9022,7 +9022,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 746324713}
     - rid: 468194574112129527
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -9187,7 +9187,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 762602685}
     - rid: 468194574112129528
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -9352,7 +9352,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 776317832}
     - rid: 468194574112129529
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -9517,7 +9517,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 792638996}
     - rid: 468194574112129530
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -9682,7 +9682,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 795171305}
     - rid: 468194574112129531
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -9847,7 +9847,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 796078750}
     - rid: 468194574112129532
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -10012,7 +10012,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 797189686}
     - rid: 468194574112129533
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -10177,7 +10177,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 820624429}
     - rid: 468194574112129534
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -10342,7 +10342,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 829146046}
     - rid: 468194574112129535
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -10507,7 +10507,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 845716032}
     - rid: 468194574112129536
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -10672,7 +10672,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 849820286}
     - rid: 468194574112129537
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -10837,7 +10837,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 857938856}
     - rid: 468194574112129538
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -11002,7 +11002,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 876602779}
     - rid: 468194574112129539
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -11167,7 +11167,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 904906213}
     - rid: 468194574112129540
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -11332,7 +11332,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 907363456}
     - rid: 468194574112129541
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -11497,7 +11497,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 918808191}
     - rid: 468194574112129542
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -11662,7 +11662,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 933645801}
     - rid: 468194574112129543
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -11827,7 +11827,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 953236141}
     - rid: 468194574112129544
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -12084,7 +12084,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 967443149}
     - rid: 468194574112129545
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -12249,7 +12249,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1010556090}
     - rid: 468194574112129546
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -12414,7 +12414,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1012300468}
     - rid: 468194574112129547
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -12579,7 +12579,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1044359773}
     - rid: 468194574112129548
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -12744,7 +12744,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1057947065}
     - rid: 468194574112129549
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -12909,7 +12909,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1062435669}
     - rid: 468194574112129550
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -13074,7 +13074,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1075735495}
     - rid: 468194574112129551
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -13239,7 +13239,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1082048952}
     - rid: 468194574112129552
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -13404,7 +13404,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1082110132}
     - rid: 468194574112129553
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -13569,7 +13569,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1110464480}
     - rid: 468194574112129554
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -13734,7 +13734,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1117922654}
     - rid: 468194574112129555
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -13964,7 +13964,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1123352814}
     - rid: 468194574112129556
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -14064,7 +14064,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1129857411}
     - rid: 468194574112129557
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -14229,7 +14229,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1150841347}
     - rid: 468194574112129558
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -14394,7 +14394,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1246562530}
     - rid: 468194574112129559
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -14624,7 +14624,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1250780334}
     - rid: 468194574112129560
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -14724,7 +14724,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1252655861}
     - rid: 468194574112129561
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -14889,7 +14889,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1266763352}
     - rid: 468194574112129562
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -15054,7 +15054,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1300433634}
     - rid: 468194574112129563
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -15219,7 +15219,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1322625601}
     - rid: 468194574112129564
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -15384,7 +15384,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1328440027}
     - rid: 468194574112129565
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -15549,7 +15549,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1333158474}
     - rid: 468194574112129566
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -15714,7 +15714,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1353717267}
     - rid: 468194574112129567
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -15879,7 +15879,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1359875397}
     - rid: 468194574112129568
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -16044,7 +16044,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1362082122}
     - rid: 468194574112129569
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -16209,7 +16209,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1384567835}
     - rid: 468194574112129570
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -16374,7 +16374,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1388546333}
     - rid: 468194574112129571
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -16539,7 +16539,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1408350452}
     - rid: 468194574112129572
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -16704,7 +16704,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1435200028}
     - rid: 468194574112129573
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -16869,7 +16869,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1455593601}
     - rid: 468194574112129574
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -17034,7 +17034,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1457311293}
     - rid: 468194574112129575
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -17199,7 +17199,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1472142692}
     - rid: 468194574112129576
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -17364,7 +17364,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1475096174}
     - rid: 468194574112129577
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -17529,7 +17529,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1488067241}
     - rid: 468194574112129578
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -17694,7 +17694,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1493699794}
     - rid: 468194574112129579
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -17859,7 +17859,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1513707523}
     - rid: 468194574112129580
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -18024,7 +18024,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1518112262}
     - rid: 468194574112129581
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -18189,7 +18189,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1528443578}
     - rid: 468194574112129582
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -18354,7 +18354,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1536587281}
     - rid: 468194574112129583
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -18519,7 +18519,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1542088881}
     - rid: 468194574112129584
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -18684,7 +18684,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1550443733}
     - rid: 468194574112129585
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -18849,7 +18849,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1553759832}
     - rid: 468194574112129586
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -19014,7 +19014,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1562003898}
     - rid: 468194574112129587
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -19179,7 +19179,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1567114019}
     - rid: 468194574112129588
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -19344,7 +19344,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1575971060}
     - rid: 468194574112129589
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -19509,7 +19509,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1603700637}
     - rid: 468194574112129590
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -19674,7 +19674,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1631242751}
     - rid: 468194574112129591
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -19839,7 +19839,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1666094173}
     - rid: 468194574112129592
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -20004,7 +20004,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1666893090}
     - rid: 468194574112129593
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -20169,7 +20169,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1699527249}
     - rid: 468194574112129594
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -20334,7 +20334,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1700622521}
     - rid: 468194574112129595
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -20499,7 +20499,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1739004334}
     - rid: 468194574112129596
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -20664,7 +20664,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1759856805}
     - rid: 468194574112129597
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -20829,7 +20829,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1767327006}
     - rid: 468194574112129598
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -20994,7 +20994,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1813464035}
     - rid: 468194574112129599
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -21159,7 +21159,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1818048595}
     - rid: 468194574112129600
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -21324,7 +21324,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1823578591}
     - rid: 468194574112129601
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -21554,7 +21554,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1844313417}
     - rid: 468194574112129602
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -21719,7 +21719,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1846253355}
     - rid: 468194574112129603
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -21819,7 +21819,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1876451454}
     - rid: 468194574112129604
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -21984,7 +21984,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1897300527}
     - rid: 468194574112129605
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -22149,7 +22149,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1900971122}
     - rid: 468194574112129606
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -22314,7 +22314,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1906711055}
     - rid: 468194574112129607
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -22479,7 +22479,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1954420034}
     - rid: 468194574112129608
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -22644,7 +22644,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1994344985}
     - rid: 468194574112129609
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -22809,7 +22809,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 1995400930}
     - rid: 468194574112129610
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -22974,7 +22974,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 2004255951}
     - rid: 468194574112129611
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -23137,7 +23137,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 2006901079}
     - rid: 468194574112129612
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -23252,7 +23252,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 2014580623}
     - rid: 468194574112129613
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -23417,7 +23417,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 2029223667}
     - rid: 468194574112129614
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -23582,7 +23582,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 2045216667}
     - rid: 468194574112129615
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -23747,7 +23747,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 2059737574}
     - rid: 468194574112129616
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -23912,7 +23912,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 2094788802}
     - rid: 468194574112129617
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -24077,7 +24077,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 2097018713}
     - rid: 468194574112129618
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -24242,7 +24242,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 2112621241}
     - rid: 468194574112129619
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -24407,7 +24407,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 2116296398}
     - rid: 468194574112129620
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -24572,7 +24572,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 2142113747}
     - rid: 468194574112129621
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -24802,7 +24802,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 2143697875}
     - rid: 468194574112129622
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
@@ -24902,7 +24902,7 @@ MonoBehaviour:
       data:
         Transform: {fileID: 2146359184}
     - rid: 468194574112129623
-      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Systems, asm: Assembly-CSharp}
+      type: {class: TransformComponent, ns: Scellecs.Morpeh.Transform.Components, asm: Assembly-CSharp}
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:

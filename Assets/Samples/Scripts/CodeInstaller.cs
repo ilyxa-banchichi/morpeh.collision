@@ -32,9 +32,9 @@ namespace Samples.Scripts
         {
             return new LateUpdateFeature[]
             {
-                new CollisionFeature(),
-                new HierarchyFeature(),
-                new TransformFeature(),
+                //new CollisionFeature(),
+                // new HierarchyFeature(),
+                // new TransformFeature(),
                 new SampleLateFeature(),
             };
         }
@@ -48,12 +48,12 @@ namespace Samples.Scripts
                 ref var tree = ref octree.GetComponent<OctreeComponent>();
                 
                 Gizmos.color = Color.white;
-                if (tree.DynamicRigidbodies.IsValid)
-                    tree.DynamicRigidbodies.DrawGizmos();
+                if (tree.DynamicColliders.IsValid)
+                    tree.DynamicColliders.DrawGizmos();
                 
                 Gizmos.color = Color.yellow;
-                if (tree.StaticRigidbodies.IsValid)
-                    tree.StaticRigidbodies.DrawGizmos();
+                if (tree.StaticColliders.IsValid)
+                    tree.StaticColliders.DrawGizmos();
                 
                 // Gizmos.color = Color.magenta;
                 // if (tree.DynamicRigidbodies.IsValid)

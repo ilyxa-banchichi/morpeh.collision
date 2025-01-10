@@ -1,4 +1,4 @@
-using Scellecs.Morpeh.Transform.Systems;
+using Scellecs.Morpeh.Transform.Components;
 
 namespace Scellecs.Morpeh
 {

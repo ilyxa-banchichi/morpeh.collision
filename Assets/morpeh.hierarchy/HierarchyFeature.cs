@@ -8,10 +8,16 @@ namespace Scellecs.Morpeh
     {
         protected override void Initialize()
         {
-            RegisterRequest<ParentChangedRequest>();
-            
             HierarchyStashCache.RefreshCache(World.Default);
+            RegisterRequest<ParentChangedRequest>();
             AddSystem(new ParentSystem());
+
+            MarkComponentsDisposable();
+        }
+        
+        private void MarkComponentsDisposable()
+        {
+            World.Default.GetStash<ChildComponent>().AsDisposable();
         }
     }
 }

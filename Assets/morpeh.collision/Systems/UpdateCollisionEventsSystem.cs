@@ -39,6 +39,8 @@ namespace Scellecs.Morpeh.Collision.Systems
                 ColliderComponents = _colliderComponents.AsNative(),
                 CollisionEventsComponents = _collisionEventsComponents.AsNative()
             }.Schedule(collidersNative.length, 64, World.JobHandle);
+            
+            World.JobHandle.Complete();
         }
         
         [BurstCompile]

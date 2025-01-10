@@ -12,17 +12,27 @@ namespace NativeTrees
         /// Performs a raycast on the octree just using the bounds of the objects in it
         /// </summary>
         public static bool RaycastOBB<T>(
-            this NativeOctree<T> octree, Ray ray, out OctreeRaycastHit<T> hit, float maxDistance = float.PositiveInfinity) 
+            this NativeOctree<T> octree, Ray ray, out OctreeRaycastHit<T> hit, 
+            float maxDistance = float.PositiveInfinity, int layerMask = ~0) 
             where T : unmanaged, ILayerProvider, IOBBProvider, IEquatable<T>
         {
-            return octree.Raycast<RayOBBIntersecter<T>>(ray, out hit, maxDistance: maxDistance);
+            var intersecter = new RayOBBIntersecter<T>() { LayerMask = layerMask };
+            return octree.Raycast(ray, out hit, intersecter: intersecter, maxDistance: maxDistance);
         }
         
         struct RayOBBIntersecter<T> : IOctreeRayIntersecter<T>
             where T : unmanaged, ILayerProvider, IOBBProvider, IEquatable<T>
         {
+            public int LayerMask;
+            
             public bool IntersectRay(in PrecomputedRay ray, T obj, AABB objBounds, out float distance)
             {
+                if (!LayerUtils.ShouldCollide(obj.Layer, LayerMask))
+                {
+                    distance = 0;
+                    return false;
+                }
+                
                 return obj.OBB.IntersectsRay(ray, out distance);
             }
         }

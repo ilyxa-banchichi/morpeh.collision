@@ -44,8 +44,8 @@ namespace Scellecs.Morpeh.Collision.Systems
 
             var octree = World.CreateEntity();
             ref var component = ref _octreeComponents.Add(octree);
-            component.DynamicRigidbodies = CreateEmptyTree(1);
-            component.StaticRigidbodies = CreateEmptyTree(1);
+            component.DynamicColliders = CreateEmptyTree(1);
+            component.StaticColliders = CreateEmptyTree(1);
         }
 
         public override void OnUpdate(float deltaTime)
@@ -55,18 +55,28 @@ namespace Scellecs.Morpeh.Collision.Systems
                 ref var cOctree = ref _octreeComponents.Get(octree);
 
                 var staticCollidersCount = _staticColliders.GetLengthSlow();
-                if (staticCollidersCount != cOctree.LastStaticRigidbodiesCount)
+                if (staticCollidersCount != cOctree.LastStaticCollidersCount)
                 {
-                    cOctree.LastStaticRigidbodiesCount = staticCollidersCount;
-                    cOctree.StaticRigidbodies.Dispose();
-                    cOctree.StaticRigidbodies = BuildTree(_staticColliders.AsNative());
+                    cOctree.LastStaticCollidersCount = staticCollidersCount;
+                    cOctree.StaticColliders.Dispose();
+                    cOctree.StaticColliders = BuildTree(_staticColliders.AsNative());
                 }
 
                 if (_dynamicColliders.IsNotEmpty())
                 {
-                    cOctree.DynamicRigidbodies.Dispose();
-                    cOctree.DynamicRigidbodies = BuildTree(_dynamicColliders.AsNative());
+                    cOctree.DynamicColliders.Dispose();
+                    cOctree.DynamicColliders = BuildTree(_dynamicColliders.AsNative());
                 }
+            }
+            
+            World.JobHandle.Complete();
+        }
+
+        public override void Dispose()
+        {
+            foreach (var octree in _octrees)
+            {
+                World.RemoveEntity(octree);
             }
         }
 

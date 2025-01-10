@@ -1,6 +1,6 @@
 using Scellecs.Morpeh.Hierarchy.Systems;
 using Scellecs.Morpeh.Providers;
-using Scellecs.Morpeh.Transform.Systems;
+using Scellecs.Morpeh.Transform.Components;
 using TriInspector;
 using UnityEngine;
 

@@ -2,7 +2,7 @@ using NativeTrees;
 using Scellecs.Morpeh.Addons.Systems;
 using Scellecs.Morpeh.Collision.Components;
 using Scellecs.Morpeh.Native;
-using Scellecs.Morpeh.Transform.Systems;
+using Scellecs.Morpeh.Transform.Components;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.IL2CPP.CompilerServices;
@@ -41,6 +41,8 @@ namespace Scellecs.Morpeh.Collision.Systems
                 ColliderComponents = _colliderComponents.AsNative(),
                 TransformComponents = _transformComponents.AsNative()
             }.Schedule(dynamicCollidersNative.length, 64, World.JobHandle);
+            
+            World.JobHandle.Complete();
         }
         
         [BurstCompile]
