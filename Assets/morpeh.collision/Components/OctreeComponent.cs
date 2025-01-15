@@ -16,10 +16,10 @@ namespace Scellecs.Morpeh.Collision.Components
         
         public void Dispose()
         {
-            if (DynamicColliders.IsValid)
+            // if (DynamicColliders.IsValid)
                 DynamicColliders.Dispose();
             
-            if (StaticColliders.IsValid)
+            // if (StaticColliders.IsValid)
                 StaticColliders.Dispose();
         }
     }

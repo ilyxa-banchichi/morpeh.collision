@@ -15,24 +15,24 @@ namespace NativeTrees.Unity
             Gizmos.color = oldColor;
         }
         
-        public static void DrawOBB(OBB obb, Color color)
+        public static void DrawOBB(BoxCollider boxCollider, Color color)
         {
             Color oldColor = Gizmos.color;
             Gizmos.color = color;
 
             float3[] vertices = new float3[8];
-            float3 halfX = obb.X * obb.Extents.x;
-            float3 halfY = obb.Y * obb.Extents.y;
-            float3 halfZ = obb.Z * obb.Extents.z;
+            float3 halfX = boxCollider.X * boxCollider.Extents.x;
+            float3 halfY = boxCollider.Y * boxCollider.Extents.y;
+            float3 halfZ = boxCollider.Z * boxCollider.Extents.z;
 
-            vertices[0] = obb.Center - halfX - halfY - halfZ; // (-X, -Y, -Z)
-            vertices[1] = obb.Center + halfX - halfY - halfZ; // (+X, -Y, -Z)
-            vertices[2] = obb.Center + halfX + halfY - halfZ; // (+X, +Y, -Z)
-            vertices[3] = obb.Center - halfX + halfY - halfZ; // (-X, +Y, -Z)
-            vertices[4] = obb.Center - halfX - halfY + halfZ; // (-X, -Y, +Z)
-            vertices[5] = obb.Center + halfX - halfY + halfZ; // (+X, -Y, +Z)
-            vertices[6] = obb.Center + halfX + halfY + halfZ; // (+X, +Y, +Z)
-            vertices[7] = obb.Center - halfX + halfY + halfZ; // (-X, +Y, +Z)
+            vertices[0] = boxCollider.Center - halfX - halfY - halfZ; // (-X, -Y, -Z)
+            vertices[1] = boxCollider.Center + halfX - halfY - halfZ; // (+X, -Y, -Z)
+            vertices[2] = boxCollider.Center + halfX + halfY - halfZ; // (+X, +Y, -Z)
+            vertices[3] = boxCollider.Center - halfX + halfY - halfZ; // (-X, +Y, -Z)
+            vertices[4] = boxCollider.Center - halfX - halfY + halfZ; // (-X, -Y, +Z)
+            vertices[5] = boxCollider.Center + halfX - halfY + halfZ; // (+X, -Y, +Z)
+            vertices[6] = boxCollider.Center + halfX + halfY + halfZ; // (+X, +Y, +Z)
+            vertices[7] = boxCollider.Center - halfX + halfY + halfZ; // (-X, +Y, +Z)
 
             DrawLine(vertices[0], vertices[1]);
             DrawLine(vertices[1], vertices[2]);

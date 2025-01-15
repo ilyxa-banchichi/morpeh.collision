@@ -27,7 +27,7 @@ namespace Scellecs.Morpeh.Collision
         
         private void MarkComponentsDisposable()
         {
-            World.Default.GetStash<BoxColliderComponent>().AsDisposable();
+            World.Default.GetStash<ColliderComponent>().AsDisposable();
             World.Default.GetStash<CollisionEventsComponent>().AsDisposable();
             World.Default.GetStash<OctreeComponent>().AsDisposable();
         }

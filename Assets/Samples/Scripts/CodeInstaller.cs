@@ -32,9 +32,9 @@ namespace Samples.Scripts
         {
             return new LateUpdateFeature[]
             {
-                //new CollisionFeature(),
-                // new HierarchyFeature(),
-                // new TransformFeature(),
+                new CollisionFeature(),
+                new HierarchyFeature(),
+                new TransformFeature(),
                 new SampleLateFeature(),
             };
         }
@@ -48,11 +48,11 @@ namespace Samples.Scripts
                 ref var tree = ref octree.GetComponent<OctreeComponent>();
                 
                 Gizmos.color = Color.white;
-                if (tree.DynamicColliders.IsValid)
+                // if (tree.DynamicColliders.IsValid)
                     tree.DynamicColliders.DrawGizmos();
                 
                 Gizmos.color = Color.yellow;
-                if (tree.StaticColliders.IsValid)
+                // if (tree.StaticColliders.IsValid)
                     tree.StaticColliders.DrawGizmos();
                 
                 // Gizmos.color = Color.magenta;
@@ -64,11 +64,10 @@ namespace Samples.Scripts
                 //     tree.StaticTriggers.DrawGizmos();
             }
             
-            foreach (var entity in defaultWorld.Filter.With<BoxColliderComponent>().Build())
+            foreach (var entity in defaultWorld.Filter.With<ColliderComponent>().Build())
             {
-                ref var collider = ref entity.GetComponent<BoxColliderComponent>();
+                ref var collider = ref entity.GetComponent<ColliderComponent>();
                 // GizmoExtensions.DrawAABB(collider.OriginalBounds, Color.green);
-                GizmoExtensions.DrawOBB(collider.WorldBounds, Color.blue);
                 // GizmoExtensions.DrawAABB((AABB)collider.WorldBounds, Color.red);
             }
         }

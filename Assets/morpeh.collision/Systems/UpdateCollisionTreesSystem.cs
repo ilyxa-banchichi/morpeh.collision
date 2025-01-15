@@ -22,24 +22,24 @@ namespace Scellecs.Morpeh.Collision.Systems
         private Filter _staticColliders;
         private Filter _octrees;
 
-        private Stash<BoxColliderComponent> _colliderComponents;
+        private Stash<ColliderComponent> _colliderComponents;
         private Stash<OctreeComponent> _octreeComponents;
 
         public override void OnAwake()
         {
             _staticColliders = World.Filter
                 .With<StaticColliderTag>()
-                .With<BoxColliderComponent>()
+                .With<ColliderComponent>()
                 .Build();
             
             _dynamicColliders = World.Filter
-                .With<BoxColliderComponent>()
+                .With<ColliderComponent>()
                 .Without<StaticColliderTag>()
                 .Build();
 
             _octrees = World.Filter.With<OctreeComponent>().Build();
 
-            _colliderComponents = World.GetStash<BoxColliderComponent>();
+            _colliderComponents = World.GetStash<ColliderComponent>();
             _octreeComponents = World.GetStash<OctreeComponent>();
 
             var octree = World.CreateEntity();
@@ -106,13 +106,13 @@ namespace Scellecs.Morpeh.Collision.Systems
         }
 
         [BurstCompile(CompileSynchronously = true)]
-        private struct PopulateJob : IJob
+        private unsafe struct PopulateJob : IJob
         {
             public NativeFilter Colliders;
             public NativeOctree<EntityHolder<Entity>> Octree;
 
             [ReadOnly]
-            public NativeStash<BoxColliderComponent> ColliderComponents;
+            public NativeStash<ColliderComponent> ColliderComponents;
 
             public void Execute()
             {
@@ -121,8 +121,8 @@ namespace Scellecs.Morpeh.Collision.Systems
                     var entity = Colliders[i];
                     ref var collider = ref ColliderComponents.Get(entity);
                     
-                    var entityHolder = new EntityHolder<Entity>(entity, collider.Layer, collider.WorldBounds);
-                    Octree.Insert(entityHolder, (AABB)collider.WorldBounds);
+                    var entityHolder = new EntityHolder<Entity>(entity, collider.Layer, collider.WorldBounds, collider.Type);
+                    Octree.Insert(entityHolder, ColliderCastUtils.ToAABB(collider.WorldBounds, collider.Type));
                 }
             }
         }

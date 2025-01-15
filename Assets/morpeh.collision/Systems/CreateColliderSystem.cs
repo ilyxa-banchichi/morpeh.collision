@@ -4,20 +4,24 @@ using Scellecs.Morpeh.Collision.Components;
 using Scellecs.Morpeh.Collision.Requests;
 using Scellecs.Morpeh.Transform.Components;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.IL2CPP.CompilerServices;
 using Unity.Mathematics;
+using UnityEngine;
+using BoxCollider = NativeTrees.BoxCollider;
+using SphereCollider = NativeTrees.SphereCollider;
 
 namespace Scellecs.Morpeh.Collision.Systems
 {
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
-    public sealed class CreateColliderSystem : LateUpdateSystem
+    public sealed unsafe class CreateColliderSystem : LateUpdateSystem
     {
         private Filter _requests;
 
         private Stash<CreateBoxColliderRequest> _createBoxColliderRequests;
-        private Stash<BoxColliderComponent> _boxColliderComponents;
+        private Stash<ColliderComponent> _colliderComponents;
         private Stash<StaticColliderTag> _staticColliderTags;
         private Stash<TriggerTag> _triggerTags;
         private Stash<RigidbodyComponent> _rigidbodyComponents;
@@ -32,7 +36,7 @@ namespace Scellecs.Morpeh.Collision.Systems
                 .Build();
 
             _createBoxColliderRequests = World.GetStash<CreateBoxColliderRequest>();
-            _boxColliderComponents = World.GetStash<BoxColliderComponent>();
+            _colliderComponents = World.GetStash<ColliderComponent>();
             _staticColliderTags = World.GetStash<StaticColliderTag>();
             _triggerTags = World.GetStash<TriggerTag>();
             _rigidbodyComponents = World.GetStash<RigidbodyComponent>();
@@ -46,7 +50,7 @@ namespace Scellecs.Morpeh.Collision.Systems
             {
                 ref var request = ref _createBoxColliderRequests.Get(entity);
                 
-                AddBoxColliderComponent(entity, request);
+                AddColliderComponent(entity, request);
                 AddCollisionEventsComponent(entity, request);
                 
                 if (request.IsStatic)
@@ -59,9 +63,9 @@ namespace Scellecs.Morpeh.Collision.Systems
             }
         }
 
-        private void AddBoxColliderComponent(Entity entity, CreateBoxColliderRequest request)
+        private void AddColliderComponent(Entity entity, CreateBoxColliderRequest request)
         {
-            ref var collider = ref _boxColliderComponents.Add(entity);
+            ref var collider = ref _colliderComponents.Add(entity);
             ref var transform = ref _transformComponents.Get(entity);
             collider.Layer = request.Layer;
             var capacity = request.IsStatic ? 5 : 5;
@@ -71,14 +75,63 @@ namespace Scellecs.Morpeh.Collision.Systems
             
             if (!collider.LastOverlapResult.IsCreated)
                 collider.LastOverlapResult = new NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>>(capacity, Allocator.Persistent);
+
+            collider.Type = request.Type;
+            switch (collider.Type)
+            {
+                case ColliderType.Box:
+                    CreateBoxCollider(ref collider, request, transform);
+                    break;
                 
-            var extents = request.Size * 0.5f;
-            collider.OriginalBounds = new AABB(request.Center - extents, request.Center + extents);
-            collider.WorldBounds = new OBB(
-                aabb: collider.OriginalBounds,
-                position: transform.Position(),
-                rotation: transform.Rotation()
-            );
+                case ColliderType.Sphere:
+                    CreateSphereCollider(ref collider, request, transform);
+                    break;
+            };
+            
+            Object.Destroy(request.Collider);
+        }
+
+        private void CreateBoxCollider(ref ColliderComponent collider, 
+            CreateBoxColliderRequest request, TransformComponent transform)
+        {
+            UnityEngine.BoxCollider boxCollider = request.Collider as UnityEngine.BoxCollider;
+            var extents = boxCollider.size * 0.5f;
+
+            BoxCollider original = new BoxCollider(new AABB(boxCollider.center - extents, boxCollider.center + extents), quaternion.identity);
+            BoxCollider* originalPtr = (BoxCollider*)UnsafeUtility.Malloc(sizeof(BoxCollider), 4, Allocator.Persistent);
+            *originalPtr = original;
+
+            collider.OriginalBounds = originalPtr;
+
+            BoxCollider world = new BoxCollider((AABB)original, transform.Position(), transform.Rotation());
+            BoxCollider* worldPtr = (BoxCollider*)UnsafeUtility.Malloc(sizeof(BoxCollider), 4, Allocator.Persistent);
+            *worldPtr = world;
+                
+            collider.WorldBounds = worldPtr;
+                
+            collider.Center = worldPtr->Center;
+            collider.Extents = worldPtr->Extents;
+        }
+        
+        private void CreateSphereCollider(ref ColliderComponent collider, 
+            CreateBoxColliderRequest request, TransformComponent transform)
+        {
+            UnityEngine.SphereCollider sphereCollider = request.Collider as UnityEngine.SphereCollider;
+            
+            SphereCollider original = new SphereCollider(sphereCollider.center, sphereCollider.radius);
+            SphereCollider* originalPtr = (SphereCollider*)UnsafeUtility.Malloc(sizeof(SphereCollider), 4, Allocator.Persistent);
+            *originalPtr = original;
+            
+            collider.OriginalBounds = originalPtr;
+            
+            SphereCollider world = new SphereCollider(original.Center + transform.Position(), original.Radius);
+            SphereCollider* worldPtr = (SphereCollider*)UnsafeUtility.Malloc(sizeof(SphereCollider), 4, Allocator.Persistent);
+            *worldPtr = world;
+            
+            collider.WorldBounds = worldPtr;
+
+            collider.Center = worldPtr->Center;
+            collider.Extents = worldPtr->Radius;
         }
         
         private void AddCollisionEventsComponent(Entity entity, CreateBoxColliderRequest request)

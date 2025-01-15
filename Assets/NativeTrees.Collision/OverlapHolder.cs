@@ -5,9 +5,9 @@ namespace NativeTrees
 {
     [Serializable]
     public struct OverlapHolder<T> : IEquatable<OverlapHolder<T>>
-        where T : unmanaged, IEquatable<T>, ILayerProvider, IOBBProvider
+        where T : unmanaged, IEquatable<T>, ILayerProvider, IColliderProvider
     {
-        public OBBOverlapExtensions.OverlapResult Overlap;
+        public OverlapResult Overlap;
         public T Obj;
 
         public override bool Equals(object obj)

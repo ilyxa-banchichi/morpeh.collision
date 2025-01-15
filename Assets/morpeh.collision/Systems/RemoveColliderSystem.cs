@@ -12,7 +12,7 @@ namespace Scellecs.Morpeh.Collision.Systems
     {
         private Filter _requests;
 
-        private Stash<BoxColliderComponent> _boxColliderComponents;
+        private Stash<ColliderComponent> _boxColliderComponents;
         private Stash<StaticColliderTag> _staticColliderTags;
         private Stash<TriggerTag> _triggerTags;
         private Stash<RigidbodyComponent> _rigidbodyComponents;
@@ -22,7 +22,7 @@ namespace Scellecs.Morpeh.Collision.Systems
         {
             _requests = World.Filter.With<RemoveColliderRequest>().Build();
 
-            _boxColliderComponents = World.GetStash<BoxColliderComponent>();
+            _boxColliderComponents = World.GetStash<ColliderComponent>();
             _staticColliderTags = World.GetStash<StaticColliderTag>();
             _triggerTags = World.GetStash<TriggerTag>();
             _rigidbodyComponents = World.GetStash<RigidbodyComponent>();

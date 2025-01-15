@@ -1,0 +1,18 @@
+{
+    "name": "NativeTrees.Collision",
+    "rootNamespace": "NativeTrees.Collision",
+    "references": [
+        "GUID:17f495d31df1b4f1c90363273beccc77",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:e0cd26848372d4e5c891c569017e11f1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

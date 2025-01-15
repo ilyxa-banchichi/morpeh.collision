@@ -14,14 +14,14 @@ namespace NativeTrees
         public static bool RaycastOBB<T>(
             this NativeOctree<T> octree, Ray ray, out OctreeRaycastHit<T> hit, 
             float maxDistance = float.PositiveInfinity, int layerMask = ~0) 
-            where T : unmanaged, ILayerProvider, IOBBProvider, IEquatable<T>
+            where T : unmanaged, ILayerProvider, IColliderProvider, IEquatable<T>
         {
             var intersecter = new RayOBBIntersecter<T>() { LayerMask = layerMask };
             return octree.Raycast(ray, out hit, intersecter: intersecter, maxDistance: maxDistance);
         }
         
         struct RayOBBIntersecter<T> : IOctreeRayIntersecter<T>
-            where T : unmanaged, ILayerProvider, IOBBProvider, IEquatable<T>
+            where T : unmanaged, ILayerProvider, IColliderProvider, IEquatable<T>
         {
             public int LayerMask;
             
@@ -32,8 +32,11 @@ namespace NativeTrees
                     distance = 0;
                     return false;
                 }
-                
-                return obj.OBB.IntersectsRay(ray, out distance);
+
+                //ToDo: void
+                distance = 99999;
+                return true;
+                //return obj.OBB.IntersectsRay(ray, out distance);
             }
         }
     }

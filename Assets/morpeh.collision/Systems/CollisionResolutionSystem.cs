@@ -17,7 +17,7 @@ namespace Scellecs.Morpeh.Collision.Systems
     {
         private Filter _dynamicRigidbodies;
         
-        private Stash<BoxColliderComponent> _colliderComponents;
+        private Stash<ColliderComponent> _colliderComponents;
         private Stash<RigidbodyComponent> _rigidbodyComponents;
         private Stash<TransformComponent> _transformComponents;
         
@@ -25,12 +25,12 @@ namespace Scellecs.Morpeh.Collision.Systems
         {
             _dynamicRigidbodies = World.Filter
                 .With<RigidbodyComponent>()
-                .With<BoxColliderComponent>()
+                .With<ColliderComponent>()
                 .With<TransformComponent>()
                 .Without<StaticColliderTag>()
                 .Build();
 
-            _colliderComponents = World.GetStash<BoxColliderComponent>();
+            _colliderComponents = World.GetStash<ColliderComponent>();
             _rigidbodyComponents = World.GetStash<RigidbodyComponent>();
             _transformComponents = World.GetStash<TransformComponent>();
         }
@@ -56,7 +56,7 @@ namespace Scellecs.Morpeh.Collision.Systems
             public NativeFilter Colliders;
                         
             [ReadOnly]
-            public NativeStash<BoxColliderComponent> ColliderComponents;
+            public NativeStash<ColliderComponent> ColliderComponents;
             
             [ReadOnly]
             public NativeStash<RigidbodyComponent> RigidbodyComponents;
@@ -83,7 +83,7 @@ namespace Scellecs.Morpeh.Collision.Systems
                     if (rigidbody.Weight > otherRigidbody.Weight) continue;
 
                     ref var otherCollider = ref ColliderComponents.Get(other);
-                    var vec = collider.WorldBounds.Center - otherCollider.WorldBounds.Center;
+                    var vec = collider.Center - otherCollider.Center;
                     var dir = math.sign(math.dot(vec, o.Axis));
 
                     o.Axis *= rigidbody.FreezePosition;

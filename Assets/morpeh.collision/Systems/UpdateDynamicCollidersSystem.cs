@@ -13,22 +13,22 @@ namespace Scellecs.Morpeh.Collision.Systems
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
-    public sealed class UpdateDynamicCollidersSystem : LateUpdateSystem
+    public sealed unsafe class UpdateDynamicCollidersSystem : LateUpdateSystem
     {
         private Filter _dynamicColliders;
         
-        private Stash<BoxColliderComponent> _colliderComponents;
+        private Stash<ColliderComponent> _colliderComponents;
         private Stash<TransformComponent> _transformComponents;
         
         public override void OnAwake()
         {
             _dynamicColliders = World.Filter
-                .With<BoxColliderComponent>()
+                .With<ColliderComponent>()
                 .With<TransformComponent>()
                 .Without<StaticColliderTag>()
                 .Build();
 
-            _colliderComponents = World.GetStash<BoxColliderComponent>();
+            _colliderComponents = World.GetStash<ColliderComponent>();
             _transformComponents = World.GetStash<TransformComponent>();
         }
         
@@ -51,7 +51,7 @@ namespace Scellecs.Morpeh.Collision.Systems
             [ReadOnly]
             public NativeFilter Colliders;
                         
-            public NativeStash<BoxColliderComponent> ColliderComponents;
+            public NativeStash<ColliderComponent> ColliderComponents;
            
             [ReadOnly]
             public NativeStash<TransformComponent> TransformComponents;
@@ -61,12 +61,35 @@ namespace Scellecs.Morpeh.Collision.Systems
                 var entity = Colliders[index];
                 ref var collider = ref ColliderComponents.Get(entity);
                 ref var transform = ref TransformComponents.Get(entity);
+                
+                switch (collider.Type)
+                {
+                    case ColliderType.Box:
+                        BoxCollider* boxPtr = (BoxCollider*)collider.WorldBounds;
+                        *boxPtr = new BoxCollider(
+                            ColliderCastUtils.ToAABB(collider.OriginalBounds, collider.Type),
+                            transform.Position(),
+                            transform.Rotation()
+                        );
 
-                collider.WorldBounds = new OBB(
-                    collider.OriginalBounds,
-                    transform.Position(),
-                    transform.Rotation()
-                );
+                        collider.Center = boxPtr->Center;
+                        collider.Extents = boxPtr->Extents;
+                        
+                        break;
+                
+                    case ColliderType.Sphere:
+                        SphereCollider* spherePtr = (SphereCollider*)collider.WorldBounds;
+                        var original = ColliderCastUtils.ToSphereCollider(collider.OriginalBounds);
+                        *spherePtr = new SphereCollider(
+                            original->Center + transform.Position(),
+                            original->Radius
+                        );
+
+                        collider.Center = spherePtr->Center;
+                        collider.Extents = spherePtr->Radius;
+                        
+                        break;
+                };
             }
         }
     }

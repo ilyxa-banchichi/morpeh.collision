@@ -16,17 +16,17 @@ namespace Scellecs.Morpeh.Collision.Systems
     {
         private Filter _colliders;
         
-        private Stash<BoxColliderComponent> _colliderComponents;
+        private Stash<ColliderComponent> _colliderComponents;
         private Stash<CollisionEventsComponent> _collisionEventsComponents;
 
         public override void OnAwake()
         {
             _colliders = World.Filter
-                .With<BoxColliderComponent>()
+                .With<ColliderComponent>()
                 .With<CollisionEventsComponent>()
                 .Build();
                 
-            _colliderComponents = World.GetStash<BoxColliderComponent>();
+            _colliderComponents = World.GetStash<ColliderComponent>();
             _collisionEventsComponents = World.GetStash<CollisionEventsComponent>();
         }
         
@@ -49,7 +49,7 @@ namespace Scellecs.Morpeh.Collision.Systems
             [ReadOnly]
             public NativeFilter Colliders;
             
-            public NativeStash<BoxColliderComponent> ColliderComponents;
+            public NativeStash<ColliderComponent> ColliderComponents;
             public NativeStash<CollisionEventsComponent> CollisionEventsComponents;
             
             public void Execute(int index)

@@ -18,20 +18,20 @@ namespace Scellecs.Morpeh.Collision.Systems
         private Filter _dynamicColliders;
         private Filter _octrees;
         
-        private Stash<BoxColliderComponent> _colliderComponents;
+        private Stash<ColliderComponent> _colliderComponents;
         private Stash<OctreeComponent> _octreeComponents;
 
         public override void OnAwake()
         {
-            _colliders = World.Filter.With<BoxColliderComponent>().Build();
+            _colliders = World.Filter.With<ColliderComponent>().Build();
             _dynamicColliders = World.Filter
-                .With<BoxColliderComponent>()
+                .With<ColliderComponent>()
                 .Without<StaticColliderTag>()
                 .Build();
 
             _octrees = World.Filter.With<OctreeComponent>().Build();
                 
-            _colliderComponents = World.GetStash<BoxColliderComponent>();
+            _colliderComponents = World.GetStash<ColliderComponent>();
             _octreeComponents = World.GetStash<OctreeComponent>();
         }
         
@@ -69,7 +69,7 @@ namespace Scellecs.Morpeh.Collision.Systems
             [ReadOnly]
             public NativeFilter Colliders;
             
-            public NativeStash<BoxColliderComponent> ColliderComponents;
+            public NativeStash<ColliderComponent> ColliderComponents;
             
             public void Execute(int index)
             {
@@ -80,7 +80,7 @@ namespace Scellecs.Morpeh.Collision.Systems
         }
         
         [BurstCompile]
-        private struct Job : IJobParallelFor
+        private unsafe struct Job : IJobParallelFor
         {
             [ReadOnly]
             public NativeFilter Colliders;
@@ -91,7 +91,7 @@ namespace Scellecs.Morpeh.Collision.Systems
             [ReadOnly]
             public NativeArray<int> LayerCollisionMasks;
             
-            public NativeStash<BoxColliderComponent> ColliderComponents;
+            public NativeStash<ColliderComponent> ColliderComponents;
             
             public void Execute(int index)
             {
@@ -99,17 +99,17 @@ namespace Scellecs.Morpeh.Collision.Systems
                 ref var collider = ref ColliderComponents.Get(entity);
                 var overlapHolder = new OverlapHolder<EntityHolder<Entity>>()
                 {
-                    Obj = new EntityHolder<Entity>(entity, collider.Layer, collider.WorldBounds)
+                    Obj = new EntityHolder<Entity>(entity, collider.Layer, collider.WorldBounds, collider.Type)
                 };
                 
-                Octree.StaticColliders.RangeOBBUnique(collider.WorldBounds, collider.OverlapResult, LayerCollisionMasks[collider.Layer]);
+                Octree.StaticColliders.RangeColliderUnique(collider.WorldBounds, collider.Type, collider.OverlapResult, LayerCollisionMasks[collider.Layer]);
                 foreach (var o in collider.OverlapResult)
                 {
                     ref var otherCollider = ref ColliderComponents.Get(o.Obj.Entity);
                     otherCollider.OverlapResult.Add(overlapHolder);
 
                 }
-                Octree.DynamicColliders.RangeOBBUnique(collider.WorldBounds, collider.OverlapResult, LayerCollisionMasks[collider.Layer]);
+                Octree.DynamicColliders.RangeColliderUnique(collider.WorldBounds, collider.Type, collider.OverlapResult, LayerCollisionMasks[collider.Layer]);
                 
                 if (collider.OverlapResult.Contains(overlapHolder))
                     collider.OverlapResult.Remove(overlapHolder);
