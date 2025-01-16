@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace Samples.Scripts
 {
-    public class CodeInstaller : BaseFeaturesInstaller
+    public unsafe class CodeInstaller : BaseFeaturesInstaller
     {
         protected override void InitializeShared() { }
 
@@ -67,7 +67,22 @@ namespace Samples.Scripts
             foreach (var entity in defaultWorld.Filter.With<ColliderComponent>().Build())
             {
                 ref var collider = ref entity.GetComponent<ColliderComponent>();
-                // GizmoExtensions.DrawAABB(collider.OriginalBounds, Color.green);
+
+                if (collider.Type == ColliderType.Box)
+                {
+                    var obb = ColliderCastUtils.ToBoxCollider(collider.WorldBounds);
+                    GizmoExtensions.DrawOBB(*obb, Color.blue);
+                }
+                else if (collider.Type == ColliderType.Sphere)
+                {
+                    var sphere = ColliderCastUtils.ToSphereCollider(collider.WorldBounds);
+                    GizmoExtensions.DrawSphere(*sphere, Color.blue);
+                }
+                else if (collider.Type == ColliderType.Terrain)
+                {
+                    // var terrain = ColliderCastUtils.ToTerrainCollider(collider.WorldBounds);
+                    // GizmoExtensions.DrawTerrain(*terrain, Color.blue);
+                }
                 // GizmoExtensions.DrawAABB((AABB)collider.WorldBounds, Color.red);
             }
         }

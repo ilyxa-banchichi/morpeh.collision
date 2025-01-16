@@ -6,6 +6,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using BoxCollider = UnityEngine.BoxCollider;
 using SphereCollider = UnityEngine.SphereCollider;
+using TerrainCollider = UnityEngine.TerrainCollider;
 
 namespace Scellecs.Morpeh.Collision.Requests
 {
@@ -42,6 +43,8 @@ namespace Scellecs.Morpeh.Collision.Requests
                 Type = ColliderType.Box;
             else if (Collider is SphereCollider)
                 Type = ColliderType.Sphere;
+            else if (Collider is TerrainCollider)
+                Type = ColliderType.Terrain;
             
             Layer = gameObject.layer;
             IsStatic = gameObject.isStatic;

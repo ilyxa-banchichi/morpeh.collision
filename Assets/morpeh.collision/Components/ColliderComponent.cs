@@ -59,6 +59,12 @@ namespace Scellecs.Morpeh.Collision.Components
 
         public void Dispose()
         {
+            if (Type == ColliderType.Terrain)
+            {
+                var terrain = ColliderCastUtils.ToTerrainCollider(WorldBounds);
+                terrain->HeightMap.Dispose();
+            }
+            
             UnsafeUtility.Free(OriginalBounds, Allocator.Persistent);
             UnsafeUtility.Free(WorldBounds, Allocator.Persistent);
             OverlapResult.Dispose();

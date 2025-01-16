@@ -15,7 +15,7 @@ namespace Scellecs.Morpeh.Collision.Systems
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     public sealed class UpdateCollisionTreesSystem : LateUpdateSystem
     {
-        private const float sz = 500;
+        private const float sz = 5000;
         private static readonly AABB WorldBounds = new AABB(new float3(-sz, -sz, -sz), new float3(sz, sz, sz));
         
         private Filter _dynamicColliders;

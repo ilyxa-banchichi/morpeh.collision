@@ -15,6 +15,34 @@ namespace NativeTrees.Unity
             Gizmos.color = oldColor;
         }
         
+        public static void DrawSphere(SphereCollider sphere, Color color)
+        {
+            Color oldColor = Gizmos.color;
+            Gizmos.color = color;
+            
+            Gizmos.DrawWireSphere(sphere.Center, sphere.Radius);
+            
+            Gizmos.color = oldColor;
+        }
+        
+        public static void DrawTerrain(TerrainCollider terrain, Color color)
+        {
+            Color oldColor = Gizmos.color;
+            Gizmos.color = color;
+
+            for (int z = 0; z < terrain.Height; z++)
+            {
+                for (int x = 0; x < terrain.Width; x++)
+                {
+                    var pos = new float3(x * terrain.ScaleX, 0f, z * terrain.ScaleZ) + terrain.Translation;
+                    pos.y = terrain.GetHeightAtIndex(x, z);
+                    Gizmos.DrawCube(pos, new float3(0.1f));
+                }
+            }
+            
+            Gizmos.color = oldColor;
+        }
+        
         public static void DrawOBB(BoxCollider boxCollider, Color color)
         {
             Color oldColor = Gizmos.color;

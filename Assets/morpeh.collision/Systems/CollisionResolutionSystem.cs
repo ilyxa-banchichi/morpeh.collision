@@ -1,3 +1,4 @@
+using NativeTrees;
 using Scellecs.Morpeh.Addons.Systems;
 using Scellecs.Morpeh.Collision.Components;
 using Scellecs.Morpeh.Native;
@@ -7,6 +8,7 @@ using Unity.Collections;
 using Unity.IL2CPP.CompilerServices;
 using Unity.Jobs;
 using Unity.Mathematics;
+using UnityEngine;
 
 namespace Scellecs.Morpeh.Collision.Systems
 {
@@ -88,8 +90,16 @@ namespace Scellecs.Morpeh.Collision.Systems
 
                     o.Axis *= rigidbody.FreezePosition;
                     var delta = dir * o.Axis * o.Depth;
+                    if (otherCollider.Type == ColliderType.Terrain)
+                        delta.y *= -1;
+                    
                     if (rigidbody.Weight == otherRigidbody.Weight)
                         delta *= .5f;
+                    
+                    Debug.Log($"Center: {otherCollider.Center}");
+                    Debug.Log($"dir: {dir}");
+                    Debug.Log($"Axis: {o.Axis}");
+                    Debug.Log($"Depth: {o.Depth}");
                     
                     transform.Translate(delta);
                 }

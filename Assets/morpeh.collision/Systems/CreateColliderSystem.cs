@@ -1,3 +1,4 @@
+using System;
 using NativeTrees;
 using Scellecs.Morpeh.Addons.Systems;
 using Scellecs.Morpeh.Collision.Components;
@@ -7,8 +8,8 @@ using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.IL2CPP.CompilerServices;
 using Unity.Mathematics;
-using UnityEngine;
 using BoxCollider = NativeTrees.BoxCollider;
+using Object = UnityEngine.Object;
 using SphereCollider = NativeTrees.SphereCollider;
 
 namespace Scellecs.Morpeh.Collision.Systems
@@ -86,9 +87,17 @@ namespace Scellecs.Morpeh.Collision.Systems
                 case ColliderType.Sphere:
                     CreateSphereCollider(ref collider, request, transform);
                     break;
+                
+                case ColliderType.Capsule:
+                    throw new NotImplementedException();
+                    break;
+                
+                case ColliderType.Terrain:
+                    CreateTerrainCollider(ref collider, request, transform);
+                    break;
             };
             
-            Object.Destroy(request.Collider);
+            //Object.Destroy(request.Collider);
         }
 
         private void CreateBoxCollider(ref ColliderComponent collider, 
@@ -132,6 +141,46 @@ namespace Scellecs.Morpeh.Collision.Systems
 
             collider.Center = worldPtr->Center;
             collider.Extents = worldPtr->Radius;
+        }
+        
+        private void CreateTerrainCollider(ref ColliderComponent collider, 
+            CreateBoxColliderRequest request, TransformComponent transform)
+        {
+            var terrainCollider = request.Collider as UnityEngine.TerrainCollider;
+            var terrainData = terrainCollider.terrainData;
+            
+            TerrainCollider world = new TerrainCollider();
+            world.Width = terrainData.heightmapResolution;
+            world.Height = terrainData.heightmapResolution;
+            world.ScaleX = terrainData.size.x / world.Width;
+            world.ScaleZ = terrainData.size.z / world.Height;
+            world.Translation = transform.Position();
+
+            world.HeightMap = new NativeArray<float>(world.Width * world.Height, Allocator.Persistent);
+            
+            world.MinHeight = float.MaxValue;
+            world.MaxHeight = float.MinValue;
+
+            // Заполняем высотную карту
+            for (int z = 0; z < world.Height; z++)
+            {
+                for (int x = 0; x < world.Width; x++)
+                {
+                    var height = terrainData.GetHeight(x, z);
+                    world.HeightMap[z * world.Width + x] = height;
+                    world.MinHeight = math.min(height, world.MinHeight);
+                    world.MaxHeight = math.max(height, world.MaxHeight);
+                }
+            }
+
+            TerrainCollider* worldPtr = (TerrainCollider*)UnsafeUtility.Malloc(sizeof(TerrainCollider), 4, Allocator.Persistent);
+            *worldPtr = world;
+            
+            collider.WorldBounds = worldPtr;
+
+            var aabb = ColliderCastUtils.ToAABB(worldPtr, ColliderType.Terrain);
+            collider.Center = aabb.Center;
+            collider.Extents = aabb.Center * .5f;
         }
         
         private void AddCollisionEventsComponent(Entity entity, CreateBoxColliderRequest request)

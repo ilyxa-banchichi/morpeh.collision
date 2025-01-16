@@ -7,6 +7,9 @@ using Unity.Burst;
 using Unity.Collections;
 using Unity.IL2CPP.CompilerServices;
 using Unity.Jobs;
+using UnityEngine;
+using BoxCollider = NativeTrees.BoxCollider;
+using SphereCollider = NativeTrees.SphereCollider;
 
 namespace Scellecs.Morpeh.Collision.Systems
 {
@@ -88,6 +91,9 @@ namespace Scellecs.Morpeh.Collision.Systems
                         collider.Center = spherePtr->Center;
                         collider.Extents = spherePtr->Radius;
                         
+                        break;
+                    
+                    case ColliderType.Terrain:
                         break;
                 };
             }

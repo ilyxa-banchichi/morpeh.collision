@@ -11,8 +11,11 @@ namespace NativeTrees
 
             if (type == ColliderType.Sphere)
                 return (AABB)(*ToSphereCollider(collider));
+            
+            if (type == ColliderType.Terrain)
+                return (AABB)(*ToTerrainCollider(collider));
 
-            throw new InvalidCastException($"Cannot convert collider {type} to AABB");
+            throw new InvalidCastException($"Cannot convert collider {type} ({(int)type}) to AABB");
         }
         
         public static BoxCollider* ToBoxCollider(void* collider)
@@ -23,6 +26,11 @@ namespace NativeTrees
         public static SphereCollider* ToSphereCollider(void* collider)
         {
             return (SphereCollider*)collider;
+        }
+        
+        public static TerrainCollider* ToTerrainCollider(void* collider)
+        {
+            return (TerrainCollider*)collider;
         }
     }
 }
