@@ -77,8 +77,8 @@ namespace Scellecs.Morpeh.Collision.Systems
             if (!collider.LastOverlapResult.IsCreated)
                 collider.LastOverlapResult = new NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>>(capacity, Allocator.Persistent);
 
-            collider.Type = request.Type;
-            switch (collider.Type)
+            collider.OriginalBounds.Type = collider.WorldBounds.Type = request.Type;
+            switch (request.Type)
             {
                 case ColliderType.Box:
                     CreateBoxCollider(ref collider, request, transform);
@@ -110,13 +110,13 @@ namespace Scellecs.Morpeh.Collision.Systems
             BoxCollider* originalPtr = (BoxCollider*)UnsafeUtility.Malloc(sizeof(BoxCollider), 4, Allocator.Persistent);
             *originalPtr = original;
 
-            collider.OriginalBounds = originalPtr;
+            collider.OriginalBounds.Bounds = originalPtr;
 
             BoxCollider world = new BoxCollider((AABB)original, transform.Position(), transform.Rotation());
             BoxCollider* worldPtr = (BoxCollider*)UnsafeUtility.Malloc(sizeof(BoxCollider), 4, Allocator.Persistent);
             *worldPtr = world;
                 
-            collider.WorldBounds = worldPtr;
+            collider.WorldBounds.Bounds = worldPtr;
                 
             collider.Center = worldPtr->Center;
             collider.Extents = worldPtr->Extents;
@@ -131,13 +131,13 @@ namespace Scellecs.Morpeh.Collision.Systems
             SphereCollider* originalPtr = (SphereCollider*)UnsafeUtility.Malloc(sizeof(SphereCollider), 4, Allocator.Persistent);
             *originalPtr = original;
             
-            collider.OriginalBounds = originalPtr;
+            collider.OriginalBounds.Bounds = originalPtr;
             
             SphereCollider world = new SphereCollider(original.Center + transform.Position(), original.Radius);
             SphereCollider* worldPtr = (SphereCollider*)UnsafeUtility.Malloc(sizeof(SphereCollider), 4, Allocator.Persistent);
             *worldPtr = world;
             
-            collider.WorldBounds = worldPtr;
+            collider.WorldBounds.Bounds = worldPtr;
 
             collider.Center = worldPtr->Center;
             collider.Extents = worldPtr->Radius;
@@ -176,9 +176,9 @@ namespace Scellecs.Morpeh.Collision.Systems
             TerrainCollider* worldPtr = (TerrainCollider*)UnsafeUtility.Malloc(sizeof(TerrainCollider), 4, Allocator.Persistent);
             *worldPtr = world;
             
-            collider.WorldBounds = worldPtr;
+            collider.WorldBounds.Bounds = worldPtr;
 
-            var aabb = ColliderCastUtils.ToAABB(worldPtr, ColliderType.Terrain);
+            var aabb = ColliderCastUtils.ToAABB(collider.WorldBounds);
             collider.Center = aabb.Center;
             collider.Extents = aabb.Center * .5f;
         }

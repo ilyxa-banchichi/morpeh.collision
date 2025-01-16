@@ -1,3 +1,4 @@
+using System;
 using NativeTrees;
 using Scellecs.Morpeh.Addons.Systems;
 using Scellecs.Morpeh.Collision.Components;
@@ -16,7 +17,7 @@ namespace Scellecs.Morpeh.Collision.Systems
     [Il2CppSetOption(Option.NullChecks, false)]
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
-    public sealed unsafe class UpdateDynamicCollidersSystem : LateUpdateSystem
+    public sealed class UpdateDynamicCollidersSystem : LateUpdateSystem
     {
         private Filter _dynamicColliders;
         
@@ -65,35 +66,38 @@ namespace Scellecs.Morpeh.Collision.Systems
                 ref var collider = ref ColliderComponents.Get(entity);
                 ref var transform = ref TransformComponents.Get(entity);
                 
-                switch (collider.Type)
+                switch (collider.WorldBounds.Type)
                 {
                     case ColliderType.Box:
-                        BoxCollider* boxPtr = (BoxCollider*)collider.WorldBounds;
-                        *boxPtr = new BoxCollider(
-                            ColliderCastUtils.ToAABB(collider.OriginalBounds, collider.Type),
+                        ref var boxPtr = ref ColliderCastUtils.ToBoxColliderRef(collider.WorldBounds);
+                        boxPtr = new BoxCollider(
+                            ColliderCastUtils.ToAABB(collider.OriginalBounds),
                             transform.Position(),
                             transform.Rotation()
                         );
 
-                        collider.Center = boxPtr->Center;
-                        collider.Extents = boxPtr->Extents;
+                        collider.Center = boxPtr.Center;
+                        collider.Extents = boxPtr.Extents;
                         
                         break;
                 
                     case ColliderType.Sphere:
-                        SphereCollider* spherePtr = (SphereCollider*)collider.WorldBounds;
-                        var original = ColliderCastUtils.ToSphereCollider(collider.OriginalBounds);
-                        *spherePtr = new SphereCollider(
-                            original->Center + transform.Position(),
-                            original->Radius
+                        ref var spherePtr = ref ColliderCastUtils.ToSphereColliderRef(collider.WorldBounds);
+                        ref var original = ref ColliderCastUtils.ToSphereColliderRef(collider.OriginalBounds);
+                        spherePtr = new SphereCollider(
+                            original.Center + transform.Position(),
+                            original.Radius
                         );
 
-                        collider.Center = spherePtr->Center;
-                        collider.Extents = spherePtr->Radius;
+                        collider.Center = spherePtr.Center;
+                        collider.Extents = spherePtr.Radius;
                         
                         break;
                     
                     case ColliderType.Terrain:
+#if UNITY_EDITOR
+                        throw new ArgumentException("Terrain collider cannot be dynamic");
+#endif
                         break;
                 };
             }

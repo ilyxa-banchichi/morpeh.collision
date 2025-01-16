@@ -1,7 +1,7 @@
 using System;
+using System.Runtime.CompilerServices;
 using Unity.Collections;
 using Unity.Mathematics;
-using UnityEngine;
 
 namespace NativeTrees
 {
@@ -15,63 +15,6 @@ namespace NativeTrees
         public float MinHeight;  // Минимальная высота террейна
         public float MaxHeight;  // Максимальная высота террейна
         public float3 Translation;
-        
-        public float GetHeightAtIndex(int ix, int iz)
-        {
-            ix = math.clamp(ix, 0, Width - 1);
-            iz = math.clamp(iz, 0, Height - 1);
-            return HeightMap[iz * Width + ix] + Translation.y;
-        }
-        
-        public float GetInterpolatedHeight(float x, float z)
-        {
-            // Преобразование мировых координат в локальные
-            float localX = (x - Translation.x) / (ScaleX * Width);
-            float localZ = (z - Translation.z) / (ScaleZ * Height);
-
-            // Преобразование в координаты сетки (индексы)
-            float gridX = localX * (Width - 1);
-            float gridZ = localZ * (Height - 1);
-
-            // Ограничиваем координаты в пределах массива
-            gridX = math.clamp(gridX, 0, Width - 1);
-            gridZ = math.clamp(gridZ, 0, Height - 1);
-
-            // Индексы соседних точек
-            int x0 = (int)math.floor(gridX);
-            int z0 = (int)math.floor(gridZ);
-            int x1 = math.min(x0 + 1, Width - 1);
-            int z1 = math.min(z0 + 1, Height - 1);
-
-            // Фракции для интерполяции
-            float tx = gridX - x0;
-            float tz = gridZ - z0;
-
-            // Значения высот в четырех углах
-            float h00 = HeightMap[z0 * Width + x0];
-            float h10 = HeightMap[z0 * Width + x1];
-            float h01 = HeightMap[z1 * Width + x0];
-            float h11 = HeightMap[z1 * Width + x1];
-
-            // Интерполяция по X
-            float hx0 = math.lerp(h00, h10, tx);
-            float hx1 = math.lerp(h01, h11, tx);
-
-            // Интерполяция по Z
-            float h = math.lerp(hx0, hx1, tz);
-
-            return h;
-        }
-        
-        public float GetHeightAt(float x, float z)
-        {
-            x -=  Translation.x;
-            z -=  Translation.z;
-            int ix = (int)math.round(x / ScaleX);
-            int iz = (int)math.round(z / ScaleZ);
-
-            return GetHeightAtIndex(ix, iz);
-        }
         
         public static explicit operator AABB(TerrainCollider terrainCollider)
         {
@@ -96,6 +39,68 @@ namespace NativeTrees
         public override int GetHashCode()
         {
             return HashCode.Combine(HeightMap, Width, Height, ScaleX, ScaleZ, MinHeight, MaxHeight);
+        }
+    }
+
+    public static class TerrainColliderExtensions
+    {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static float GetHeightAtIndex(this TerrainCollider collider, int ix, int iz)
+        {
+            ix = math.clamp(ix, 0, collider.Width - 1);
+            iz = math.clamp(iz, 0, collider.Height - 1);
+            return collider.HeightMap[iz * collider.Width + ix] + collider.Translation.y;
+        }
+        
+        public static float GetInterpolatedHeight(this TerrainCollider collider, float x, float z)
+        {
+            // Преобразование мировых координат в локальные
+            float localX = (x - collider.Translation.x) / (collider.ScaleX * collider.Width);
+            float localZ = (z - collider.Translation.z) / (collider.ScaleZ * collider.Height);
+
+            // Преобразование в координаты сетки (индексы)
+            float gridX = localX * (collider.Width - 1);
+            float gridZ = localZ * (collider.Height - 1);
+
+            // Ограничиваем координаты в пределах массива
+            gridX = math.clamp(gridX, 0, collider.Width - 1);
+            gridZ = math.clamp(gridZ, 0, collider.Height - 1);
+
+            // Индексы соседних точек
+            int x0 = (int)math.floor(gridX);
+            int z0 = (int)math.floor(gridZ);
+            int x1 = math.min(x0 + 1, collider.Width - 1);
+            int z1 = math.min(z0 + 1, collider.Height - 1);
+
+            // Фракции для интерполяции
+            float tx = gridX - x0;
+            float tz = gridZ - z0;
+
+            // Значения высот в четырех углах
+            float h00 = collider.HeightMap[z0 * collider.Width + x0];
+            float h10 = collider.HeightMap[z0 * collider.Width + x1];
+            float h01 = collider.HeightMap[z1 * collider.Width + x0];
+            float h11 = collider.HeightMap[z1 * collider.Width + x1];
+
+            // Интерполяция по X
+            float hx0 = math.lerp(h00, h10, tx);
+            float hx1 = math.lerp(h01, h11, tx);
+
+            // Интерполяция по Z
+            float h = math.lerp(hx0, hx1, tz);
+
+            return h;
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static float GetHeightAt(this TerrainCollider collider, float x, float z)
+        {
+            x -=  collider.Translation.x;
+            z -=  collider.Translation.z;
+            int ix = (int)math.round(x / collider.ScaleX);
+            int iz = (int)math.round(z / collider.ScaleZ);
+
+            return collider.GetHeightAtIndex(ix, iz);
         }
     }
 }

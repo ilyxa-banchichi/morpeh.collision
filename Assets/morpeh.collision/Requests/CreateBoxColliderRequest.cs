@@ -19,7 +19,7 @@ namespace Scellecs.Morpeh.Collision.Requests
         [ReadOnly]
         public ColliderType Type;
         
-        public Collider Collider;
+        public UnityEngine.Collider Collider;
         
         [ReadOnly]
         public int Layer;
@@ -38,7 +38,7 @@ namespace Scellecs.Morpeh.Collision.Requests
 
         public void OnValidate(GameObject gameObject)
         {
-            Collider = gameObject.GetComponent<Collider>();
+            Collider = gameObject.GetComponent<UnityEngine.Collider>();
             if (Collider is BoxCollider)
                 Type = ColliderType.Box;
             else if (Collider is SphereCollider)

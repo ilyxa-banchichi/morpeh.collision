@@ -67,19 +67,19 @@ namespace Samples.Scripts
             foreach (var entity in defaultWorld.Filter.With<ColliderComponent>().Build())
             {
                 ref var collider = ref entity.GetComponent<ColliderComponent>();
-                if (collider.Type == ColliderType.Box)
+                if (collider.WorldBounds.Type == ColliderType.Box)
                 {
-                    var obb = ColliderCastUtils.ToBoxCollider(collider.WorldBounds);
-                    GizmoExtensions.DrawOBB(*obb, Color.blue);
+                    var obb = ColliderCastUtils.ToBoxColliderRef(collider.WorldBounds);
+                    GizmoExtensions.DrawOBB(obb, Color.blue);
                 }
-                else if (collider.Type == ColliderType.Sphere)
+                else if (collider.WorldBounds.Type == ColliderType.Sphere)
                 {
-                    var sphere = ColliderCastUtils.ToSphereCollider(collider.WorldBounds);
-                    GizmoExtensions.DrawSphere(*sphere, Color.blue);
+                    var sphere = ColliderCastUtils.ToSphereColliderRef(collider.WorldBounds);
+                    GizmoExtensions.DrawSphere(sphere, Color.blue);
                 }
-                else if (collider.Type == ColliderType.Terrain)
+                else if (collider.WorldBounds.Type == ColliderType.Terrain)
                 {
-                    var terrain = ColliderCastUtils.ToTerrainCollider(collider.WorldBounds);
+                    var terrain = ColliderCastUtils.ToTerrainColliderRef(collider.WorldBounds);
                     // GizmoExtensions.DrawTerrain(*terrain, Color.blue);
                 }
             }

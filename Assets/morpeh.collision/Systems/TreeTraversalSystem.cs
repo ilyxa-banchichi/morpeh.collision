@@ -80,7 +80,7 @@ namespace Scellecs.Morpeh.Collision.Systems
         }
         
         [BurstCompile]
-        private unsafe struct Job : IJobParallelFor
+        private struct Job : IJobParallelFor
         {
             [ReadOnly]
             public NativeFilter Colliders;
@@ -99,17 +99,17 @@ namespace Scellecs.Morpeh.Collision.Systems
                 ref var collider = ref ColliderComponents.Get(entity);
                 var overlapHolder = new OverlapHolder<EntityHolder<Entity>>()
                 {
-                    Obj = new EntityHolder<Entity>(entity, collider.Layer, collider.WorldBounds, collider.Type)
+                    Obj = new EntityHolder<Entity>(entity, collider.Layer, collider.WorldBounds)
                 };
                 
-                Octree.StaticColliders.RangeColliderUnique(collider.WorldBounds, collider.Type, collider.OverlapResult, LayerCollisionMasks[collider.Layer]);
+                Octree.StaticColliders.RangeColliderUnique(collider.WorldBounds, collider.OverlapResult, LayerCollisionMasks[collider.Layer]);
                 foreach (var o in collider.OverlapResult)
                 {
                     ref var otherCollider = ref ColliderComponents.Get(o.Obj.Entity);
                     otherCollider.OverlapResult.Add(overlapHolder);
 
                 }
-                Octree.DynamicColliders.RangeColliderUnique(collider.WorldBounds, collider.Type, collider.OverlapResult, LayerCollisionMasks[collider.Layer]);
+                Octree.DynamicColliders.RangeColliderUnique(collider.WorldBounds, collider.OverlapResult, LayerCollisionMasks[collider.Layer]);
                 
                 if (collider.OverlapResult.Contains(overlapHolder))
                     collider.OverlapResult.Remove(overlapHolder);

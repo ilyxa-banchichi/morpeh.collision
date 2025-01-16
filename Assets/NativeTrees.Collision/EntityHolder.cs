@@ -7,32 +7,29 @@ namespace NativeTrees
         int Layer { get; }
     }
     
-    public unsafe interface IColliderProvider
+    public interface IColliderProvider
     {
-        void* Collider { get; }
-        ColliderType Type { get; }
+        Collider Collider { get; }
     }
     
     [Serializable]
-    public unsafe struct EntityHolder<T> : IEquatable<EntityHolder<T>>, ILayerProvider, IColliderProvider 
+    public struct EntityHolder<T> : IEquatable<EntityHolder<T>>, ILayerProvider, IColliderProvider 
         where T : unmanaged, IEquatable<T>
     {
         public T Entity;
         public int Layer { get; }
-        public void* Collider { get; }
-        public ColliderType Type { get; }
+        public Collider Collider { get; }
 
-        public EntityHolder(T entity, int layer, void* collider, ColliderType type)
+        public EntityHolder(T entity, int layer, Collider collider)
         {
             Entity = entity;
             Layer = layer;
             Collider = collider;
-            Type = type;
         }
         
         public override bool Equals(object obj)
         {
-            return obj is EntityHolder<T> other && Equals(other) && Type.Equals(other.Type);
+            return obj is EntityHolder<T> other && Equals(other) && Collider.Type.Equals(other.Collider.Type);
         }
 
         public bool Equals(EntityHolder<T> other)

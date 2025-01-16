@@ -121,8 +121,8 @@ namespace Scellecs.Morpeh.Collision.Systems
                     var entity = Colliders[i];
                     ref var collider = ref ColliderComponents.Get(entity);
                     
-                    var entityHolder = new EntityHolder<Entity>(entity, collider.Layer, collider.WorldBounds, collider.Type);
-                    Octree.Insert(entityHolder, ColliderCastUtils.ToAABB(collider.WorldBounds, collider.Type));
+                    var entityHolder = new EntityHolder<Entity>(entity, collider.Layer, collider.WorldBounds);
+                    Octree.Insert(entityHolder, ColliderCastUtils.ToAABB(collider.WorldBounds));
                 }
             }
         }

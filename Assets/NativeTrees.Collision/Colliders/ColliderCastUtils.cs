@@ -1,36 +1,46 @@
 using System;
+using System.Runtime.CompilerServices;
+using Unity.Collections.LowLevel.Unsafe;
 
 namespace NativeTrees
 {
     public static unsafe class ColliderCastUtils
     {
-        public static AABB ToAABB(void* collider, ColliderType type)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static AABB ToAABB(Collider collider)
         {
-            if (type == ColliderType.Box)
-                return (AABB)(*ToBoxCollider(collider));
+            if (collider.Type == ColliderType.Box)
+                return (AABB)(ToBoxColliderRef(collider));
 
-            if (type == ColliderType.Sphere)
-                return (AABB)(*ToSphereCollider(collider));
+            if (collider.Type == ColliderType.Sphere)
+                return (AABB)(ToSphereColliderRef(collider));
             
-            if (type == ColliderType.Terrain)
-                return (AABB)(*ToTerrainCollider(collider));
+            if (collider.Type == ColliderType.Terrain)
+                return (AABB)(ToTerrainColliderRef(collider));
 
-            throw new InvalidCastException($"Cannot convert collider {type} ({(int)type}) to AABB");
+#if UNITY_EDITOR
+            throw new InvalidCastException($"Cannot convert collider {collider.Type} ({(int)collider.Type}) to AABB");
+#endif
+
+            return default;
         }
         
-        public static BoxCollider* ToBoxCollider(void* collider)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ref BoxCollider ToBoxColliderRef(Collider collider)
         {
-            return (BoxCollider*)collider;
+            return ref UnsafeUtility.AsRef<BoxCollider>(collider.Bounds);
         }
         
-        public static SphereCollider* ToSphereCollider(void* collider)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ref SphereCollider ToSphereColliderRef(Collider collider)
         {
-            return (SphereCollider*)collider;
+            return ref UnsafeUtility.AsRef<SphereCollider>(collider.Bounds);
         }
         
-        public static TerrainCollider* ToTerrainCollider(void* collider)
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ref TerrainCollider ToTerrainColliderRef(Collider collider)
         {
-            return (TerrainCollider*)collider;
+            return ref UnsafeUtility.AsRef<TerrainCollider>(collider.Bounds);
         }
     }
 }

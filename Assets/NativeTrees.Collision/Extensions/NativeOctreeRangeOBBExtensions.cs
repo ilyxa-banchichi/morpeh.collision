@@ -3,15 +3,14 @@ using Unity.Collections;
 
 namespace NativeTrees
 {
-    public static unsafe class NativeOctreeRangeOBBExtensions
+    public static class NativeOctreeRangeOBBExtensions
     {
-        public static void RangeColliderUnique<T>(this NativeOctree<T> octree, void* rangeCollider,
-            ColliderType rangeColliderType,
+        public static void RangeColliderUnique<T>(this NativeOctree<T> octree, Collider range,
             NativeParallelHashSet<OverlapHolder<T>> results, int mask = ~0) 
             where T : unmanaged, IEquatable<T>, ILayerProvider, IColliderProvider
         {
-            var vistor = new RangeColliderUniqueVisitor<T>(results, rangeCollider, rangeColliderType, mask);
-            octree.Range(ColliderCastUtils.ToAABB(rangeCollider, rangeColliderType), ref vistor);
+            var vistor = new RangeColliderUniqueVisitor<T>(results, range, mask);
+            octree.Range(ColliderCastUtils.ToAABB(range), ref vistor);
         }
 
         struct RangeColliderUniqueVisitor<T> : IOctreeRangeVisitor<T> 
@@ -20,26 +19,30 @@ namespace NativeTrees
             public NativeParallelHashSet<OverlapHolder<T>> results;
             public int mask;
 
+            private ColliderType _type;
             private BoxCollider _boxCollider;
             private SphereCollider _sphereCollider;
-            private ColliderType _type;
 
             public RangeColliderUniqueVisitor(
                 NativeParallelHashSet<OverlapHolder<T>> results, 
-                void* queryCollider, ColliderType queryColliderType, 
+                Collider range, 
                 int mask)
             {
                 this.results = results;
                 this.mask = mask;
 
-                _type = queryColliderType;
+                _type = range.Type;
                 _boxCollider = default;
                 _sphereCollider = default;
                 
                 if (_type == ColliderType.Box)
-                    _boxCollider = *ColliderCastUtils.ToBoxCollider(queryCollider);
+                    _boxCollider = ColliderCastUtils.ToBoxColliderRef(range);
                 else if (_type == ColliderType.Sphere)
-                    _sphereCollider = *ColliderCastUtils.ToSphereCollider(queryCollider);
+                    _sphereCollider = ColliderCastUtils.ToSphereColliderRef(range);
+#if UNITY_EDITOR
+                else if (_type == ColliderType.Terrain)
+                    throw new ArgumentException("Terrain collider cannot be dynamic");
+#endif
             }
 
             public bool OnVisit(T obj, AABB aabb1, AABB aabb2)
@@ -67,23 +70,23 @@ namespace NativeTrees
 
             private OverlapResult OverlapBox(T obj, AABB aabb1, AABB aabb2)
             {
-                if (obj.Type == ColliderType.Box)
+                if (obj.Collider.Type == ColliderType.Box)
                 {
-                    var other = ColliderCastUtils.ToBoxCollider(obj.Collider);
-                    return other->Overlaps(_boxCollider);
+                    ref var other = ref ColliderCastUtils.ToBoxColliderRef(obj.Collider);
+                    return other.Overlaps(_boxCollider);
                 }
-                else if (obj.Type == ColliderType.Sphere)
+                else if (obj.Collider.Type == ColliderType.Sphere)
                 {
-                    var other = ColliderCastUtils.ToSphereCollider(obj.Collider);
-                    return other->Overlaps(_boxCollider);
+                    ref var other = ref ColliderCastUtils.ToSphereColliderRef(obj.Collider);
+                    return other.Overlaps(_boxCollider);
                 }
-                else if (obj.Type == ColliderType.Terrain)
+                else if (obj.Collider.Type == ColliderType.Terrain)
                 {
                     if (!aabb1.Overlaps(aabb2))
                         return new OverlapResult() { IsIntersecting = false };
                     
-                    var other = ColliderCastUtils.ToTerrainCollider(obj.Collider);
-                    return other->Overlaps(_boxCollider);
+                    ref var other = ref ColliderCastUtils.ToTerrainColliderRef(obj.Collider);
+                    return other.Overlaps(_boxCollider);
                 }
 
                 return default;
@@ -91,23 +94,23 @@ namespace NativeTrees
             
             private OverlapResult OverlapSphere(T obj, AABB aabb1, AABB aabb2)
             {
-                if (obj.Type == ColliderType.Box)
+                if (obj.Collider.Type == ColliderType.Box)
                 {
-                    var other = ColliderCastUtils.ToBoxCollider(obj.Collider);
-                    return other->Overlaps(_sphereCollider);
+                    ref var other = ref ColliderCastUtils.ToBoxColliderRef(obj.Collider);
+                    return other.Overlaps(_sphereCollider);
                 }
-                else if (obj.Type == ColliderType.Sphere)
+                else if (obj.Collider.Type == ColliderType.Sphere)
                 {
-                    var other = ColliderCastUtils.ToSphereCollider(obj.Collider);
-                    return other->Overlaps(_sphereCollider);
+                    ref var other = ref ColliderCastUtils.ToSphereColliderRef(obj.Collider);
+                    return other.Overlaps(_sphereCollider);
                 }
-                else if (obj.Type == ColliderType.Terrain)
+                else if (obj.Collider.Type == ColliderType.Terrain)
                 {
                     if (!aabb1.Overlaps(aabb2))
                         return new OverlapResult() { IsIntersecting = false };
                     
-                    var other = ColliderCastUtils.ToTerrainCollider(obj.Collider);
-                    return other->Overlaps(_sphereCollider);
+                    ref var other = ref ColliderCastUtils.ToTerrainColliderRef(obj.Collider);
+                    return other.Overlaps(_sphereCollider);
                 }
 
                 return default;

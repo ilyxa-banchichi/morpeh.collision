@@ -87,14 +87,10 @@ namespace Scellecs.Morpeh.Collision.Systems
                     ref var otherCollider = ref ColliderComponents.Get(other);
                     var vec = collider.Center - otherCollider.Center;
                     var dir = math.sign(math.dot(vec, o.Axis));
-
-                    o.Axis *= rigidbody.FreezePosition;
-                    if (otherCollider.Type == ColliderType.Terrain)
-                    {
+                    if (otherCollider.WorldBounds.Type == ColliderType.Terrain)
                         dir = 1f;
-                        o.Depth = math.clamp(o.Depth, 0f, 0.1f);
-                    }
                     
+                    o.Axis *= rigidbody.FreezePosition;
                     var delta = dir * o.Axis * o.Depth;
                     
                     if (rigidbody.Weight == otherRigidbody.Weight)
