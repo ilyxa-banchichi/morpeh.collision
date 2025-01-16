@@ -67,7 +67,6 @@ namespace Samples.Scripts
             foreach (var entity in defaultWorld.Filter.With<ColliderComponent>().Build())
             {
                 ref var collider = ref entity.GetComponent<ColliderComponent>();
-
                 if (collider.Type == ColliderType.Box)
                 {
                     var obb = ColliderCastUtils.ToBoxCollider(collider.WorldBounds);
@@ -80,10 +79,9 @@ namespace Samples.Scripts
                 }
                 else if (collider.Type == ColliderType.Terrain)
                 {
-                    // var terrain = ColliderCastUtils.ToTerrainCollider(collider.WorldBounds);
+                    var terrain = ColliderCastUtils.ToTerrainCollider(collider.WorldBounds);
                     // GizmoExtensions.DrawTerrain(*terrain, Color.blue);
                 }
-                // GizmoExtensions.DrawAABB((AABB)collider.WorldBounds, Color.red);
             }
         }
     }

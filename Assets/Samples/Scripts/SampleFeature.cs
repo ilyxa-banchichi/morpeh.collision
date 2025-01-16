@@ -39,7 +39,7 @@ namespace Samples.Scripts
             foreach (var player in _player)
             {
                 ref var transform = ref player.GetComponent<TransformComponent>();
-                transform.LocalPosition += new float3(inputX, 0f, inputY) * deltaTime * 3f;
+                transform.LocalPosition += new float3(inputX, -.3f, inputY) * deltaTime * 3f;
             }
         }
     }

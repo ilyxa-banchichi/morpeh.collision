@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &4971875
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 4971873}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -7.572, y: 0.48, z: 14.898001}
+  m_LocalPosition: {x: 69.138, y: 0.48, z: 56.657997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -231,9 +231,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -7.572
+          x: 69.138
           y: 0.48
-          z: 14.898001
+          z: 56.657997
         LocalRotation:
           value:
             x: -0
@@ -261,9 +261,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -7.572
+            x: 69.138
             y: 0.48
-            z: 14.898001
+            z: 56.657997
             w: 1
     - rid: 1350995581066543114
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -382,7 +382,7 @@ Transform:
   m_GameObject: {fileID: 10297537}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -18.887999, y: 0.48, z: 9.0720005}
+  m_LocalPosition: {x: 57.822, y: 0.48, z: 50.832}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -412,9 +412,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -18.887999
+          x: 57.822
           y: 0.48
-          z: 9.0720005
+          z: 50.832
         LocalRotation:
           value:
             x: -0
@@ -442,9 +442,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -18.887999
+            x: 57.822
             y: 0.48
-            z: 9.0720005
+            z: 50.832
             w: 1
     - rid: 1350995581066543117
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -563,7 +563,7 @@ Transform:
   m_GameObject: {fileID: 33293833}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: 2.462, y: 0.48, z: 19.802002}
+  m_LocalPosition: {x: 79.172, y: 0.48, z: 61.562}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -593,9 +593,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 2.462
+          x: 79.172
           y: 0.48
-          z: 19.802002
+          z: 61.562
         LocalRotation:
           value:
             x: -0
@@ -623,9 +623,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: 2.462
+            x: 79.172
             y: 0.48
-            z: 19.802002
+            z: 61.562
             w: 1
     - rid: 1350995581066543120
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -665,139 +665,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 1, z: 0.99999994}
   m_Center: {x: -0.0000009536743, y: 0, z: 0}
---- !u!1 &42966585
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 42966590}
-  - component: {fileID: 42966589}
-  - component: {fileID: 42966588}
-  - component: {fileID: 42966587}
-  - component: {fileID: 42966586}
-  m_Layer: 0
-  m_Name: test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!54 &42966586
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42966585}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!135 &42966587
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42966585}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &42966588
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42966585}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &42966589
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42966585}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &42966590
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42966585}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.23, y: 0, z: 6.52}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &70133090
 GameObject:
   m_ObjectHideFlags: 0
@@ -817,7 +684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &70133092
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -877,7 +744,7 @@ Transform:
   m_GameObject: {fileID: 70133090}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.792, y: 0.48, z: -1.2020001}
+  m_LocalPosition: {x: 59.918, y: 0.48, z: 40.558}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -907,9 +774,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -16.792
+          x: 59.918
           y: 0.48
-          z: -1.2020001
+          z: 40.558
         LocalRotation:
           value:
             x: 0
@@ -937,9 +804,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: -16.792
+            x: 59.918
             y: 0.48
-            z: -1.2020001
+            z: 40.558
             w: 1
     - rid: 1350995581066543123
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -1167,7 +1034,7 @@ Transform:
   m_GameObject: {fileID: 117312514}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: 11.642, y: 0.48, z: -9.978}
+  m_LocalPosition: {x: 88.352, y: 0.48, z: 31.781998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1197,9 +1064,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 11.642
+          x: 88.352
           y: 0.48
-          z: -9.978
+          z: 31.781998
         LocalRotation:
           value:
             x: -0
@@ -1227,9 +1094,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: 11.642
+            x: 88.352
             y: 0.48
-            z: -9.978
+            z: 31.781998
             w: 1
     - rid: 1350995581066543126
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -1288,7 +1155,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &139678778
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1348,7 +1215,7 @@ Transform:
   m_GameObject: {fileID: 139678776}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.5, y: 0.48, z: 9.97}
+  m_LocalPosition: {x: 70.21, y: 0.48, z: 51.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1378,9 +1245,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -6.5
+          x: 70.21
           y: 0.48
-          z: 9.97
+          z: 51.73
         LocalRotation:
           value:
             x: 0
@@ -1408,9 +1275,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: -6.5
+            x: 70.21
             y: 0.48
-            z: 9.97
+            z: 51.73
             w: 1
     - rid: 1350995581066543129
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -1529,7 +1396,7 @@ Transform:
   m_GameObject: {fileID: 147659035}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -12.952, y: 0.48, z: 9.488}
+  m_LocalPosition: {x: 63.758, y: 0.48, z: 51.247997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1559,9 +1426,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -12.952
+          x: 63.758
           y: 0.48
-          z: 9.488
+          z: 51.247997
         LocalRotation:
           value:
             x: -0
@@ -1589,9 +1456,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -12.952
+            x: 63.758
             y: 0.48
-            z: 9.488
+            z: 51.247997
             w: 1
     - rid: 1350995581066543132
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -1650,7 +1517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &168649102
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1710,7 +1577,7 @@ Transform:
   m_GameObject: {fileID: 168649100}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: -14.38, y: 0.48, z: -3.5500002}
+  m_LocalPosition: {x: 62.329998, y: 0.48, z: 38.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1740,9 +1607,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -14.38
+          x: 62.329998
           y: 0.48
-          z: -3.5500002
+          z: 38.21
         LocalRotation:
           value:
             x: -0
@@ -1770,9 +1637,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: -14.38
+            x: 62.329998
             y: 0.48
-            z: -3.5500002
+            z: 38.21
             w: 1
     - rid: 1350995581066543135
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -1891,7 +1758,7 @@ Transform:
   m_GameObject: {fileID: 182570612}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 0.97399974, y: 0.48, z: -13.456}
+  m_LocalPosition: {x: 77.684, y: 0.48, z: 28.303997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1921,9 +1788,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 0.97399974
+          x: 77.684
           y: 0.48
-          z: -13.456
+          z: 28.303997
         LocalRotation:
           value:
             x: 0
@@ -1951,9 +1818,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 0.97399974
+            x: 77.684
             y: 0.48
-            z: -13.456
+            z: 28.303997
             w: 1
     - rid: 1350995581066543138
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -2072,7 +1939,7 @@ Transform:
   m_GameObject: {fileID: 192524251}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 6.9839997, y: 0.48, z: 12.304001}
+  m_LocalPosition: {x: 83.694, y: 0.48, z: 54.064}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2102,9 +1969,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 6.9839997
+          x: 83.694
           y: 0.48
-          z: 12.304001
+          z: 54.064
         LocalRotation:
           value:
             x: 0
@@ -2132,9 +1999,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 6.9839997
+            x: 83.694
             y: 0.48
-            z: 12.304001
+            z: 54.064
             w: 1
     - rid: 1350995581066543141
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -2193,7 +2060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &196426017
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2253,7 +2120,7 @@ Transform:
   m_GameObject: {fileID: 196426015}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.5160003, y: 0.48, z: 4.8240004}
+  m_LocalPosition: {x: 71.194, y: 0.48, z: 46.584}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2283,9 +2150,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -5.5160003
+          x: 71.194
           y: 0.48
-          z: 4.8240004
+          z: 46.584
         LocalRotation:
           value:
             x: 0
@@ -2313,9 +2180,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: -5.5160003
+            x: 71.194
             y: 0.48
-            z: 4.8240004
+            z: 46.584
             w: 1
     - rid: 1350995581066543144
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -2434,7 +2301,7 @@ Transform:
   m_GameObject: {fileID: 200947166}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -15.584, y: 0.48, z: 10.176001}
+  m_LocalPosition: {x: 61.126, y: 0.48, z: 51.935997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2464,9 +2331,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -15.584
+          x: 61.126
           y: 0.48
-          z: 10.176001
+          z: 51.935997
         LocalRotation:
           value:
             x: -0
@@ -2494,9 +2361,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -15.584
+            x: 61.126
             y: 0.48
-            z: 10.176001
+            z: 51.935997
             w: 1
     - rid: 1350995581066543147
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -2615,7 +2482,7 @@ Transform:
   m_GameObject: {fileID: 237219957}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -7.168, y: 0.48, z: 4.1120005}
+  m_LocalPosition: {x: 69.542, y: 0.48, z: 45.871998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2645,9 +2512,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -7.168
+          x: 69.542
           y: 0.48
-          z: 4.1120005
+          z: 45.871998
         LocalRotation:
           value:
             x: -0
@@ -2675,9 +2542,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -7.168
+            x: 69.542
             y: 0.48
-            z: 4.1120005
+            z: 45.871998
             w: 1
     - rid: 1350995581066543150
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -2736,7 +2603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &240922242
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2796,7 +2663,7 @@ Transform:
   m_GameObject: {fileID: 240922240}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -1.872, y: 0.48, z: -2.3719997}
+  m_LocalPosition: {x: 74.838, y: 0.48, z: 39.388}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2826,9 +2693,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -1.872
+          x: 74.838
           y: 0.48
-          z: -2.3719997
+          z: 39.388
         LocalRotation:
           value:
             x: -0
@@ -2856,9 +2723,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -1.872
+            x: 74.838
             y: 0.48
-            z: -2.3719997
+            z: 39.388
             w: 1
     - rid: 1350995581066543153
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -2917,7 +2784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &251233346
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2977,7 +2844,7 @@ Transform:
   m_GameObject: {fileID: 251233344}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -9, y: 0.48, z: 12.1}
+  m_LocalPosition: {x: 67.71, y: 0.48, z: 53.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3007,9 +2874,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -9
+          x: 67.71
           y: 0.48
-          z: 12.1
+          z: 53.86
         LocalRotation:
           value:
             x: -0
@@ -3037,9 +2904,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -9
+            x: 67.71
             y: 0.48
-            z: 12.1
+            z: 53.86
             w: 1
     - rid: 1350995581066543156
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -3158,7 +3025,7 @@ Transform:
   m_GameObject: {fileID: 268112004}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: -2.51, y: 0.48, z: -6.1800003}
+  m_LocalPosition: {x: 74.2, y: 0.48, z: 35.579998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3188,9 +3055,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -2.51
+          x: 74.2
           y: 0.48
-          z: -6.1800003
+          z: 35.579998
         LocalRotation:
           value:
             x: -0
@@ -3218,9 +3085,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: -2.51
+            x: 74.2
             y: 0.48
-            z: -6.1800003
+            z: 35.579998
             w: 1
     - rid: 1350995581066543159
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -3383,7 +3250,7 @@ Transform:
   m_GameObject: {fileID: 318383834}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: 1.2, y: 0.48, z: 10.300001}
+  m_LocalPosition: {x: 77.909996, y: 0.48, z: 52.059998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3413,9 +3280,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 1.2
+          x: 77.909996
           y: 0.48
-          z: 10.300001
+          z: 52.059998
         LocalRotation:
           value:
             x: -0
@@ -3443,9 +3310,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: 1.2
+            x: 77.909996
             y: 0.48
-            z: 10.300001
+            z: 52.059998
             w: 1
     - rid: 1350995581066543162
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -3564,7 +3431,7 @@ Transform:
   m_GameObject: {fileID: 328380248}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: -17.402, y: 0.48, z: 5.928}
+  m_LocalPosition: {x: 59.308, y: 0.48, z: 47.688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3594,9 +3461,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -17.402
+          x: 59.308
           y: 0.48
-          z: 5.928
+          z: 47.688
         LocalRotation:
           value:
             x: -0
@@ -3624,9 +3491,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: -17.402
+            x: 59.308
             y: 0.48
-            z: 5.928
+            z: 47.688
             w: 1
     - rid: 1350995581066543165
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -3745,7 +3612,7 @@ Transform:
   m_GameObject: {fileID: 330471759}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: 4.378, y: 0.48, z: -0.10199976}
+  m_LocalPosition: {x: 81.088, y: 0.48, z: 41.657997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3775,9 +3642,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 4.378
+          x: 81.088
           y: 0.48
-          z: -0.10199976
+          z: 41.657997
         LocalRotation:
           value:
             x: -0
@@ -3805,9 +3672,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: 4.378
+            x: 81.088
             y: 0.48
-            z: -0.10199976
+            z: 41.657997
             w: 1
     - rid: 1350995581066543168
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -3866,7 +3733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &338347789
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3926,7 +3793,7 @@ Transform:
   m_GameObject: {fileID: 338347787}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -19.292, y: 0.48, z: 0.928}
+  m_LocalPosition: {x: 57.418, y: 0.48, z: 42.688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3956,9 +3823,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -19.292
+          x: 57.418
           y: 0.48
-          z: 0.928
+          z: 42.688
         LocalRotation:
           value:
             x: -0
@@ -3986,9 +3853,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -19.292
+            x: 57.418
             y: 0.48
-            z: 0.928
+            z: 42.688
             w: 1
     - rid: 1350995581066543171
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -4156,7 +4023,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &347371299
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4216,7 +4083,7 @@ Transform:
   m_GameObject: {fileID: 347371297}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 2.0219998, y: 0.48, z: -5.368}
+  m_LocalPosition: {x: 78.732, y: 0.48, z: 36.392}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4246,9 +4113,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 2.0219998
+          x: 78.732
           y: 0.48
-          z: -5.368
+          z: 36.392
         LocalRotation:
           value:
             x: 0
@@ -4276,9 +4143,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 2.0219998
+            x: 78.732
             y: 0.48
-            z: -5.368
+            z: 36.392
             w: 1
     - rid: 1350995581066543174
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -4397,7 +4264,7 @@ Transform:
   m_GameObject: {fileID: 354561307}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 15.984, y: 0.48, z: -8.776}
+  m_LocalPosition: {x: 92.694, y: 0.48, z: 32.983997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4427,9 +4294,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 15.984
+          x: 92.694
           y: 0.48
-          z: -8.776
+          z: 32.983997
         LocalRotation:
           value:
             x: 0
@@ -4457,9 +4324,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 15.984
+            x: 92.694
             y: 0.48
-            z: -8.776
+            z: 32.983997
             w: 1
     - rid: 1350995581066543177
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -4578,7 +4445,7 @@ Transform:
   m_GameObject: {fileID: 355397634}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: 0.572, y: 0.48, z: 14.802001}
+  m_LocalPosition: {x: 77.282, y: 0.48, z: 56.562}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4608,9 +4475,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 0.572
+          x: 77.282
           y: 0.48
-          z: 14.802001
+          z: 56.562
         LocalRotation:
           value:
             x: -0
@@ -4638,9 +4505,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: 0.572
+            x: 77.282
             y: 0.48
-            z: 14.802001
+            z: 56.562
             w: 1
     - rid: 1350995581066543180
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -4759,7 +4626,7 @@ Transform:
   m_GameObject: {fileID: 361632908}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -3.368, y: 0.48, z: -14.658}
+  m_LocalPosition: {x: 73.341995, y: 0.48, z: 27.101997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4789,9 +4656,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -3.368
+          x: 73.341995
           y: 0.48
-          z: -14.658
+          z: 27.101997
         LocalRotation:
           value:
             x: -0
@@ -4819,9 +4686,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -3.368
+            x: 73.341995
             y: 0.48
-            z: -14.658
+            z: 27.101997
             w: 1
     - rid: 1350995581066543183
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -4880,7 +4747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &372230033
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4940,7 +4807,7 @@ Transform:
   m_GameObject: {fileID: 372230031}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.072, y: 0.48, z: 12.672001}
+  m_LocalPosition: {x: 79.782, y: 0.48, z: 54.432}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4970,9 +4837,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 3.072
+          x: 79.782
           y: 0.48
-          z: 12.672001
+          z: 54.432
         LocalRotation:
           value:
             x: 0
@@ -5000,9 +4867,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: 3.072
+            x: 79.782
             y: 0.48
-            z: 12.672001
+            z: 54.432
             w: 1
     - rid: 1350995581066543186
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -5170,7 +5037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &389050244
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5230,7 +5097,7 @@ Transform:
   m_GameObject: {fileID: 389050242}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: -4.0880003, y: 0.48, z: 7.622}
+  m_LocalPosition: {x: 72.622, y: 0.48, z: 49.382}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5260,9 +5127,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -4.0880003
+          x: 72.622
           y: 0.48
-          z: 7.622
+          z: 49.382
         LocalRotation:
           value:
             x: -0
@@ -5290,9 +5157,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: -4.0880003
+            x: 72.622
             y: 0.48
-            z: 7.622
+            z: 49.382
             w: 1
     - rid: 1350995581066543189
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -5351,7 +5218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &398742997
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5411,7 +5278,7 @@ Transform:
   m_GameObject: {fileID: 398742994}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -1.0719999, y: 0.48, z: 4.928}
+  m_LocalPosition: {x: 75.638, y: 0.48, z: 46.688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5441,9 +5308,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -1.0719999
+          x: 75.638
           y: 0.48
-          z: 4.928
+          z: 46.688
         LocalRotation:
           value:
             x: -0
@@ -5471,9 +5338,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -1.0719999
+            x: 75.638
             y: 0.48
-            z: 4.928
+            z: 46.688
             w: 1
     - rid: 1350995581066543111
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -5592,7 +5459,7 @@ Transform:
   m_GameObject: {fileID: 407504601}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 5.094, y: 0.48, z: 7.304001}
+  m_LocalPosition: {x: 81.804, y: 0.48, z: 49.064}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5622,9 +5489,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 5.094
+          x: 81.804
           y: 0.48
-          z: 7.304001
+          z: 49.064
         LocalRotation:
           value:
             x: 0
@@ -5652,9 +5519,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 5.094
+            x: 81.804
             y: 0.48
-            z: 7.304001
+            z: 49.064
             w: 1
     - rid: 1350995581066543192
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -5773,7 +5640,7 @@ Transform:
   m_GameObject: {fileID: 415812511}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 7.0099998, y: 0.48, z: -12.6}
+  m_LocalPosition: {x: 83.72, y: 0.48, z: 29.159998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5803,9 +5670,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 7.0099998
+          x: 83.72
           y: 0.48
-          z: -12.6
+          z: 29.159998
         LocalRotation:
           value:
             x: 0
@@ -5833,9 +5700,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 7.0099998
+            x: 83.72
             y: 0.48
-            z: -12.6
+            z: 29.159998
             w: 1
     - rid: 1350995581066543195
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -5954,7 +5821,7 @@ Transform:
   m_GameObject: {fileID: 425283728}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.236, y: 0.48, z: 9.784}
+  m_LocalPosition: {x: 59.474, y: 0.48, z: 51.544}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5984,9 +5851,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -17.236
+          x: 59.474
           y: 0.48
-          z: 9.784
+          z: 51.544
         LocalRotation:
           value:
             x: 0
@@ -6014,9 +5881,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: -17.236
+            x: 59.474
             y: 0.48
-            z: 9.784
+            z: 51.544
             w: 1
     - rid: 1350995581066543198
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -6135,7 +6002,7 @@ Transform:
   m_GameObject: {fileID: 458963569}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 6.746, y: 0.48, z: 8.016001}
+  m_LocalPosition: {x: 83.456, y: 0.48, z: 49.776}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6165,9 +6032,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 6.746
+          x: 83.456
           y: 0.48
-          z: 8.016001
+          z: 49.776
         LocalRotation:
           value:
             x: 0
@@ -6195,9 +6062,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 6.746
+            x: 83.456
             y: 0.48
-            z: 8.016001
+            z: 49.776
             w: 1
     - rid: 1350995581066543201
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -6316,7 +6183,7 @@ Transform:
   m_GameObject: {fileID: 466770666}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 8.9, y: 0.48, z: -7.6}
+  m_LocalPosition: {x: 85.61, y: 0.48, z: 34.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6346,9 +6213,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 8.9
+          x: 85.61
           y: 0.48
-          z: -7.6
+          z: 34.16
         LocalRotation:
           value:
             x: 0
@@ -6376,9 +6243,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 8.9
+            x: 85.61
             y: 0.48
-            z: -7.6
+            z: 34.16
             w: 1
     - rid: 1350995581066543204
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -6497,7 +6364,7 @@ Transform:
   m_GameObject: {fileID: 471778400}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.57, y: 0.48, z: -2.06}
+  m_LocalPosition: {x: 61.14, y: 0.48, z: 39.699997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6527,9 +6394,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -15.57
+          x: 61.14
           y: 0.48
-          z: -2.06
+          z: 39.699997
         LocalRotation:
           value:
             x: 0
@@ -6557,9 +6424,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: -15.57
+            x: 61.14
             y: 0.48
-            z: -2.06
+            z: 39.699997
             w: 1
     - rid: 1350995581066543207
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -6735,7 +6602,7 @@ Transform:
   m_GameObject: {fileID: 475550034}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: 14.722, y: 0.48, z: -6.468}
+  m_LocalPosition: {x: 91.432, y: 0.48, z: 35.292}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6765,9 +6632,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 14.722
+          x: 91.432
           y: 0.48
-          z: -6.468
+          z: 35.292
         LocalRotation:
           value:
             x: -0
@@ -6795,9 +6662,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: 14.722
+            x: 91.432
             y: 0.48
-            z: -6.468
+            z: 35.292
             w: 1
     - rid: 1350995581066543210
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -6916,7 +6783,7 @@ Transform:
   m_GameObject: {fileID: 488807114}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -0.63199997, y: 0.48, z: 18.288002}
+  m_LocalPosition: {x: 76.078, y: 0.48, z: 60.048}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6946,9 +6813,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -0.63199997
+          x: 76.078
           y: 0.48
-          z: 18.288002
+          z: 60.048
         LocalRotation:
           value:
             x: -0
@@ -6976,9 +6843,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -0.63199997
+            x: 76.078
             y: 0.48
-            z: 18.288002
+            z: 60.048
             w: 1
     - rid: 1350995581066543213
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -7097,7 +6964,7 @@ Transform:
   m_GameObject: {fileID: 499273708}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.9719996, y: 0.48, z: -12.378}
+  m_LocalPosition: {x: 82.682, y: 0.48, z: 29.381998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7127,9 +6994,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 5.9719996
+          x: 82.682
           y: 0.48
-          z: -12.378
+          z: 29.381998
         LocalRotation:
           value:
             x: 0
@@ -7157,9 +7024,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: 5.9719996
+            x: 82.682
             y: 0.48
-            z: -12.378
+            z: 29.381998
             w: 1
     - rid: 1350995581066543216
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -7278,7 +7145,7 @@ Transform:
   m_GameObject: {fileID: 528060054}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.49, y: 0, z: 2.8}
+  m_LocalPosition: {x: 78.1, y: 0.5, z: 47.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7310,9 +7177,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 6.49
-          y: 0
-          z: 2.8
+          x: 78.1
+          y: 0.5
+          z: 47.1
         LocalRotation:
           value:
             x: 0
@@ -7340,9 +7207,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: 6.49
-            y: 0
-            z: 2.8
+            x: 78.1
+            y: 0.5
+            z: 47.1
             w: 1
     - rid: 1350995581066543107
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -7464,7 +7331,7 @@ Transform:
   m_GameObject: {fileID: 559383945}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: 8.606001, y: 0.48, z: 1.4960003}
+  m_LocalPosition: {x: 85.316, y: 0.48, z: 43.255997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7494,9 +7361,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 8.606001
+          x: 85.316
           y: 0.48
-          z: 1.4960003
+          z: 43.255997
         LocalRotation:
           value:
             x: -0
@@ -7524,9 +7391,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: 8.606001
+            x: 85.316
             y: 0.48
-            z: 1.4960003
+            z: 43.255997
             w: 1
     - rid: 1350995581066543219
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -7585,7 +7452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &561198118
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7645,7 +7512,7 @@ Transform:
   m_GameObject: {fileID: 561198116}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: -0.61, y: 0.48, z: 7.13}
+  m_LocalPosition: {x: 76.1, y: 0.48, z: 48.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7675,9 +7542,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -0.61
+          x: 76.1
           y: 0.48
-          z: 7.13
+          z: 48.89
         LocalRotation:
           value:
             x: -0
@@ -7705,9 +7572,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: -0.61
+            x: 76.1
             y: 0.48
-            z: 7.13
+            z: 48.89
             w: 1
     - rid: 1350995581066543222
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -7826,7 +7693,7 @@ Transform:
   m_GameObject: {fileID: 638074131}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 8.662, y: 0.48, z: -11.8880005}
+  m_LocalPosition: {x: 85.372, y: 0.48, z: 29.871998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7856,9 +7723,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 8.662
+          x: 85.372
           y: 0.48
-          z: -11.8880005
+          z: 29.871998
         LocalRotation:
           value:
             x: 0
@@ -7886,9 +7753,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 8.662
+            x: 85.372
             y: 0.48
-            z: -11.8880005
+            z: 29.871998
             w: 1
     - rid: 1350995581066543225
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -8007,7 +7874,7 @@ Transform:
   m_GameObject: {fileID: 674178481}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: 5.748, y: 0.48, z: -10.292}
+  m_LocalPosition: {x: 82.458, y: 0.48, z: 31.467999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8037,9 +7904,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 5.748
+          x: 82.458
           y: 0.48
-          z: -10.292
+          z: 31.467999
         LocalRotation:
           value:
             x: -0
@@ -8067,9 +7934,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: 5.748
+            x: 82.458
             y: 0.48
-            z: -10.292
+            z: 31.467999
             w: 1
     - rid: 1350995581066543228
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -8188,7 +8055,7 @@ Transform:
   m_GameObject: {fileID: 700771991}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -20.72, y: 0.48, z: 17.060001}
+  m_LocalPosition: {x: 90.2, y: 0.48, z: 60.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8218,9 +8085,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -20.72
+          x: 90.2
           y: 0.48
-          z: 17.060001
+          z: 60.3
         LocalRotation:
           value:
             x: -0
@@ -8248,9 +8115,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -20.72
+            x: 90.2
             y: 0.48
-            z: 17.060001
+            z: 60.3
             w: 1
     - rid: 1350995581066543231
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -8463,7 +8330,7 @@ Transform:
   m_GameObject: {fileID: 717804814}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: 5.178, y: 0.48, z: -4.612}
+  m_LocalPosition: {x: 81.888, y: 0.48, z: 37.148}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8493,9 +8360,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 5.178
+          x: 81.888
           y: 0.48
-          z: -4.612
+          z: 37.148
         LocalRotation:
           value:
             x: -0
@@ -8523,9 +8390,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: 5.178
+            x: 81.888
             y: 0.48
-            z: -4.612
+            z: 37.148
             w: 1
     - rid: 1350995581066543234
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -8644,7 +8511,7 @@ Transform:
   m_GameObject: {fileID: 719646561}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: -9.468, y: 0.48, z: 2.212}
+  m_LocalPosition: {x: 67.242, y: 0.48, z: 43.972}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8674,9 +8541,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -9.468
+          x: 67.242
           y: 0.48
-          z: 2.212
+          z: 43.972
         LocalRotation:
           value:
             x: -0
@@ -8704,9 +8571,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: -9.468
+            x: 67.242
             y: 0.48
-            z: 2.212
+            z: 43.972
             w: 1
     - rid: 1350995581066543237
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -8825,7 +8692,7 @@ Transform:
   m_GameObject: {fileID: 729002129}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7160002, y: 0.48, z: -13.946}
+  m_LocalPosition: {x: 74.993996, y: 0.48, z: 27.814}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8855,9 +8722,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -1.7160002
+          x: 74.993996
           y: 0.48
-          z: -13.946
+          z: 27.814
         LocalRotation:
           value:
             x: 0
@@ -8885,9 +8752,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: -1.7160002
+            x: 74.993996
             y: 0.48
-            z: -13.946
+            z: 27.814
             w: 1
     - rid: 1350995581066543240
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -8946,7 +8813,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &730647118
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9006,7 +8873,7 @@ Transform:
   m_GameObject: {fileID: 730647116}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: 2, y: 0.48, z: 17.6}
+  m_LocalPosition: {x: 78.71, y: 0.48, z: 59.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9036,9 +8903,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 2
+          x: 78.71
           y: 0.48
-          z: 17.6
+          z: 59.36
         LocalRotation:
           value:
             x: -0
@@ -9066,9 +8933,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: 2
+            x: 78.71
             y: 0.48
-            z: 17.6
+            z: 59.36
             w: 1
     - rid: 1350995581066543243
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -9127,7 +8994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &739265643
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9187,7 +9054,7 @@ Transform:
   m_GameObject: {fileID: 739265641}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -17.46, y: 0.48, z: -7.06}
+  m_LocalPosition: {x: 59.25, y: 0.48, z: 34.699997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9217,9 +9084,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -17.46
+          x: 59.25
           y: 0.48
-          z: -7.06
+          z: 34.699997
         LocalRotation:
           value:
             x: -0
@@ -9247,9 +9114,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -17.46
+            x: 59.25
             y: 0.48
-            z: -7.06
+            z: 34.699997
             w: 1
     - rid: 1350995581066543246
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -9368,7 +9235,7 @@ Transform:
   m_GameObject: {fileID: 746324709}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: 3.916, y: 0.48, z: -2.304}
+  m_LocalPosition: {x: 80.626, y: 0.48, z: 39.455997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9398,9 +9265,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 3.916
+          x: 80.626
           y: 0.48
-          z: -2.304
+          z: 39.455997
         LocalRotation:
           value:
             x: -0
@@ -9428,9 +9295,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: 3.916
+            x: 80.626
             y: 0.48
-            z: -2.304
+            z: 39.455997
             w: 1
     - rid: 1350995581066543249
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -9549,7 +9416,7 @@ Transform:
   m_GameObject: {fileID: 762602681}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -12.1, y: 0.48, z: 2.9}
+  m_LocalPosition: {x: 64.61, y: 0.48, z: 44.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9579,9 +9446,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -12.1
+          x: 64.61
           y: 0.48
-          z: 2.9
+          z: 44.66
         LocalRotation:
           value:
             x: 0
@@ -9609,9 +9476,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -12.1
+            x: 64.61
             y: 0.48
-            z: 2.9
+            z: 44.66
             w: 1
     - rid: 1350995581066543252
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -9730,7 +9597,7 @@ Transform:
   m_GameObject: {fileID: 776317828}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: 13.070001, y: 0.48, z: -7.18}
+  m_LocalPosition: {x: 89.78, y: 0.48, z: 34.579998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9760,9 +9627,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 13.070001
+          x: 89.78
           y: 0.48
-          z: -7.18
+          z: 34.579998
         LocalRotation:
           value:
             x: -0
@@ -9790,9 +9657,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: 13.070001
+            x: 89.78
             y: 0.48
-            z: -7.18
+            z: 34.579998
             w: 1
     - rid: 1350995581066543255
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -9911,7 +9778,7 @@ Transform:
   m_GameObject: {fileID: 792638992}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: 5.484, y: 0.48, z: 10.324001}
+  m_LocalPosition: {x: 82.194, y: 0.48, z: 52.084}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9941,9 +9808,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 5.484
+          x: 82.194
           y: 0.48
-          z: 10.324001
+          z: 52.084
         LocalRotation:
           value:
             x: -0
@@ -9971,9 +9838,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: 5.484
+            x: 82.194
             y: 0.48
-            z: 10.324001
+            z: 52.084
             w: 1
     - rid: 1350995581066543258
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -10092,7 +9959,7 @@ Transform:
   m_GameObject: {fileID: 795171301}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -4.572, y: 0.48, z: -11.172}
+  m_LocalPosition: {x: 72.138, y: 0.48, z: 30.587997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10122,9 +9989,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -4.572
+          x: 72.138
           y: 0.48
-          z: -11.172
+          z: 30.587997
         LocalRotation:
           value:
             x: -0
@@ -10152,9 +10019,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -4.572
+            x: 72.138
             y: 0.48
-            z: -11.172
+            z: 30.587997
             w: 1
     - rid: 1350995581066543261
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -10273,7 +10140,7 @@ Transform:
   m_GameObject: {fileID: 796078746}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: -3.31, y: 0.48, z: -1.6700001}
+  m_LocalPosition: {x: 73.4, y: 0.48, z: 40.089996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10303,9 +10170,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -3.31
+          x: 73.4
           y: 0.48
-          z: -1.6700001
+          z: 40.089996
         LocalRotation:
           value:
             x: -0
@@ -10333,9 +10200,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: -3.31
+            x: 73.4
             y: 0.48
-            z: -1.6700001
+            z: 40.089996
             w: 1
     - rid: 1350995581066543264
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -10454,7 +10321,7 @@ Transform:
   m_GameObject: {fileID: 797189682}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: 4.3199997, y: 0.48, z: -13.09}
+  m_LocalPosition: {x: 81.03, y: 0.48, z: 28.669998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10484,9 +10351,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 4.3199997
+          x: 81.03
           y: 0.48
-          z: -13.09
+          z: 28.669998
         LocalRotation:
           value:
             x: -0
@@ -10514,9 +10381,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: 4.3199997
+            x: 81.03
             y: 0.48
-            z: -13.09
+            z: 28.669998
             w: 1
     - rid: 1350995581066543267
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -10635,7 +10502,7 @@ Transform:
   m_GameObject: {fileID: 820624425}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -12.88, y: 0.48, z: -1.5700002}
+  m_LocalPosition: {x: 63.829998, y: 0.48, z: 40.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10665,9 +10532,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -12.88
+          x: 63.829998
           y: 0.48
-          z: -1.5700002
+          z: 40.19
         LocalRotation:
           value:
             x: 0
@@ -10695,9 +10562,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -12.88
+            x: 63.829998
             y: 0.48
-            z: -1.5700002
+            z: 40.19
             w: 1
     - rid: 1350995581066543270
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -10816,7 +10683,7 @@ Transform:
   m_GameObject: {fileID: 829146042}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -2.5880003, y: 0.48, z: 9.602}
+  m_LocalPosition: {x: 74.122, y: 0.48, z: 51.362}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10846,9 +10713,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -2.5880003
+          x: 74.122
           y: 0.48
-          z: 9.602
+          z: 51.362
         LocalRotation:
           value:
             x: 0
@@ -10876,9 +10743,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -2.5880003
+            x: 74.122
             y: 0.48
-            z: 9.602
+            z: 51.362
             w: 1
     - rid: 1350995581066543273
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -10997,7 +10864,7 @@ Transform:
   m_GameObject: {fileID: 845716028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -21.924, y: 0.48, z: 20.546001}
+  m_LocalPosition: {x: 78.8, y: 0.48, z: 64.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11027,9 +10894,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -21.924
+          x: 78.8
           y: 0.48
-          z: 20.546001
+          z: 64.79
         LocalRotation:
           value:
             x: -0
@@ -11057,9 +10924,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -21.924
+            x: 78.8
             y: 0.48
-            z: 20.546001
+            z: 64.79
             w: 1
     - rid: 1350995581066543276
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -11118,7 +10985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &849820284
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11178,7 +11045,7 @@ Transform:
   m_GameObject: {fileID: 849820282}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2219999, y: 0.48, z: -0.8579998}
+  m_LocalPosition: {x: 77.932, y: 0.48, z: 40.902}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11208,9 +11075,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 1.2219999
+          x: 77.932
           y: 0.48
-          z: -0.8579998
+          z: 40.902
         LocalRotation:
           value:
             x: 0
@@ -11238,9 +11105,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: 1.2219999
+            x: 77.932
             y: 0.48
-            z: -0.8579998
+            z: 40.902
             w: 1
     - rid: 1350995581066543279
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -11359,7 +11226,7 @@ Transform:
   m_GameObject: {fileID: 857938852}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: 11.238001, y: 0.48, z: 0.8080001}
+  m_LocalPosition: {x: 87.948, y: 0.48, z: 42.567997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11389,9 +11256,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 11.238001
+          x: 87.948
           y: 0.48
-          z: 0.8080001
+          z: 42.567997
         LocalRotation:
           value:
             x: -0
@@ -11419,9 +11286,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: 11.238001
+            x: 87.948
             y: 0.48
-            z: 0.8080001
+            z: 42.567997
             w: 1
     - rid: 1350995581066543282
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -11480,7 +11347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &876602777
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11540,7 +11407,7 @@ Transform:
   m_GameObject: {fileID: 876602775}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -17.012, y: 0.48, z: -2.862}
+  m_LocalPosition: {x: 59.697998, y: 0.48, z: 38.898}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11570,9 +11437,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -17.012
+          x: 59.697998
           y: 0.48
-          z: -2.862
+          z: 38.898
         LocalRotation:
           value:
             x: 0
@@ -11600,9 +11467,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -17.012
+            x: 59.697998
             y: 0.48
-            z: -2.862
+            z: 38.898
             w: 1
     - rid: 1350995581066543285
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -11661,7 +11528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &904906211
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11721,7 +11588,7 @@ Transform:
   m_GameObject: {fileID: 904906209}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -6.72, y: 0.48, z: 8.31}
+  m_LocalPosition: {x: 69.99, y: 0.48, z: 50.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11751,9 +11618,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -6.72
+          x: 69.99
           y: 0.48
-          z: 8.31
+          z: 50.07
         LocalRotation:
           value:
             x: 0
@@ -11781,9 +11648,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -6.72
+            x: 69.99
             y: 0.48
-            z: 8.31
+            z: 50.07
             w: 1
     - rid: 1350995581066543288
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -11842,7 +11709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &907363454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11902,7 +11769,7 @@ Transform:
   m_GameObject: {fileID: 907363452}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: -17.46, y: 0.48, z: 11.87}
+  m_LocalPosition: {x: 59.25, y: 0.48, z: 53.629997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11932,9 +11799,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -17.46
+          x: 59.25
           y: 0.48
-          z: 11.87
+          z: 53.629997
         LocalRotation:
           value:
             x: -0
@@ -11962,9 +11829,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: -17.46
+            x: 59.25
             y: 0.48
-            z: 11.87
+            z: 53.629997
             w: 1
     - rid: 1350995581066543291
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -12083,7 +11950,7 @@ Transform:
   m_GameObject: {fileID: 918808187}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -16.198, y: 0.48, z: 9.562}
+  m_LocalPosition: {x: 60.512, y: 0.48, z: 51.322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12113,9 +11980,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -16.198
+          x: 60.512
           y: 0.48
-          z: 9.562
+          z: 51.322
         LocalRotation:
           value:
             x: 0
@@ -12143,9 +12010,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -16.198
+            x: 60.512
             y: 0.48
-            z: 9.562
+            z: 51.322
             w: 1
     - rid: 1350995581066543294
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -12204,7 +12071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &933645799
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12264,7 +12131,7 @@ Transform:
   m_GameObject: {fileID: 933645797}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: 3.832, y: 0.48, z: 9.612001}
+  m_LocalPosition: {x: 80.542, y: 0.48, z: 51.372}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12294,9 +12161,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 3.832
+          x: 80.542
           y: 0.48
-          z: 9.612001
+          z: 51.372
         LocalRotation:
           value:
             x: -0
@@ -12324,9 +12191,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: 3.832
+            x: 80.542
             y: 0.48
-            z: 9.612001
+            z: 51.372
             w: 1
     - rid: 1350995581066543297
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -12445,7 +12312,7 @@ Transform:
   m_GameObject: {fileID: 953236137}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: -16.602, y: 0.48, z: 1.4179997}
+  m_LocalPosition: {x: 60.108, y: 0.48, z: 43.177998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12475,9 +12342,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -16.602
+          x: 60.108
           y: 0.48
-          z: 1.4179997
+          z: 43.177998
         LocalRotation:
           value:
             x: -0
@@ -12505,9 +12372,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: -16.602
+            x: 60.108
             y: 0.48
-            z: 1.4179997
+            z: 43.177998
             w: 1
     - rid: 1350995581066543300
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -12718,7 +12585,7 @@ Transform:
   m_GameObject: {fileID: 967443145}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -0.6780002, y: 0.48, z: -14.168}
+  m_LocalPosition: {x: 76.032, y: 0.48, z: 27.592}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12748,9 +12615,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -0.6780002
+          x: 76.032
           y: 0.48
-          z: -14.168
+          z: 27.592
         LocalRotation:
           value:
             x: 0
@@ -12778,9 +12645,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -0.6780002
+            x: 76.032
             y: 0.48
-            z: -14.168
+            z: 27.592
             w: 1
     - rid: 1350995581066543303
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -12899,7 +12766,7 @@ Transform:
   m_GameObject: {fileID: 1010556086}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.2939997, y: 0.48, z: 11.814001}
+  m_LocalPosition: {x: 81.004, y: 0.48, z: 53.573997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12929,9 +12796,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 4.2939997
+          x: 81.004
           y: 0.48
-          z: 11.814001
+          z: 53.573997
         LocalRotation:
           value:
             x: 0
@@ -12959,9 +12826,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: 4.2939997
+            x: 81.004
             y: 0.48
-            z: 11.814001
+            z: 53.573997
             w: 1
     - rid: 1350995581066543306
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -13080,7 +12947,7 @@ Transform:
   m_GameObject: {fileID: 1012300464}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -18.439999, y: 0.48, z: 13.27}
+  m_LocalPosition: {x: 93.9, y: 0.48, z: 54.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13110,9 +12977,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -18.439999
+          x: 93.9
           y: 0.48
-          z: 13.27
+          z: 54.44
         LocalRotation:
           value:
             x: 0
@@ -13140,9 +13007,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -18.439999
+            x: 93.9
             y: 0.48
-            z: 13.27
+            z: 54.44
             w: 1
     - rid: 1350995581066543309
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -13261,7 +13128,7 @@ Transform:
   m_GameObject: {fileID: 1044359769}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -14.77, y: 0.48, z: -6.57}
+  m_LocalPosition: {x: 61.94, y: 0.48, z: 35.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13291,9 +13158,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -14.77
+          x: 61.94
           y: 0.48
-          z: -6.57
+          z: 35.19
         LocalRotation:
           value:
             x: 0
@@ -13321,9 +13188,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -14.77
+            x: 61.94
             y: 0.48
-            z: -6.57
+            z: 35.19
             w: 1
     - rid: 1350995581066543312
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -13442,7 +13309,7 @@ Transform:
   m_GameObject: {fileID: 1057947061}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 14.332001, y: 0.48, z: -9.488}
+  m_LocalPosition: {x: 91.042, y: 0.48, z: 32.272}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13472,9 +13339,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 14.332001
+          x: 91.042
           y: 0.48
-          z: -9.488
+          z: 32.272
         LocalRotation:
           value:
             x: 0
@@ -13502,9 +13369,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 14.332001
+            x: 91.042
             y: 0.48
-            z: -9.488
+            z: 32.272
             w: 1
     - rid: 1350995581066543315
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -13623,7 +13490,7 @@ Transform:
   m_GameObject: {fileID: 1062435665}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -7.9680004, y: 0.48, z: 4.192}
+  m_LocalPosition: {x: 68.742, y: 0.48, z: 45.952}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13653,9 +13520,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -7.9680004
+          x: 68.742
           y: 0.48
-          z: 4.192
+          z: 45.952
         LocalRotation:
           value:
             x: 0
@@ -13683,9 +13550,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -7.9680004
+            x: 68.742
             y: 0.48
-            z: 4.192
+            z: 45.952
             w: 1
     - rid: 1350995581066543318
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -13804,7 +13671,7 @@ Transform:
   m_GameObject: {fileID: 1075735491}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: -1.94, y: 0.48, z: -11.860001}
+  m_LocalPosition: {x: 74.77, y: 0.48, z: 29.899998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13834,9 +13701,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -1.94
+          x: 74.77
           y: 0.48
-          z: -11.860001
+          z: 29.899998
         LocalRotation:
           value:
             x: -0
@@ -13864,9 +13731,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: -1.94
+            x: 74.77
             y: 0.48
-            z: -11.860001
+            z: 29.899998
             w: 1
     - rid: 1350995581066543321
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -13925,7 +13792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1082048950
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13985,7 +13852,7 @@ Transform:
   m_GameObject: {fileID: 1082048948}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -0.6680001, y: 0.48, z: -5.858}
+  m_LocalPosition: {x: 76.042, y: 0.48, z: 35.902}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14015,9 +13882,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -0.6680001
+          x: 76.042
           y: 0.48
-          z: -5.858
+          z: 35.902
         LocalRotation:
           value:
             x: -0
@@ -14045,9 +13912,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -0.6680001
+            x: 76.042
             y: 0.48
-            z: -5.858
+            z: 35.902
             w: 1
     - rid: 1350995581066543324
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -14166,7 +14033,7 @@ Transform:
   m_GameObject: {fileID: 1082110128}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: -6.31, y: 0.48, z: 12.59}
+  m_LocalPosition: {x: 70.4, y: 0.48, z: 54.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14196,9 +14063,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -6.31
+          x: 70.4
           y: 0.48
-          z: 12.59
+          z: 54.35
         LocalRotation:
           value:
             x: -0
@@ -14226,9 +14093,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: -6.31
+            x: 70.4
             y: 0.48
-            z: 12.59
+            z: 54.35
             w: 1
     - rid: 1350995581066543327
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -14347,7 +14214,7 @@ Transform:
   m_GameObject: {fileID: 1110464476}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 12.09, y: 0.48, z: -5.7799997}
+  m_LocalPosition: {x: 88.8, y: 0.48, z: 35.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14377,9 +14244,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 12.09
+          x: 88.8
           y: 0.48
-          z: -5.7799997
+          z: 35.98
         LocalRotation:
           value:
             x: 0
@@ -14407,9 +14274,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 12.09
+            x: 88.8
             y: 0.48
-            z: -5.7799997
+            z: 35.98
             w: 1
     - rid: 1350995581066543330
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -14468,7 +14335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1117922652
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14528,7 +14395,7 @@ Transform:
   m_GameObject: {fileID: 1117922650}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -17.864, y: 0.48, z: 3.7259998}
+  m_LocalPosition: {x: 58.846, y: 0.48, z: 45.486}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14558,9 +14425,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -17.864
+          x: 58.846
           y: 0.48
-          z: 3.7259998
+          z: 45.486
         LocalRotation:
           value:
             x: -0
@@ -14588,9 +14455,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -17.864
+            x: 58.846
             y: 0.48
-            z: 3.7259998
+            z: 45.486
             w: 1
     - rid: 1350995581066543333
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -14649,7 +14516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1123352812
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14709,7 +14576,7 @@ Transform:
   m_GameObject: {fileID: 1123352810}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.88, y: 0.48, z: 4.56}
+  m_LocalPosition: {x: 64.83, y: 0.48, z: 46.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14739,9 +14606,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -11.88
+          x: 64.83
           y: 0.48
-          z: 4.56
+          z: 46.32
         LocalRotation:
           value:
             x: 0
@@ -14769,9 +14636,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: -11.88
+            x: 64.83
             y: 0.48
-            z: 4.56
+            z: 46.32
             w: 1
     - rid: 1350995581066543336
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -14830,7 +14697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1129857409
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14890,7 +14757,7 @@ Transform:
   m_GameObject: {fileID: 1129857407}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: -5.74, y: 0.48, z: 6.9100003}
+  m_LocalPosition: {x: 70.97, y: 0.48, z: 48.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14920,9 +14787,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -5.74
+          x: 70.97
           y: 0.48
-          z: 6.9100003
+          z: 48.67
         LocalRotation:
           value:
             x: -0
@@ -14950,9 +14817,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: -5.74
+            x: 70.97
             y: 0.48
-            z: 6.9100003
+            z: 48.67
             w: 1
     - rid: 1350995581066543339
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -15071,7 +14938,7 @@ Transform:
   m_GameObject: {fileID: 1150841343}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.896, y: 0.48, z: -0.58599997}
+  m_LocalPosition: {x: 65.813995, y: 0.48, z: 41.174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15101,9 +14968,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -10.896
+          x: 65.813995
           y: 0.48
-          z: -0.58599997
+          z: 41.174
         LocalRotation:
           value:
             x: 0
@@ -15131,9 +14998,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: -10.896
+            x: 65.813995
             y: 0.48
-            z: -0.58599997
+            z: 41.174
             w: 1
     - rid: 1350995581066543342
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -15436,7 +15303,7 @@ Transform:
   m_GameObject: {fileID: 1246562526}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -13.752, y: 0.48, z: 2.1880002}
+  m_LocalPosition: {x: 62.958, y: 0.48, z: 43.947998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15466,9 +15333,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -13.752
+          x: 62.958
           y: 0.48
-          z: 2.1880002
+          z: 43.947998
         LocalRotation:
           value:
             x: -0
@@ -15496,9 +15363,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -13.752
+            x: 62.958
             y: 0.48
-            z: 2.1880002
+            z: 43.947998
             w: 1
     - rid: 1350995581066543345
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -15557,7 +15424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1250780332
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15617,7 +15484,7 @@ Transform:
   m_GameObject: {fileID: 1250780330}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.22, y: 0.48, z: 14.93}
+  m_LocalPosition: {x: 74.08, y: 0.48, z: 62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15647,9 +15514,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -18.22
+          x: 74.08
           y: 0.48
-          z: 14.93
+          z: 62
         LocalRotation:
           value:
             x: 0
@@ -15677,9 +15544,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: -18.22
+            x: 74.08
             y: 0.48
-            z: 14.93
+            z: 62
             w: 1
     - rid: 1350995581066543348
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -15798,7 +15665,7 @@ Transform:
   m_GameObject: {fileID: 1252655857}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -6.4040003, y: 0.48, z: -3.184}
+  m_LocalPosition: {x: 70.306, y: 0.48, z: 38.575996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15828,9 +15695,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -6.4040003
+          x: 70.306
           y: 0.48
-          z: -3.184
+          z: 38.575996
         LocalRotation:
           value:
             x: -0
@@ -15858,9 +15725,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -6.4040003
+            x: 70.306
             y: 0.48
-            z: -3.184
+            z: 38.575996
             w: 1
     - rid: 1350995581066543351
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -15919,7 +15786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1266763350
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15979,7 +15846,7 @@ Transform:
   m_GameObject: {fileID: 1266763348}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -2.5, y: 0.48, z: 2.13}
+  m_LocalPosition: {x: 74.21, y: 0.48, z: 43.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16009,9 +15876,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -2.5
+          x: 74.21
           y: 0.48
-          z: 2.13
+          z: 43.89
         LocalRotation:
           value:
             x: -0
@@ -16039,9 +15906,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -2.5
+            x: 74.21
             y: 0.48
-            z: 2.13
+            z: 43.89
             w: 1
     - rid: 1350995581066543354
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -16100,7 +15967,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1300433632
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16160,7 +16027,7 @@ Transform:
   m_GameObject: {fileID: 1300433630}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.98399985, y: 0.48, z: -5.146}
+  m_LocalPosition: {x: 77.694, y: 0.48, z: 36.614}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16190,9 +16057,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 0.98399985
+          x: 77.694
           y: 0.48
-          z: -5.146
+          z: 36.614
         LocalRotation:
           value:
             x: 0
@@ -16220,9 +16087,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: 0.98399985
+            x: 77.694
             y: 0.48
-            z: -5.146
+            z: 36.614
             w: 1
     - rid: 1350995581066543357
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -16341,7 +16208,7 @@ Transform:
   m_GameObject: {fileID: 1322625597}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: 9.81, y: 0.48, z: -1.9899998}
+  m_LocalPosition: {x: 86.52, y: 0.48, z: 39.769997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16371,9 +16238,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 9.81
+          x: 86.52
           y: 0.48
-          z: -1.9899998
+          z: 39.769997
         LocalRotation:
           value:
             x: -0
@@ -16401,9 +16268,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: 9.81
+            x: 86.52
             y: 0.48
-            z: -1.9899998
+            z: 39.769997
             w: 1
     - rid: 1350995581066543360
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -16462,7 +16329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1328440025
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16522,7 +16389,7 @@ Transform:
   m_GameObject: {fileID: 1328440023}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -3.704, y: 0.48, z: 5.616}
+  m_LocalPosition: {x: 73.006, y: 0.48, z: 47.376}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16552,9 +16419,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -3.704
+          x: 73.006
           y: 0.48
-          z: 5.616
+          z: 47.376
         LocalRotation:
           value:
             x: -0
@@ -16582,9 +16449,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -3.704
+            x: 73.006
             y: 0.48
-            z: 5.616
+            z: 47.376
             w: 1
     - rid: 1350995581066543363
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -16643,7 +16510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1333158472
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16703,7 +16570,7 @@ Transform:
   m_GameObject: {fileID: 1333158470}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: -16.032, y: 0.48, z: -4.262}
+  m_LocalPosition: {x: 60.678, y: 0.48, z: 37.497997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16733,9 +16600,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -16.032
+          x: 60.678
           y: 0.48
-          z: -4.262
+          z: 37.497997
         LocalRotation:
           value:
             x: -0
@@ -16763,9 +16630,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: -16.032
+            x: 60.678
             y: 0.48
-            z: -4.262
+            z: 37.497997
             w: 1
     - rid: 1350995581066543366
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -16884,7 +16751,7 @@ Transform:
   m_GameObject: {fileID: 1353717263}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.0559998, y: 0.48, z: 7.526001}
+  m_LocalPosition: {x: 80.766, y: 0.48, z: 49.286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16914,9 +16781,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 4.0559998
+          x: 80.766
           y: 0.48
-          z: 7.526001
+          z: 49.286
         LocalRotation:
           value:
             x: 0
@@ -16944,9 +16811,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: 4.0559998
+            x: 80.766
             y: 0.48
-            z: 7.526001
+            z: 49.286
             w: 1
     - rid: 1350995581066543369
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -17065,7 +16932,7 @@ Transform:
   m_GameObject: {fileID: 1359875393}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.278, y: 0.48, z: 9.112}
+  m_LocalPosition: {x: 71.432, y: 0.48, z: 50.871998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17095,9 +16962,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -5.278
+          x: 71.432
           y: 0.48
-          z: 9.112
+          z: 50.871998
         LocalRotation:
           value:
             x: 0
@@ -17125,9 +16992,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: -5.278
+            x: 71.432
             y: 0.48
-            z: 9.112
+            z: 50.871998
             w: 1
     - rid: 1350995581066543372
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -17246,7 +17113,7 @@ Transform:
   m_GameObject: {fileID: 1362082118}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -9.858, y: 0.48, z: -0.8080001}
+  m_LocalPosition: {x: 66.852, y: 0.48, z: 40.952}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17276,9 +17143,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -9.858
+          x: 66.852
           y: 0.48
-          z: -0.8080001
+          z: 40.952
         LocalRotation:
           value:
             x: 0
@@ -17306,9 +17173,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -9.858
+            x: 66.852
             y: 0.48
-            z: -0.8080001
+            z: 40.952
             w: 1
     - rid: 1350995581066543375
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -17427,7 +17294,7 @@ Transform:
   m_GameObject: {fileID: 1384567831}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -13.118, y: 0.48, z: -5.8580003}
+  m_LocalPosition: {x: 63.592, y: 0.48, z: 35.901997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17457,9 +17324,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -13.118
+          x: 63.592
           y: 0.48
-          z: -5.8580003
+          z: 35.901997
         LocalRotation:
           value:
             x: 0
@@ -17487,9 +17354,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -13.118
+            x: 63.592
             y: 0.48
-            z: -5.8580003
+            z: 35.901997
             w: 1
     - rid: 1350995581066543378
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -17608,7 +17475,7 @@ Transform:
   m_GameObject: {fileID: 1388546329}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: -11.12, y: 0.48, z: 1.5}
+  m_LocalPosition: {x: 65.59, y: 0.48, z: 43.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17638,9 +17505,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -11.12
+          x: 65.59
           y: 0.48
-          z: 1.5
+          z: 43.26
         LocalRotation:
           value:
             x: -0
@@ -17668,9 +17535,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: -11.12
+            x: 65.59
             y: 0.48
-            z: 1.5
+            z: 43.26
             w: 1
     - rid: 1350995581066543381
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -17789,7 +17656,7 @@ Transform:
   m_GameObject: {fileID: 1408350448}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.294001, y: 0.48, z: -9.266}
+  m_LocalPosition: {x: 90.004, y: 0.48, z: 32.494}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17819,9 +17686,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 13.294001
+          x: 90.004
           y: 0.48
-          z: -9.266
+          z: 32.494
         LocalRotation:
           value:
             x: 0
@@ -17849,9 +17716,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: 13.294001
+            x: 90.004
             y: 0.48
-            z: -9.266
+            z: 32.494
             w: 1
     - rid: 1350995581066543384
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -17970,7 +17837,7 @@ Transform:
   m_GameObject: {fileID: 1435200024}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -8.206, y: 0.48, z: -0.096000195}
+  m_LocalPosition: {x: 68.504, y: 0.48, z: 41.663998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18000,9 +17867,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -8.206
+          x: 68.504
           y: 0.48
-          z: -0.096000195
+          z: 41.663998
         LocalRotation:
           value:
             x: 0
@@ -18030,9 +17897,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -8.206
+            x: 68.504
             y: 0.48
-            z: -0.096000195
+            z: 41.663998
             w: 1
     - rid: 1350995581066543387
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -18151,7 +18018,7 @@ Transform:
   m_GameObject: {fileID: 1455593597}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -14.546, y: 0.48, z: 10.274}
+  m_LocalPosition: {x: 62.164, y: 0.48, z: 52.033997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18181,9 +18048,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -14.546
+          x: 62.164
           y: 0.48
-          z: 10.274
+          z: 52.033997
         LocalRotation:
           value:
             x: 0
@@ -18211,9 +18078,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -14.546
+            x: 62.164
             y: 0.48
-            z: 10.274
+            z: 52.033997
             w: 1
     - rid: 1350995581066543390
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -18332,7 +18199,7 @@ Transform:
   m_GameObject: {fileID: 1457311289}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: -18.029999, y: 0.48, z: 17.55}
+  m_LocalPosition: {x: 92.4, y: 0.48, z: 58.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18362,9 +18229,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -18.029999
+          x: 92.4
           y: 0.48
-          z: 17.55
+          z: 58.3
         LocalRotation:
           value:
             x: -0
@@ -18392,9 +18259,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: -18.029999
+            x: 92.4
             y: 0.48
-            z: 17.55
+            z: 58.3
             w: 1
     - rid: 1350995581066543393
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -18513,7 +18380,7 @@ Transform:
   m_GameObject: {fileID: 1472142688}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: 10.438001, y: 0.48, z: -6.4919996}
+  m_LocalPosition: {x: 87.148, y: 0.48, z: 35.267998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18543,9 +18410,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 10.438001
+          x: 87.148
           y: 0.48
-          z: -6.4919996
+          z: 35.267998
         LocalRotation:
           value:
             x: -0
@@ -18573,9 +18440,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: 10.438001
+            x: 87.148
             y: 0.48
-            z: -6.4919996
+            z: 35.267998
             w: 1
     - rid: 1350995581066543396
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -18743,7 +18610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1488067239
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18803,7 +18670,7 @@ Transform:
   m_GameObject: {fileID: 1488067237}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -18.664, y: 0.48, z: -3.574}
+  m_LocalPosition: {x: 58.045998, y: 0.48, z: 38.185997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18833,9 +18700,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -18.664
+          x: 58.045998
           y: 0.48
-          z: -3.574
+          z: 38.185997
         LocalRotation:
           value:
             x: -0
@@ -18863,9 +18730,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -18.664
+            x: 58.045998
             y: 0.48
-            z: -3.574
+            z: 38.185997
             w: 1
     - rid: 1350995581066543399
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -18984,7 +18851,7 @@ Transform:
   m_GameObject: {fileID: 1493699790}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: -11.690001, y: 0.48, z: 7.18}
+  m_LocalPosition: {x: 65.02, y: 0.48, z: 48.94}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19014,9 +18881,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -11.690001
+          x: 65.02
           y: 0.48
-          z: 7.18
+          z: 48.94
         LocalRotation:
           value:
             x: -0
@@ -19044,9 +18911,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: -11.690001
+            x: 65.02
             y: 0.48
-            z: 7.18
+            z: 48.94
             w: 1
     - rid: 1350995581066543402
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -19165,7 +19032,7 @@ Transform:
   m_GameObject: {fileID: 1513707519}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -3.7719998, y: 0.48, z: -3.8720002}
+  m_LocalPosition: {x: 72.937996, y: 0.48, z: 37.887997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19195,9 +19062,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -3.7719998
+          x: 72.937996
           y: 0.48
-          z: -3.8720002
+          z: 37.887997
         LocalRotation:
           value:
             x: -0
@@ -19225,9 +19092,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -3.7719998
+            x: 72.937996
             y: 0.48
-            z: -3.8720002
+            z: 37.887997
             w: 1
     - rid: 1350995581066543405
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -19286,7 +19153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1518112260
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19346,7 +19213,7 @@ Transform:
   m_GameObject: {fileID: 1518112258}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.808, y: 0.48, z: -6.348}
+  m_LocalPosition: {x: 60.902, y: 0.48, z: 35.412}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19376,9 +19243,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -15.808
+          x: 60.902
           y: 0.48
-          z: -6.348
+          z: 35.412
         LocalRotation:
           value:
             x: 0
@@ -19406,9 +19273,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: -15.808
+            x: 60.902
             y: 0.48
-            z: -6.348
+            z: 35.412
             w: 1
     - rid: 1350995581066543408
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -19527,7 +19394,7 @@ Transform:
   m_GameObject: {fileID: 1528443574}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -20.092, y: 0.48, z: 12.558001}
+  m_LocalPosition: {x: 56.95, y: 0.48, z: 47.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19557,9 +19424,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -20.092
+          x: 56.95
           y: 0.48
-          z: 12.558001
+          z: 47.72
         LocalRotation:
           value:
             x: -0
@@ -19587,9 +19454,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -20.092
+            x: 56.95
             y: 0.48
-            z: 12.558001
+            z: 47.72
             w: 1
     - rid: 1350995581066543411
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -19708,7 +19575,7 @@ Transform:
   m_GameObject: {fileID: 1536587277}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.532001, y: 0.48, z: -4.9779997}
+  m_LocalPosition: {x: 90.242, y: 0.48, z: 36.781998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19738,9 +19605,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 13.532001
+          x: 90.242
           y: 0.48
-          z: -4.9779997
+          z: 36.781998
         LocalRotation:
           value:
             x: 0
@@ -19768,9 +19635,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: 13.532001
+            x: 90.242
             y: 0.48
-            z: -4.9779997
+            z: 36.781998
             w: 1
     - rid: 1350995581066543414
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -19889,7 +19756,7 @@ Transform:
   m_GameObject: {fileID: 1542088877}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: -12.49, y: 0.48, z: 11.690001}
+  m_LocalPosition: {x: 64.22, y: 0.48, z: 53.449997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19919,9 +19786,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -12.49
+          x: 64.22
           y: 0.48
-          z: 11.690001
+          z: 53.449997
         LocalRotation:
           value:
             x: -0
@@ -19949,9 +19816,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: -12.49
+            x: 64.22
             y: 0.48
-            z: 11.690001
+            z: 53.449997
             w: 1
     - rid: 1350995581066543417
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -20070,7 +19937,7 @@ Transform:
   m_GameObject: {fileID: 1550443729}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 16.222, y: 0.48, z: -4.488}
+  m_LocalPosition: {x: 92.932, y: 0.48, z: 37.272}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20100,9 +19967,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 16.222
+          x: 92.932
           y: 0.48
-          z: -4.488
+          z: 37.272
         LocalRotation:
           value:
             x: 0
@@ -20130,9 +19997,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 16.222
+            x: 92.932
             y: 0.48
-            z: -4.488
+            z: 37.272
             w: 1
     - rid: 1350995581066543420
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -20251,7 +20118,7 @@ Transform:
   m_GameObject: {fileID: 1553759828}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: -7.11, y: 0.48, z: 17.1}
+  m_LocalPosition: {x: 69.6, y: 0.48, z: 58.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20281,9 +20148,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -7.11
+          x: 69.6
           y: 0.48
-          z: 17.1
+          z: 58.86
         LocalRotation:
           value:
             x: -0
@@ -20311,9 +20178,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: -7.11
+            x: 69.6
             y: 0.48
-            z: 17.1
+            z: 58.86
             w: 1
     - rid: 1350995581066543423
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -20432,7 +20299,7 @@ Transform:
   m_GameObject: {fileID: 1562003894}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: 2.4039998, y: 0.48, z: 6.814001}
+  m_LocalPosition: {x: 79.114, y: 0.48, z: 48.573997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20462,9 +20329,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 2.4039998
+          x: 79.114
           y: 0.48
-          z: 6.814001
+          z: 48.573997
         LocalRotation:
           value:
             x: -0
@@ -20492,9 +20359,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: 2.4039998
+            x: 79.114
             y: 0.48
-            z: 6.814001
+            z: 48.573997
             w: 1
     - rid: 1350995581066543426
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -20613,7 +20480,7 @@ Transform:
   m_GameObject: {fileID: 1567114015}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 1.2119997, y: 0.48, z: -9.168}
+  m_LocalPosition: {x: 77.922, y: 0.48, z: 32.592}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20643,9 +20510,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 1.2119997
+          x: 77.922
           y: 0.48
-          z: -9.168
+          z: 32.592
         LocalRotation:
           value:
             x: 0
@@ -20673,9 +20540,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 1.2119997
+            x: 77.922
             y: 0.48
-            z: -9.168
+            z: 32.592
             w: 1
     - rid: 1350995581066543429
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -20794,7 +20661,7 @@ Transform:
   m_GameObject: {fileID: 1575971056}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -14.38, y: 0.48, z: 6.69}
+  m_LocalPosition: {x: 62.329998, y: 0.48, z: 48.449997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20824,9 +20691,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -14.38
+          x: 62.329998
           y: 0.48
-          z: 6.69
+          z: 48.449997
         LocalRotation:
           value:
             x: -0
@@ -20854,9 +20721,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -14.38
+            x: 62.329998
             y: 0.48
-            z: 6.69
+            z: 48.449997
             w: 1
     - rid: 1350995581066543432
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -20975,7 +20842,7 @@ Transform:
   m_GameObject: {fileID: 1603700633}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: -0.2880001, y: 0.48, z: -11.148001}
+  m_LocalPosition: {x: 76.422, y: 0.48, z: 30.611998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21005,9 +20872,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -0.2880001
+          x: 76.422
           y: 0.48
-          z: -11.148001
+          z: 30.611998
         LocalRotation:
           value:
             x: -0
@@ -21035,9 +20902,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: -0.2880001
+            x: 76.422
             y: 0.48
-            z: -11.148001
+            z: 30.611998
             w: 1
     - rid: 1350995581066543435
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -21156,7 +21023,7 @@ Transform:
   m_GameObject: {fileID: 1631242747}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -2.8260002, y: 0.48, z: 5.314}
+  m_LocalPosition: {x: 73.884, y: 0.48, z: 47.073997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21186,9 +21053,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -2.8260002
+          x: 73.884
           y: 0.48
-          z: 5.314
+          z: 47.073997
         LocalRotation:
           value:
             x: 0
@@ -21216,9 +21083,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -2.8260002
+            x: 73.884
             y: 0.48
-            z: 5.314
+            z: 47.073997
             w: 1
     - rid: 1350995581066543438
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -21277,7 +21144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1666094171
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21337,7 +21204,7 @@ Transform:
   m_GameObject: {fileID: 1666094169}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -8.372, y: 0.48, z: 7.5980005}
+  m_LocalPosition: {x: 68.338, y: 0.48, z: 49.357998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21367,9 +21234,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -8.372
+          x: 68.338
           y: 0.48
-          z: 7.5980005
+          z: 49.357998
         LocalRotation:
           value:
             x: -0
@@ -21397,9 +21264,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -8.372
+            x: 68.338
             y: 0.48
-            z: 7.5980005
+            z: 49.357998
             w: 1
     - rid: 1350995581066543441
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -21458,7 +21325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1666893088
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21518,7 +21385,7 @@ Transform:
   m_GameObject: {fileID: 1666893086}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: 0.19, y: 0.48, z: 2.62}
+  m_LocalPosition: {x: 76.9, y: 0.48, z: 44.379997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21548,9 +21415,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 0.19
+          x: 76.9
           y: 0.48
-          z: 2.62
+          z: 44.379997
         LocalRotation:
           value:
             x: -0
@@ -21578,9 +21445,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: 0.19
+            x: 76.9
             y: 0.48
-            z: 2.62
+            z: 44.379997
             w: 1
     - rid: 1350995581066543444
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -21699,7 +21566,7 @@ Transform:
   m_GameObject: {fileID: 1699527245}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.998, y: 0.48, z: 14.0720005}
+  m_LocalPosition: {x: 95.1, y: 0.48, z: 43.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21729,9 +21596,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -16.998
+          x: 95.1
           y: 0.48
-          z: 14.0720005
+          z: 43.5
         LocalRotation:
           value:
             x: 0
@@ -21759,9 +21626,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: -16.998
+            x: 95.1
             y: 0.48
-            z: 14.0720005
+            z: 43.5
             w: 1
     - rid: 1350995581066543447
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -21880,7 +21747,7 @@ Transform:
   m_GameObject: {fileID: 1700622517}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -19.292, y: 0.48, z: 19.858}
+  m_LocalPosition: {x: 94.6, y: 0.48, z: 56.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21910,9 +21777,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -19.292
+          x: 94.6
           y: 0.48
-          z: 19.858
+          z: 56.1
         LocalRotation:
           value:
             x: -0
@@ -21940,9 +21807,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -19.292
+            x: 94.6
             y: 0.48
-            z: 19.858
+            z: 56.1
             w: 1
     - rid: 1350995581066543450
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -22001,7 +21868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1739004332
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22061,7 +21928,7 @@ Transform:
   m_GameObject: {fileID: 1739004330}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 3.9119997, y: 0.48, z: -0.36800003}
+  m_LocalPosition: {x: 80.622, y: 0.48, z: 41.392}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22091,9 +21958,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 3.9119997
+          x: 80.622
           y: 0.48
-          z: -0.36800003
+          z: 41.392
         LocalRotation:
           value:
             x: 0
@@ -22121,9 +21988,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 3.9119997
+            x: 80.622
             y: 0.48
-            z: -0.36800003
+            z: 41.392
             w: 1
     - rid: 1350995581066543453
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -22182,7 +22049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1748089271
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22229,9 +22096,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 5.22
+          x: 81.93
           y: 0.4
-          z: 5.92
+          z: 47.68
         LocalRotation:
           value:
             x: 0
@@ -22259,9 +22126,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: 5.22
+            x: 81.93
             y: 0.4
-            z: 5.92
+            z: 47.68
             w: 1
     - rid: 1350995581066543107
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -22342,11 +22209,10 @@ Transform:
   m_GameObject: {fileID: 1748089270}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.22, y: 0.4, z: 5.92}
+  m_LocalPosition: {x: 81.93, y: 0.4, z: 47.68}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1860803472}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759856801
@@ -22428,7 +22294,7 @@ Transform:
   m_GameObject: {fileID: 1759856801}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: 11.700001, y: 0.48, z: 3.0100002}
+  m_LocalPosition: {x: 88.41, y: 0.48, z: 44.769997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22458,9 +22324,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 11.700001
+          x: 88.41
           y: 0.48
-          z: 3.0100002
+          z: 44.769997
         LocalRotation:
           value:
             x: -0
@@ -22488,9 +22354,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: 11.700001
+            x: 88.41
             y: 0.48
-            z: 3.0100002
+            z: 44.769997
             w: 1
     - rid: 1350995581066543456
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -22609,7 +22475,7 @@ Transform:
   m_GameObject: {fileID: 1767327002}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -2.92, y: 0.48, z: -10.46}
+  m_LocalPosition: {x: 73.79, y: 0.48, z: 31.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22639,9 +22505,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -2.92
+          x: 73.79
           y: 0.48
-          z: -10.46
+          z: 31.3
         LocalRotation:
           value:
             x: 0
@@ -22669,9 +22535,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -2.92
+            x: 73.79
             y: 0.48
-            z: -10.46
+            z: 31.3
             w: 1
     - rid: 1350995581066543459
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -22790,7 +22656,7 @@ Transform:
   m_GameObject: {fileID: 1813464031}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -14.308, y: 0.48, z: 14.562}
+  m_LocalPosition: {x: 64.25, y: 0.48, z: 56.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22820,9 +22686,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -14.308
+          x: 64.25
           y: 0.48
-          z: 14.562
+          z: 56.17
         LocalRotation:
           value:
             x: 0
@@ -22850,9 +22716,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -14.308
+            x: 64.25
             y: 0.48
-            z: 14.562
+            z: 56.17
             w: 1
     - rid: 1350995581066543462
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -22971,7 +22837,7 @@ Transform:
   m_GameObject: {fileID: 1818048591}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4780002, y: 0.48, z: -9.658}
+  m_LocalPosition: {x: 75.232, y: 0.48, z: 32.101997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23001,9 +22867,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -1.4780002
+          x: 75.232
           y: 0.48
-          z: -9.658
+          z: 32.101997
         LocalRotation:
           value:
             x: 0
@@ -23031,9 +22897,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: -1.4780002
+            x: 75.232
             y: 0.48
-            z: -9.658
+            z: 32.101997
             w: 1
     - rid: 1350995581066543465
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -23152,7 +23018,7 @@ Transform:
   m_GameObject: {fileID: 1823578587}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: -18.83, y: 0.48, z: 22.060001}
+  m_LocalPosition: {x: 89.9, y: 0.48, z: 65.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23182,9 +23048,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -18.83
+          x: 89.9
           y: 0.48
-          z: 22.060001
+          z: 65.9
         LocalRotation:
           value:
             x: -0
@@ -23212,9 +23078,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: -18.83
+            x: 89.9
             y: 0.48
-            z: 22.060001
+            z: 65.9
             w: 1
     - rid: 1350995581066543468
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -23333,7 +23199,7 @@ Transform:
   m_GameObject: {fileID: 1844313413}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.988, y: 0.48, z: -7.232}
+  m_LocalPosition: {x: 81.698, y: 0.48, z: 34.528}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23363,9 +23229,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 4.988
+          x: 81.698
           y: 0.48
-          z: -7.232
+          z: 34.528
         LocalRotation:
           value:
             x: 0
@@ -23393,9 +23259,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: 4.988
+            x: 81.698
             y: 0.48
-            z: -7.232
+            z: 34.528
             w: 1
     - rid: 1350995581066543471
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -23514,7 +23380,7 @@ Transform:
   m_GameObject: {fileID: 1846253351}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.31, y: 0.48, z: -4.12}
+  m_LocalPosition: {x: 89.02, y: 0.48, z: 37.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23544,9 +23410,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 12.31
+          x: 89.02
           y: 0.48
-          z: -4.12
+          z: 37.64
         LocalRotation:
           value:
             x: 0
@@ -23574,9 +23440,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: 12.31
+            x: 89.02
             y: 0.48
-            z: -4.12
+            z: 37.64
             w: 1
     - rid: 1350995581066543474
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -23616,98 +23482,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1860803471
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1860803472}
-  - component: {fileID: 1860803474}
-  - component: {fileID: 1860803473}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1860803472
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860803471}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.37136775, y: 0, z: 0, w: 0.9284859}
-  m_LocalPosition: {x: 0, y: 8.3, z: -8.92}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1748089275}
-  m_LocalEulerAnglesHint: {x: 43.6, y: 0, z: 0}
---- !u!81 &1860803473
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860803471}
-  m_Enabled: 1
---- !u!20 &1860803474
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860803471}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
 --- !u!1 &1876451450
 GameObject:
   m_ObjectHideFlags: 0
@@ -23787,7 +23561,7 @@ Transform:
   m_GameObject: {fileID: 1876451450}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: -15.808, y: 0.48, z: 12.582001}
+  m_LocalPosition: {x: 62.49, y: 0.48, z: 54.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23817,9 +23591,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -15.808
+          x: 62.49
           y: 0.48
-          z: 12.582001
+          z: 54.78
         LocalRotation:
           value:
             x: -0
@@ -23847,9 +23621,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: -15.808
+            x: 62.49
             y: 0.48
-            z: 12.582001
+            z: 54.78
             w: 1
     - rid: 1350995581066543477
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -23968,7 +23742,7 @@ Transform:
   m_GameObject: {fileID: 1897300523}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 4.768, y: 0.48, z: -8.892}
+  m_LocalPosition: {x: 81.478, y: 0.48, z: 32.867996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23998,9 +23772,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 4.768
+          x: 81.478
           y: 0.48
-          z: -8.892
+          z: 32.867996
         LocalRotation:
           value:
             x: 0
@@ -24028,9 +23802,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 4.768
+            x: 81.478
             y: 0.48
-            z: -8.892
+            z: 32.867996
             w: 1
     - rid: 1350995581066543480
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -24149,7 +23923,7 @@ Transform:
   m_GameObject: {fileID: 1900971118}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: 2.488, y: 0.48, z: -5.1019998}
+  m_LocalPosition: {x: 79.198, y: 0.48, z: 36.657997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24179,9 +23953,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 2.488
+          x: 79.198
           y: 0.48
-          z: -5.1019998
+          z: 36.657997
         LocalRotation:
           value:
             x: -0
@@ -24209,9 +23983,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: 2.488
+            x: 79.198
             y: 0.48
-            z: -5.1019998
+            z: 36.657997
             w: 1
     - rid: 1350995581066543483
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -24330,7 +24104,7 @@ Transform:
   m_GameObject: {fileID: 1906711051}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -12.548, y: 0.48, z: -1.2979999}
+  m_LocalPosition: {x: 64.162, y: 0.48, z: 40.461998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24360,9 +24134,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -12.548
+          x: 64.162
           y: 0.48
-          z: -1.2979999
+          z: 40.461998
         LocalRotation:
           value:
             x: -0
@@ -24390,9 +24164,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -12.548
+            x: 64.162
             y: 0.48
-            z: -1.2979999
+            z: 40.461998
             w: 1
     - rid: 1350995581066543486
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -24511,7 +24285,7 @@ Transform:
   m_GameObject: {fileID: 1954420030}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: 1.2839999, y: 0.48, z: -1.6159997}
+  m_LocalPosition: {x: 77.993996, y: 0.48, z: 40.143997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24541,9 +24315,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 1.2839999
+          x: 77.993996
           y: 0.48
-          z: -1.6159997
+          z: 40.143997
         LocalRotation:
           value:
             x: -0
@@ -24571,9 +24345,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: 1.2839999
+            x: 77.993996
             y: 0.48
-            z: -1.6159997
+            z: 40.143997
             w: 1
     - rid: 1350995581066543489
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -24692,7 +24466,7 @@ Transform:
   m_GameObject: {fileID: 1994344981}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.658, y: 0.48, z: 3.7020001}
+  m_LocalPosition: {x: 66.052, y: 0.48, z: 45.461998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24722,9 +24496,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -10.658
+          x: 66.052
           y: 0.48
-          z: 3.7020001
+          z: 45.461998
         LocalRotation:
           value:
             x: 0
@@ -24752,9 +24526,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: -10.658
+            x: 66.052
             y: 0.48
-            z: 3.7020001
+            z: 45.461998
             w: 1
     - rid: 1350995581066543492
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -24813,7 +24587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1995400928
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24873,7 +24647,7 @@ Transform:
   m_GameObject: {fileID: 1995400926}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -20.496, y: 0.48, z: 4.414}
+  m_LocalPosition: {x: 56.213997, y: 0.48, z: 46.174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24903,9 +24677,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -20.496
+          x: 56.213997
           y: 0.48
-          z: 4.414
+          z: 46.174
         LocalRotation:
           value:
             x: -0
@@ -24933,9 +24707,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -20.496
+            x: 56.213997
             y: 0.48
-            z: 4.414
+            z: 46.174
             w: 1
     - rid: 1350995581066543495
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -24994,7 +24768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &2004255949
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25054,7 +24828,7 @@ Transform:
   m_GameObject: {fileID: 2004255947}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -10.204, y: 0.48, z: 15.586}
+  m_LocalPosition: {x: 66.506, y: 0.48, z: 57.346}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25084,9 +24858,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -10.204
+          x: 66.506
           y: 0.48
-          z: 15.586
+          z: 57.346
         LocalRotation:
           value:
             x: -0
@@ -25114,9 +24888,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -10.204
+            x: 66.506
             y: 0.48
-            z: 15.586
+            z: 57.346
             w: 1
     - rid: 1350995581066543498
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -25232,7 +25006,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &2014580621
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25292,7 +25066,7 @@ Transform:
   m_GameObject: {fileID: 2014580619}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -0.22, y: 0.48, z: -1.66}
+  m_LocalPosition: {x: 76.49, y: 0.48, z: 40.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25322,9 +25096,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -0.22
+          x: 76.49
           y: 0.48
-          z: -1.66
+          z: 40.1
         LocalRotation:
           value:
             x: 0
@@ -25352,9 +25126,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -0.22
+            x: 76.49
             y: 0.48
-            z: -1.66
+            z: 40.1
             w: 1
     - rid: 1350995581066543501
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -25473,7 +25247,7 @@ Transform:
   m_GameObject: {fileID: 2029223663}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.21, y: 0.48, z: -8.09}
+  m_LocalPosition: {x: 82.92, y: 0.48, z: 33.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25503,9 +25277,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 6.21
+          x: 82.92
           y: 0.48
-          z: -8.09
+          z: 33.67
         LocalRotation:
           value:
             x: 0
@@ -25533,9 +25307,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: 6.21
+            x: 82.92
             y: 0.48
-            z: -8.09
+            z: 33.67
             w: 1
     - rid: 1350995581066543504
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -25654,7 +25428,7 @@ Transform:
   m_GameObject: {fileID: 2045216663}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: 3.262, y: 0.48, z: 15.292001}
+  m_LocalPosition: {x: 79.972, y: 0.48, z: 57.052}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25684,9 +25458,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 3.262
+          x: 79.972
           y: 0.48
-          z: 15.292001
+          z: 57.052
         LocalRotation:
           value:
             x: -0
@@ -25714,9 +25488,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: 3.262
+            x: 79.972
             y: 0.48
-            z: 15.292001
+            z: 57.052
             w: 1
     - rid: 1350995581066543507
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -25835,7 +25609,7 @@ Transform:
   m_GameObject: {fileID: 2059737570}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: 3.116, y: 0.48, z: -9.604}
+  m_LocalPosition: {x: 79.826, y: 0.48, z: 32.156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25865,9 +25639,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 3.116
+          x: 79.826
           y: 0.48
-          z: -9.604
+          z: 32.156
         LocalRotation:
           value:
             x: -0
@@ -25895,9 +25669,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: 3.116
+            x: 79.826
             y: 0.48
-            z: -9.604
+            z: 32.156
             w: 1
     - rid: 1350995581066543510
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -26016,7 +25790,7 @@ Transform:
   m_GameObject: {fileID: 2094788798}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.88253754, z: 0, w: -0.470242}
-  m_LocalPosition: {x: -5.2, y: 0.48, z: -6.67}
+  m_LocalPosition: {x: 71.51, y: 0.48, z: 35.089996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26046,9 +25820,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -5.2
+          x: 71.51
           y: 0.48
-          z: -6.67
+          z: 35.089996
         LocalRotation:
           value:
             x: -0
@@ -26076,9 +25850,9 @@ MonoBehaviour:
             z: -0.55774504
             w: 0
           c3:
-            x: -5.2
+            x: 71.51
             y: 0.48
-            z: -6.67
+            z: 35.089996
             w: 1
     - rid: 1350995581066543513
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -26137,7 +25911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &2097018711
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26197,7 +25971,7 @@ Transform:
   m_GameObject: {fileID: 2097018709}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 3.6739998, y: 0.48, z: -4.656}
+  m_LocalPosition: {x: 80.384, y: 0.48, z: 37.103996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26227,9 +26001,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 3.6739998
+          x: 80.384
           y: 0.48
-          z: -4.656
+          z: 37.103996
         LocalRotation:
           value:
             x: 0
@@ -26257,9 +26031,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 3.6739998
+            x: 80.384
             y: 0.48
-            z: -4.656
+            z: 37.103996
             w: 1
     - rid: 1350995581066543516
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -26378,7 +26152,7 @@ Transform:
   m_GameObject: {fileID: 2112621237}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.46027705, z: 0, w: -0.8877753}
-  m_LocalPosition: {x: 12.5, y: 0.48, z: -1.5}
+  m_LocalPosition: {x: 89.21, y: 0.48, z: 40.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26408,9 +26182,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 12.5
+          x: 89.21
           y: 0.48
-          z: -1.5
+          z: 40.26
         LocalRotation:
           value:
             x: -0
@@ -26438,9 +26212,9 @@ MonoBehaviour:
             z: 0.5762901
             w: 0
           c3:
-            x: 12.5
+            x: 89.21
             y: 0.48
-            z: -1.5
+            z: 40.26
             w: 1
     - rid: 1350995581066543519
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -26559,7 +26333,7 @@ Transform:
   m_GameObject: {fileID: 2116296394}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3821187, z: 0, w: -0.9241133}
-  m_LocalPosition: {x: 7.3999996, y: 0.48, z: -9.58}
+  m_LocalPosition: {x: 84.11, y: 0.48, z: 32.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26589,9 +26363,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 7.3999996
+          x: 84.11
           y: 0.48
-          z: -9.58
+          z: 32.18
         LocalRotation:
           value:
             x: -0
@@ -26619,9 +26393,9 @@ MonoBehaviour:
             z: 0.7079706
             w: 0
           c3:
-            x: 7.3999996
+            x: 84.11
             y: 0.48
-            z: -9.58
+            z: 32.18
             w: 1
     - rid: 1350995581066543522
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -26740,7 +26514,7 @@ Transform:
   m_GameObject: {fileID: 2142113743}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: -4.478, y: 0.48, z: 4.602}
+  m_LocalPosition: {x: 72.232, y: 0.48, z: 46.362}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26770,9 +26544,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -4.478
+          x: 72.232
           y: 0.48
-          z: 4.602
+          z: 46.362
         LocalRotation:
           value:
             x: 0
@@ -26800,9 +26574,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: -4.478
+            x: 72.232
             y: 0.48
-            z: 4.602
+            z: 46.362
             w: 1
     - rid: 1350995581066543525
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -26921,7 +26695,7 @@ Transform:
   m_GameObject: {fileID: 2143697871}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.7, y: 0.48, z: -8.8}
+  m_LocalPosition: {x: 74.01, y: 0.48, z: 32.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26951,9 +26725,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: -2.7
+          x: 74.01
           y: 0.48
-          z: -8.8
+          z: 32.96
         LocalRotation:
           value:
             x: 0
@@ -26981,9 +26755,9 @@ MonoBehaviour:
             z: 1
             w: 0
           c3:
-            x: -2.7
+            x: 74.01
             y: 0.48
-            z: -8.8
+            z: 32.96
             w: 1
     - rid: 1350995581066543528
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -27102,7 +26876,7 @@ Transform:
   m_GameObject: {fileID: 2146359180}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.46097437, z: 0, w: 0.88741344}
-  m_LocalPosition: {x: 2.852, y: 0.48, z: 11.012001}
+  m_LocalPosition: {x: 79.562, y: 0.48, z: 52.772}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27132,9 +26906,9 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 2.852
+          x: 79.562
           y: 0.48
-          z: 11.012001
+          z: 52.772
         LocalRotation:
           value:
             x: 0
@@ -27162,9 +26936,9 @@ MonoBehaviour:
             z: 0.5750053
             w: 0
           c3:
-            x: 2.852
+            x: 79.562
             y: 0.48
-            z: 11.012001
+            z: 52.772
             w: 1
     - rid: 1350995581066543531
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
@@ -27210,7 +26984,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 313449396}
   - {fileID: 705507995}
-  - {fileID: 42966590}
   - {fileID: 1243762735}
   - {fileID: 374783927}
   - {fileID: 528060058}

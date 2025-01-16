@@ -65,40 +65,25 @@ public class TestTerrain : MonoBehaviour
         // position.y = world.GetInterpolatedHeight(position.x, position.z);
         // Gizmos.DrawSphere(position, 0.1f);
 
-        float3[] points = new[]
-        {
-            new float3(_point.position.x + 0.5f, _point.position.y, _point.position.z),
-            new float3(_point.position.x, _point.position.y, _point.position.z + 0.5f),
-            new float3(_point.position.x, _point.position.y, _point.position.z - 0.5f),
-            new float3(_point.position.x - 0.5f, _point.position.y, _point.position.z),
-            new float3(_point.position.x, _point.position.y + 0.5f, _point.position.z),
-            new float3(_point.position.x, _point.position.y - 0.5f, _point.position.z),
-        };
-        
-        var maxDepth = 0f;
-        int sampleCount = 3;  // Можем увеличить количество проверок для точности
-        for (int i = 0; i < points.Length; i++)
+        var sumHeight = 0f;
+        int sampleCount = 8;  // Можем увеличить количество проверок для точности
+        for (int i = 0; i < sampleCount; i++)
         {
             // Точка на окружности сферы
             float angle = math.radians(i * (360f / sampleCount));
-            // float x = _point.position.x + 0.5f * math.cos(angle);
-            // float z = _point.position.z + 0.5f * math.sin(angle);
-
-            float x = points[i].x;
-            float z = points[i].z;
-            Gizmos.DrawSphere(points[i], 0.1f);
+            float x = _point.position.x + 0.5f * math.cos(angle);
+            float z = _point.position.z + 0.5f * math.sin(angle);
 
             // Получаем высоту террейна в этой точке
             float height = world.GetInterpolatedHeight(x, z);
-            //Gizmos.DrawSphere(new Vector3(x, height, z), 0.1f);
+            Gizmos.DrawSphere(new Vector3(x, height, z), 0.1f);
 
-            if (points[i].y < height)
-            {
-                var depth = height - points[i].y;
-                maxDepth = math.max(depth, maxDepth);
-            }
+            sumHeight += height;
         }
         
-        _point.position = new Vector3(_point.position.x, _point.position.y + maxDepth, _point.position.z);
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(new Vector3(_point.position.x, sumHeight / sampleCount, _point.position.z), 0.1f);
+        
+        // _point.position = new Vector3(_point.position.x, sumHeight / sampleCount + 0.5f, _point.position.z);
     }
 }

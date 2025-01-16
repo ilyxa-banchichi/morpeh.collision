@@ -18,6 +18,7 @@ namespace NativeTrees
 
             // Перебираем несколько точек по окружности сферы
             int sampleCount = 8;  // Можем увеличить количество проверок для точности
+            float sumHeight = 0f;
             for (int i = 0; i < sampleCount; i++)
             {
                 // Точка на окружности сферы
@@ -27,22 +28,14 @@ namespace NativeTrees
 
                 // Получаем высоту террейна в этой точке
                 float height = terrain.GetInterpolatedHeight(x, z);
-                
-                Debug.Log($"point: {new float3(x, height, z)}");
-                Debug.Log($"maxDepth: {maxDepth}");
+                sumHeight += height;
 
                 // Проверяем, если точка ниже высоты террейна
                 if (sphere.Center.y - sphere.Radius < height)
-                {
                     isIntersecting = true;
-                    float depth = height - (sphere.Center.y - sphere.Radius);
-                    if (depth > maxDepth)
-                    {
-                        maxDepth = depth;
-                    }
-                }
             }
-
+            
+            maxDepth = sumHeight / sampleCount + sphere.Radius - sphere.Center.y;
             closestAxis = math.up();
             
             return new OverlapResult
