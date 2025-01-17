@@ -1,7 +1,9 @@
+using NativeTrees;
 using TriInspector;
 using Unity.Collections;
 using Unity.Mathematics;
 using UnityEngine;
+using TerrainCollider = UnityEngine.TerrainCollider;
 
 public class TestTerrain : MonoBehaviour
 {

@@ -15,6 +15,9 @@ namespace NativeTrees
             if (collider.Type == ColliderType.Sphere)
                 return (AABB)(ToSphereColliderRef(collider));
             
+            if (collider.Type == ColliderType.Capsule)
+                return (AABB)(ToCapsuleColliderRef(collider));
+            
             if (collider.Type == ColliderType.Terrain)
                 return (AABB)(ToTerrainColliderRef(collider));
 
@@ -35,6 +38,12 @@ namespace NativeTrees
         public static ref SphereCollider ToSphereColliderRef(Collider collider)
         {
             return ref UnsafeUtility.AsRef<SphereCollider>(collider.Bounds);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static ref CapsuleCollider ToCapsuleColliderRef(Collider collider)
+        {
+            return ref UnsafeUtility.AsRef<CapsuleCollider>(collider.Bounds);
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

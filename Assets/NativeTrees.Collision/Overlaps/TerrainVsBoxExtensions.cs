@@ -41,9 +41,7 @@ namespace NativeTrees
                     isIntersecting = true;
                     float depth = height - corner.y;
                     if (depth > maxDepth)
-                    {
                         maxDepth = depth;
-                    }
                 }
             }
 

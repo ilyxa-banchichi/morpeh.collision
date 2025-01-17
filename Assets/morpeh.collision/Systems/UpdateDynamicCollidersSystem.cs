@@ -10,6 +10,7 @@ using Unity.IL2CPP.CompilerServices;
 using Unity.Jobs;
 using UnityEngine;
 using BoxCollider = NativeTrees.BoxCollider;
+using CapsuleCollider = NativeTrees.CapsuleCollider;
 using SphereCollider = NativeTrees.SphereCollider;
 
 namespace Scellecs.Morpeh.Collision.Systems
@@ -77,7 +78,6 @@ namespace Scellecs.Morpeh.Collision.Systems
                         );
 
                         collider.Center = boxPtr.Center;
-                        collider.Extents = boxPtr.Extents;
                         
                         break;
                 
@@ -90,7 +90,17 @@ namespace Scellecs.Morpeh.Collision.Systems
                         );
 
                         collider.Center = spherePtr.Center;
-                        collider.Extents = spherePtr.Radius;
+                        
+                        break;
+                    
+                    case ColliderType.Capsule:
+                        ref var capsule = ref ColliderCastUtils.ToCapsuleColliderRef(collider.WorldBounds);
+                        ref var originalCapsule = ref ColliderCastUtils.ToCapsuleColliderRef(collider.OriginalBounds);
+                        capsule = new CapsuleCollider(
+                            originalCapsule.Center + transform.Position(), 
+                            originalCapsule.Radius, originalCapsule.Height, transform.Rotation());
+
+                        collider.Center = capsule.Center;
                         
                         break;
                     

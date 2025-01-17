@@ -11,19 +11,80 @@ namespace Scellecs.Morpeh.Collision.Components
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     [System.Serializable]
-    public struct ColliderComponent : IComponent, IDisposable
+    public partial struct ColliderComponent : IComponent, IDisposable
     {
          public Collider OriginalBounds;
          public Collider WorldBounds;
          
          public float3 Center;
-         public float3 Extents;
         
          public int Layer;
          public NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>> OverlapResult;
          public NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>> LastOverlapResult;
 
 #if UNITY_EDITOR
+        private ColliderType _type => WorldBounds.Type;
+        
+        [Title(nameof(BoxCollider))]
+        [InlineProperty]
+        [HideLabel]
+        [ShowInInspector]
+        [ShowIf(nameof(_type), ColliderType.Box)]
+        private BoxCollider _box
+        {
+            get
+            {
+                if (WorldBounds.Type == ColliderType.Box)
+                    return ColliderCastUtils.ToBoxColliderRef(WorldBounds);
+                return default;
+            }
+        }
+        
+        [Title(nameof(SphereCollider))]
+        [InlineProperty]
+        [HideLabel]
+        [ShowInInspector]
+        [ShowIf(nameof(_type), ColliderType.Sphere)]
+        private SphereCollider _sphere
+        {
+            get
+            {
+                if (WorldBounds.Type == ColliderType.Sphere)
+                    return ColliderCastUtils.ToSphereColliderRef(WorldBounds);
+                return default;
+            }
+        }
+
+        [Title(nameof(CapsuleCollider))]
+        [InlineProperty]
+        [HideLabel]
+        [ShowInInspector]
+        [ShowIf(nameof(_type), ColliderType.Capsule)]
+        private CapsuleCollider _capsule
+        {
+            get
+            {
+                if (WorldBounds.Type == ColliderType.Capsule)
+                    return ColliderCastUtils.ToCapsuleColliderRef(WorldBounds);
+                return default;
+            }
+        }
+        
+        [Title(nameof(TerrainCollider))]
+        [InlineProperty]
+        [HideLabel]
+        [ShowInInspector]
+        [ShowIf(nameof(_type), ColliderType.Terrain)]
+        private TerrainCollider _terrain
+        {
+            get
+            {
+                if (WorldBounds.Type == ColliderType.Terrain)
+                    return ColliderCastUtils.ToTerrainColliderRef(WorldBounds);
+                return default;
+            }
+        }
+        
         [ShowInInspector]
         private OverlapHolder<EntityHolder<Entity>>[] _overlapEntities
         {

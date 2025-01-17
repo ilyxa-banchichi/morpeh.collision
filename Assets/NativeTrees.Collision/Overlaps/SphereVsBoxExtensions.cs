@@ -1,9 +1,11 @@
+using System.Runtime.CompilerServices;
 using Unity.Mathematics;
 
 namespace NativeTrees
 {
     public static class SphereVsBoxExtensions
     {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static OverlapResult Overlaps(this BoxCollider box, SphereCollider sphere)
         {
             return sphere.Overlaps(box);

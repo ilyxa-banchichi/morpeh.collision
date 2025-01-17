@@ -5,6 +5,7 @@ using Unity.IL2CPP.CompilerServices;
 using Unity.Mathematics;
 using UnityEngine;
 using BoxCollider = UnityEngine.BoxCollider;
+using CapsuleCollider = UnityEngine.CapsuleCollider;
 using SphereCollider = UnityEngine.SphereCollider;
 using TerrainCollider = UnityEngine.TerrainCollider;
 
@@ -43,6 +44,8 @@ namespace Scellecs.Morpeh.Collision.Requests
                 Type = ColliderType.Box;
             else if (Collider is SphereCollider)
                 Type = ColliderType.Sphere;
+            else if (Collider is CapsuleCollider)
+                Type = ColliderType.Capsule;
             else if (Collider is TerrainCollider)
                 Type = ColliderType.Terrain;
             

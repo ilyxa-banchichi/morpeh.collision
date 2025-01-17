@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using Unity.Mathematics;
 using static Unity.Mathematics.math;
 using float3 = Unity.Mathematics.float3;
@@ -69,6 +70,7 @@ namespace NativeTrees
             };
         }
         
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static bool OverlapOnAxis(BoxCollider obb1, BoxCollider obb2, float3 axis, out float overlapDepth)
         {
             float projection1 = math.dot(obb1.Center, axis);
@@ -85,6 +87,7 @@ namespace NativeTrees
             return overlap > 0;
         }
         
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static float ProjectRadius(BoxCollider boxCollider, float3 axis)
         {
             // Радиус OBB на данной оси — это сумма проекций локальных осей, умноженных на размеры

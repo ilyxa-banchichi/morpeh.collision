@@ -89,7 +89,7 @@ namespace Scellecs.Morpeh.Collision.Systems
                     break;
                 
                 case ColliderType.Capsule:
-                    throw new NotImplementedException();
+                    CreateCapsuleCollider(ref collider, request, transform);
                     break;
                 
                 case ColliderType.Terrain:
@@ -119,7 +119,6 @@ namespace Scellecs.Morpeh.Collision.Systems
             collider.WorldBounds.Bounds = worldPtr;
                 
             collider.Center = worldPtr->Center;
-            collider.Extents = worldPtr->Extents;
         }
         
         private void CreateSphereCollider(ref ColliderComponent collider, 
@@ -140,7 +139,27 @@ namespace Scellecs.Morpeh.Collision.Systems
             collider.WorldBounds.Bounds = worldPtr;
 
             collider.Center = worldPtr->Center;
-            collider.Extents = worldPtr->Radius;
+        }
+        
+        private void CreateCapsuleCollider(ref ColliderComponent collider, 
+            CreateBoxColliderRequest request, TransformComponent transform)
+        {
+            UnityEngine.CapsuleCollider capsuleCollider = request.Collider as UnityEngine.CapsuleCollider;
+            
+            CapsuleCollider original = new CapsuleCollider(capsuleCollider.center, capsuleCollider.radius, capsuleCollider.height, quaternion.identity);
+            CapsuleCollider* originalPtr = (CapsuleCollider*)UnsafeUtility.Malloc(sizeof(CapsuleCollider), 4, Allocator.Persistent);
+            *originalPtr = original;
+            
+            collider.OriginalBounds.Bounds = originalPtr;
+            
+            CapsuleCollider world = new CapsuleCollider(original.Center + transform.Position(), original.Radius, original.Height, transform.Rotation());
+            CapsuleCollider* worldPtr = (CapsuleCollider*)UnsafeUtility.Malloc(sizeof(CapsuleCollider), 4, Allocator.Persistent);
+            *worldPtr = world;
+            
+            collider.WorldBounds.Bounds = worldPtr;
+
+            var aabb = ColliderCastUtils.ToAABB(collider.WorldBounds);
+            collider.Center = aabb.Center;
         }
         
         private void CreateTerrainCollider(ref ColliderComponent collider, 
@@ -180,7 +199,6 @@ namespace Scellecs.Morpeh.Collision.Systems
 
             var aabb = ColliderCastUtils.ToAABB(collider.WorldBounds);
             collider.Center = aabb.Center;
-            collider.Extents = aabb.Center * .5f;
         }
         
         private void AddCollisionEventsComponent(Entity entity, CreateBoxColliderRequest request)
