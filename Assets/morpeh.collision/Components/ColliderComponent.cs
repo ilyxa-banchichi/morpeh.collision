@@ -20,6 +20,7 @@ namespace Scellecs.Morpeh.Collision.Components
         
          public int Layer;
          public NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>> OverlapResult;
+         public int Flag;
          public NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>> LastOverlapResult;
 
 #if UNITY_EDITOR
@@ -97,6 +98,9 @@ namespace Scellecs.Morpeh.Collision.Components
                 return e;
             }
         }
+
+        [ShowInInspector]
+        private int _overlapResultCapasity => OverlapResult.Capacity;
         
         [ShowInInspector]
         private OverlapHolder<EntityHolder<Entity>>[] _lastOverlapResult
@@ -110,10 +114,14 @@ namespace Scellecs.Morpeh.Collision.Components
                 return e;
             }
         }
+        
+        [ShowInInspector]
+        private int _lastOverlapResultCapasity => LastOverlapResult.Capacity;
 #endif
 
         public void Dispose()
         {
+            LastOverlapResult.Dispose();
             OverlapResult.Dispose();
             OriginalBounds.Dispose();
             WorldBounds.Dispose();

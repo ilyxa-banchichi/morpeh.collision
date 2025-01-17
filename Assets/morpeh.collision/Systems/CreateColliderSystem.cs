@@ -69,7 +69,7 @@ namespace Scellecs.Morpeh.Collision.Systems
             ref var collider = ref _colliderComponents.Add(entity);
             ref var transform = ref _transformComponents.Get(entity);
             collider.Layer = request.Layer;
-            var capacity = request.IsStatic ? 5 : 5;
+            var capacity = 5;
             
             if (!collider.OverlapResult.IsCreated)
                 collider.OverlapResult = new NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>>(capacity, Allocator.Persistent);

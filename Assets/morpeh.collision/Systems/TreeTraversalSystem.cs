@@ -1,3 +1,4 @@
+using System.Threading;
 using NativeTrees;
 using Scellecs.Morpeh.Addons.Systems;
 using Scellecs.Morpeh.Collision.Components;
@@ -106,8 +107,10 @@ namespace Scellecs.Morpeh.Collision.Systems
                 foreach (var o in collider.OverlapResult)
                 {
                     ref var otherCollider = ref ColliderComponents.Get(o.Obj.Entity);
+                    
+                    while (Interlocked.CompareExchange(ref otherCollider.Flag, 1, 0) != 0) { }
                     otherCollider.OverlapResult.Add(overlapHolder);
-
+                    Interlocked.Exchange(ref otherCollider.Flag, 0);
                 }
                 Octree.DynamicColliders.RangeColliderUnique(collider.WorldBounds, collider.OverlapResult, LayerCollisionMasks[collider.Layer]);
                 

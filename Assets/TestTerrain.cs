@@ -1,4 +1,5 @@
 using NativeTrees;
+using Scellecs.Morpeh;
 using TriInspector;
 using Unity.Collections;
 using Unity.Mathematics;
@@ -48,7 +49,7 @@ public class TestTerrain : MonoBehaviour
         }
     }
     
-    protected void OnDrawGizmos()
+    protected unsafe void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
         // for (int z = 0; z < world.Height; z++)
