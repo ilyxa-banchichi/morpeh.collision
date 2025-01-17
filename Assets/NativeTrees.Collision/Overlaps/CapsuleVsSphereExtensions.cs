@@ -27,7 +27,7 @@ namespace NativeTrees
             {
                 // Глубина проникновения и нормаль
                 float penetrationDepth = combinedRadius - distance;
-                float3 axis = math.normalize(sphere.Center - closestPoint);
+                float3 axis = math.normalizesafe(sphere.Center - closestPoint);
 
                 return new OverlapResult
                 {

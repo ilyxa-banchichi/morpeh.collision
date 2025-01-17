@@ -14,8 +14,7 @@ namespace NativeTrees
             if (Type == ColliderType.Terrain && Bounds != null)
             {
                 ref var terrain = ref ColliderCastUtils.ToTerrainColliderRef(this);
-                if (terrain.HeightMap.IsCreated)
-                    terrain.HeightMap.Dispose();
+                    terrain.Dispose();
             }
             
             UnsafeUtility.Free(Bounds, Allocator.Persistent);

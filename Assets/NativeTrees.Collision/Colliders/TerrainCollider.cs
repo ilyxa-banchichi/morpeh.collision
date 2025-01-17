@@ -5,7 +5,7 @@ using Unity.Mathematics;
 
 namespace NativeTrees
 {
-    public struct TerrainCollider : IEquatable<TerrainCollider>
+    public struct TerrainCollider : IEquatable<TerrainCollider>, IDisposable
     {
         public NativeArray<float> HeightMap;  // Массив высот
         public int Width;  // Ширина террейна (по оси X)
@@ -15,6 +15,12 @@ namespace NativeTrees
         public float MinHeight;  // Минимальная высота террейна
         public float MaxHeight;  // Максимальная высота террейна
         public float3 Translation;
+
+        public void Dispose()
+        {
+            if (HeightMap.IsCreated)
+                HeightMap.Dispose();
+        }
         
         public static explicit operator AABB(TerrainCollider terrainCollider)
         {

@@ -27,16 +27,35 @@ namespace NativeTrees
             
             public bool IntersectRay(in PrecomputedRay ray, T obj, AABB objBounds, out float distance)
             {
+                distance = 0;
                 if (!LayerUtils.ShouldCollide(obj.Layer, LayerMask))
-                {
-                    distance = 0;
                     return false;
+                
+                if (obj.Collider.Type == ColliderType.Box)
+                {
+                    ref var other = ref ColliderCastUtils.ToBoxColliderRef(obj.Collider);
+                    return other.IntersectsRay(ray, out distance);
                 }
+                // else if (obj.Collider.Type == ColliderType.Sphere)
+                // {
+                //     ref var other = ref ColliderCastUtils.ToSphereColliderRef(obj.Collider);
+                //     return other.Overlaps(_boxCollider);
+                // }
+                // else if (obj.Collider.Type == ColliderType.Capsule)
+                // {
+                //     ref var other = ref ColliderCastUtils.ToCapsuleColliderRef(obj.Collider);
+                //     return other.Overlaps(_boxCollider);
+                // }
+                // else if (obj.Collider.Type == ColliderType.Terrain)
+                // {
+                //     if (!aabb1.Overlaps(aabb2))
+                //         return new OverlapResult() { IsIntersecting = false };
+                //     
+                //     ref var other = ref ColliderCastUtils.ToTerrainColliderRef(obj.Collider);
+                //     return other.Overlaps(_boxCollider);
+                // }
 
-                //ToDo: void
-                distance = 99999;
-                return true;
-                //return obj.OBB.IntersectsRay(ray, out distance);
+                return false;
             }
         }
     }

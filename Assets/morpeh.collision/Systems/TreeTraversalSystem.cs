@@ -21,7 +21,7 @@ namespace Scellecs.Morpeh.Collision.Systems
         
         private Stash<ColliderComponent> _colliderComponents;
         private Stash<OctreeComponent> _octreeComponents;
-
+        
         public override void OnAwake()
         {
             _colliders = World.Filter.With<ColliderComponent>().Build();
@@ -46,18 +46,20 @@ namespace Scellecs.Morpeh.Collision.Systems
                 Colliders = collidersNative,
                 ColliderComponents = _colliderComponents.AsNative()
             }.Schedule(collidersNative.length, 64, World.JobHandle);
+            
+            World.JobHandle.Complete();
 
             var layerCollisionMasks = LayerUtils.GetMasksNative(Allocator.TempJob);
             foreach (var octree in _octrees)
             {
                 ref var cOctree = ref _octreeComponents.Get(octree);
-                World.JobHandle = new Job()
+                World.JobHandle = new TreeTraversalJob()
                 {
                     Colliders = dynamicCollidersNative,
                     ColliderComponents = _colliderComponents.AsNative(),
                     Octree = cOctree,
                     LayerCollisionMasks = layerCollisionMasks
-                }.Schedule(dynamicCollidersNative.length, 64, World.JobHandle);
+                }.Schedule(dynamicCollidersNative.length, 4, World.JobHandle);
             }
             
             World.JobHandle.Complete();
@@ -81,7 +83,7 @@ namespace Scellecs.Morpeh.Collision.Systems
         }
         
         [BurstCompile]
-        private struct Job : IJobParallelFor
+        private struct TreeTraversalJob : IJobParallelFor
         {
             [ReadOnly]
             public NativeFilter Colliders;
@@ -107,10 +109,9 @@ namespace Scellecs.Morpeh.Collision.Systems
                 foreach (var o in collider.OverlapResult)
                 {
                     ref var otherCollider = ref ColliderComponents.Get(o.Obj.Entity);
-                    
-                    while (Interlocked.CompareExchange(ref otherCollider.Flag, 1, 0) != 0) { }
+                    while (Interlocked.CompareExchange(ref otherCollider.OverlapResultMultiThreadWriteFlag, 1, 0) != 0) { }
                     otherCollider.OverlapResult.Add(overlapHolder);
-                    Interlocked.Exchange(ref otherCollider.Flag, 0);
+                    Interlocked.Exchange(ref otherCollider.OverlapResultMultiThreadWriteFlag, 0);
                 }
                 Octree.DynamicColliders.RangeColliderUnique(collider.WorldBounds, collider.OverlapResult, LayerCollisionMasks[collider.Layer]);
                 

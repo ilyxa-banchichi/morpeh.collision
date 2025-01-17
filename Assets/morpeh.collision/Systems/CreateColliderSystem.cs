@@ -1,4 +1,3 @@
-using System;
 using NativeTrees;
 using Scellecs.Morpeh.Addons.Systems;
 using Scellecs.Morpeh.Collision.Components;
@@ -8,9 +7,11 @@ using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.IL2CPP.CompilerServices;
 using Unity.Mathematics;
+using UnityEngine;
 using BoxCollider = NativeTrees.BoxCollider;
-using Object = UnityEngine.Object;
+using CapsuleCollider = NativeTrees.CapsuleCollider;
 using SphereCollider = NativeTrees.SphereCollider;
+using TerrainCollider = NativeTrees.TerrainCollider;
 
 namespace Scellecs.Morpeh.Collision.Systems
 {
@@ -76,7 +77,7 @@ namespace Scellecs.Morpeh.Collision.Systems
             
             if (!collider.LastOverlapResult.IsCreated)
                 collider.LastOverlapResult = new NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>>(capacity, Allocator.Persistent);
-
+            
             collider.OriginalBounds.Type = collider.WorldBounds.Type = request.Type;
             switch (request.Type)
             {
@@ -97,7 +98,7 @@ namespace Scellecs.Morpeh.Collision.Systems
                     break;
             };
             
-            //Object.Destroy(request.Collider);
+            Object.Destroy(request.Collider);
         }
 
         private void CreateBoxCollider(ref ColliderComponent collider, 
@@ -204,7 +205,7 @@ namespace Scellecs.Morpeh.Collision.Systems
         private void AddCollisionEventsComponent(Entity entity, CreateBoxColliderRequest request)
         {
             ref var events = ref _collisionEventsComponents.Add(entity);
-            var capacity = request.IsStatic ? 5 : 5;
+            var capacity = 5;
             if (!events.OnCollisionEnter.IsCreated)
                 events.OnCollisionEnter = new NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>>(capacity, Allocator.Persistent);
             

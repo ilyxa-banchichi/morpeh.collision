@@ -4,6 +4,7 @@ using TriInspector;
 using Unity.Collections;
 using Unity.IL2CPP.CompilerServices;
 using Unity.Mathematics;
+using UnityEngine.Serialization;
 
 namespace Scellecs.Morpeh.Collision.Components
 {
@@ -11,7 +12,7 @@ namespace Scellecs.Morpeh.Collision.Components
     [Il2CppSetOption(Option.ArrayBoundsChecks, false)]
     [Il2CppSetOption(Option.DivideByZeroChecks, false)]
     [System.Serializable]
-    public partial struct ColliderComponent : IComponent, IDisposable
+    public struct ColliderComponent : IComponent, IDisposable
     {
          public Collider OriginalBounds;
          public Collider WorldBounds;
@@ -20,7 +21,7 @@ namespace Scellecs.Morpeh.Collision.Components
         
          public int Layer;
          public NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>> OverlapResult;
-         public int Flag;
+         public int OverlapResultMultiThreadWriteFlag;
          public NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>> LastOverlapResult;
 
 #if UNITY_EDITOR
@@ -121,8 +122,12 @@ namespace Scellecs.Morpeh.Collision.Components
 
         public void Dispose()
         {
-            LastOverlapResult.Dispose();
-            OverlapResult.Dispose();
+            if (LastOverlapResult.IsCreated)
+                LastOverlapResult.Dispose();
+            
+            if (OverlapResult.IsCreated)
+                OverlapResult.Dispose();
+            
             OriginalBounds.Dispose();
             WorldBounds.Dispose();
         }

@@ -54,13 +54,16 @@ namespace NativeTrees
                 if (!LayerUtils.ShouldCollide(obj.Layer, _mask))
                     return true;
 
+                if (!aabb1.Overlaps(aabb2))
+                    return true;
+
                 OverlapResult overlapResult = default;
                 if (_type == ColliderType.Box)
-                    overlapResult = OverlapBox(obj, aabb1, aabb2);
+                    overlapResult = OverlapBox(obj);
                 else if (_type == ColliderType.Sphere)
-                    overlapResult = OverlapSphere(obj, aabb1, aabb2);
+                    overlapResult = OverlapSphere(obj);
                 else if (_type == ColliderType.Capsule)
-                    overlapResult = OverlapCapsule(obj, aabb1, aabb2);
+                    overlapResult = OverlapCapsule(obj);
                 
                 if (overlapResult.IsIntersecting)
                 {
@@ -74,7 +77,7 @@ namespace NativeTrees
                 return true; // always keep iterating, we want to catch all objects
             }
 
-            private OverlapResult OverlapBox(T obj, AABB aabb1, AABB aabb2)
+            private OverlapResult OverlapBox(T obj)
             {
                 if (obj.Collider.Type == ColliderType.Box)
                 {
@@ -93,9 +96,6 @@ namespace NativeTrees
                 }
                 else if (obj.Collider.Type == ColliderType.Terrain)
                 {
-                    if (!aabb1.Overlaps(aabb2))
-                        return new OverlapResult() { IsIntersecting = false };
-                    
                     ref var other = ref ColliderCastUtils.ToTerrainColliderRef(obj.Collider);
                     return other.Overlaps(_boxCollider);
                 }
@@ -103,7 +103,7 @@ namespace NativeTrees
                 return default;
             }
             
-            private OverlapResult OverlapSphere(T obj, AABB aabb1, AABB aabb2)
+            private OverlapResult OverlapSphere(T obj)
             {
                 if (obj.Collider.Type == ColliderType.Box)
                 {
@@ -122,9 +122,6 @@ namespace NativeTrees
                 }
                 else if (obj.Collider.Type == ColliderType.Terrain)
                 {
-                    if (!aabb1.Overlaps(aabb2))
-                        return new OverlapResult() { IsIntersecting = false };
-                    
                     ref var other = ref ColliderCastUtils.ToTerrainColliderRef(obj.Collider);
                     return other.Overlaps(_sphereCollider);
                 }
@@ -132,7 +129,7 @@ namespace NativeTrees
                 return default;
             }
             
-            private OverlapResult OverlapCapsule(T obj, AABB aabb1, AABB aabb2)
+            private OverlapResult OverlapCapsule(T obj)
             {
                 if (obj.Collider.Type == ColliderType.Box)
                 {
@@ -151,9 +148,6 @@ namespace NativeTrees
                 }
                 else if (obj.Collider.Type == ColliderType.Terrain)
                 {
-                    if (!aabb1.Overlaps(aabb2))
-                        return new OverlapResult() { IsIntersecting = false };
-                    
                     ref var other = ref ColliderCastUtils.ToTerrainColliderRef(obj.Collider);
                     return other.Overlaps(_capsuleCollider);
                 }

@@ -28,7 +28,7 @@ namespace NativeTrees
                 // Определяем глубину проникновения и ось пересечения
                 float penetrationDepth = capsule.Radius - math.min(distanceToTop, distanceToBottom);
                 float3 intersectionPoint = distanceToTop < distanceToBottom ? closestToTop : closestToBottom;
-                float3 axis = math.normalize(intersectionPoint - (distanceToTop < distanceToBottom ? topSphere : bottomSphere));
+                float3 axis = math.normalizesafe(intersectionPoint - (distanceToTop < distanceToBottom ? topSphere : bottomSphere));
 
                 return new OverlapResult
                 {
