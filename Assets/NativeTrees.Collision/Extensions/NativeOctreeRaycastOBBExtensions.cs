@@ -31,29 +31,29 @@ namespace NativeTrees
                 if (!LayerUtils.ShouldCollide(obj.Layer, LayerMask))
                     return false;
                 
+                if (!objBounds.IntersectsRay(ray, out distance))
+                    return false;
+                
                 if (obj.Collider.Type == ColliderType.Box)
                 {
                     ref var other = ref ColliderCastUtils.ToBoxColliderRef(obj.Collider);
                     return other.IntersectsRay(ray, out distance);
                 }
-                // else if (obj.Collider.Type == ColliderType.Sphere)
-                // {
-                //     ref var other = ref ColliderCastUtils.ToSphereColliderRef(obj.Collider);
-                //     return other.Overlaps(_boxCollider);
-                // }
-                // else if (obj.Collider.Type == ColliderType.Capsule)
-                // {
-                //     ref var other = ref ColliderCastUtils.ToCapsuleColliderRef(obj.Collider);
-                //     return other.Overlaps(_boxCollider);
-                // }
-                // else if (obj.Collider.Type == ColliderType.Terrain)
-                // {
-                //     if (!aabb1.Overlaps(aabb2))
-                //         return new OverlapResult() { IsIntersecting = false };
-                //     
-                //     ref var other = ref ColliderCastUtils.ToTerrainColliderRef(obj.Collider);
-                //     return other.Overlaps(_boxCollider);
-                // }
+                else if (obj.Collider.Type == ColliderType.Sphere)
+                {
+                    ref var other = ref ColliderCastUtils.ToSphereColliderRef(obj.Collider);
+                    return other.IntersectsRay(ray, out distance);
+                }
+                else if (obj.Collider.Type == ColliderType.Capsule)
+                {
+                    ref var other = ref ColliderCastUtils.ToCapsuleColliderRef(obj.Collider);
+                    return other.IntersectsRay(ray, out distance);
+                }
+                else if (obj.Collider.Type == ColliderType.Terrain)
+                {
+                    ref var other = ref ColliderCastUtils.ToTerrainColliderRef(obj.Collider);
+                    return other.IntersectsRay(ray, out distance);
+                }
 
                 return false;
             }

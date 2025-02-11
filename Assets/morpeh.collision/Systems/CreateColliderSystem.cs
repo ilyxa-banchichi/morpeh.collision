@@ -98,7 +98,7 @@ namespace Scellecs.Morpeh.Collision.Systems
                     break;
             };
             
-            Object.Destroy(request.Collider);
+            // Object.Destroy(request.Collider);
         }
 
         private void CreateBoxCollider(ref ColliderComponent collider, 
