@@ -14,7 +14,7 @@ namespace Scellecs.Morpeh.Collision.Systems
 
         private Stash<ColliderComponent> _boxColliderComponents;
         private Stash<StaticColliderTag> _staticColliderTags;
-        private Stash<TriggerTag> _triggerTags;
+        private Stash<TriggerColliderTag> _triggerTags;
         private Stash<RigidbodyComponent> _rigidbodyComponents;
         private Stash<CollisionEventsComponent> _collisionEventsComponents;
         
@@ -24,7 +24,7 @@ namespace Scellecs.Morpeh.Collision.Systems
 
             _boxColliderComponents = World.GetStash<ColliderComponent>();
             _staticColliderTags = World.GetStash<StaticColliderTag>();
-            _triggerTags = World.GetStash<TriggerTag>();
+            _triggerTags = World.GetStash<TriggerColliderTag>();
             _rigidbodyComponents = World.GetStash<RigidbodyComponent>();
             _collisionEventsComponents = World.GetStash<CollisionEventsComponent>();
         }

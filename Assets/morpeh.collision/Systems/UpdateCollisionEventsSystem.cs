@@ -55,8 +55,8 @@ namespace Scellecs.Morpeh.Collision.Systems
             public void Execute(int index)
             {
                 var entity = Colliders[index];
-                ref var collider = ref ColliderComponents.Get(entity);
-                ref var events = ref CollisionEventsComponents.Get(entity);
+                ref ColliderComponent collider = ref ColliderComponents.Get(entity);
+                ref CollisionEventsComponent events = ref CollisionEventsComponents.Get(entity);
                 
                 events.OnCollisionEnter.Clear();
                 events.OnCollisionStay.Clear();
@@ -66,7 +66,7 @@ namespace Scellecs.Morpeh.Collision.Systems
                 {
                     if (!collider.LastOverlapResult.Contains(obj))
                     {
-                        events.OnCollisionEnter.Add(obj);
+                        events.OnCollisionEnter.Add(obj.Obj);
                     }
                 }
                 
@@ -74,7 +74,7 @@ namespace Scellecs.Morpeh.Collision.Systems
                 {
                     if (collider.LastOverlapResult.Contains(obj))
                     {
-                        events.OnCollisionStay.Add(obj);
+                        events.OnCollisionStay.Add(obj.Obj);
                     }
                 }
                 
@@ -82,7 +82,7 @@ namespace Scellecs.Morpeh.Collision.Systems
                 {
                     if (!collider.OverlapResult.Contains(obj))
                     {
-                        events.OnCollisionExit.Add(obj);
+                        events.OnCollisionExit.Add(obj.Obj);
                     }
                 }
                 

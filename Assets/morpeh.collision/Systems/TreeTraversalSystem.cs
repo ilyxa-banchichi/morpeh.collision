@@ -99,7 +99,7 @@ namespace Scellecs.Morpeh.Collision.Systems
             public void Execute(int index)
             {
                 var entity = Colliders[index];
-                ref var collider = ref ColliderComponents.Get(entity);
+                ref ColliderComponent collider = ref ColliderComponents.Get(entity);
                 var overlapHolder = new OverlapHolder<EntityHolder<Entity>>()
                 {
                     Obj = new EntityHolder<Entity>(entity, collider.Layer, collider.WorldBounds)
@@ -108,7 +108,7 @@ namespace Scellecs.Morpeh.Collision.Systems
                 Octree.StaticColliders.RangeColliderUnique(collider.WorldBounds, collider.OverlapResult, LayerCollisionMasks[collider.Layer]);
                 foreach (var o in collider.OverlapResult)
                 {
-                    ref var otherCollider = ref ColliderComponents.Get(o.Obj.Entity);
+                    ref ColliderComponent otherCollider = ref ColliderComponents.Get(o.Obj.Entity);
                     while (Interlocked.CompareExchange(ref otherCollider.OverlapResultMultiThreadWriteFlag, 1, 0) != 0) { }
                     otherCollider.OverlapResult.Add(overlapHolder);
                     Interlocked.Exchange(ref otherCollider.OverlapResultMultiThreadWriteFlag, 0);

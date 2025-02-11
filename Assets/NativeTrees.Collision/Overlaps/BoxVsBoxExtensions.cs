@@ -8,7 +8,7 @@ namespace NativeTrees
 {
     public static class BoxVsBoxExtensions
     {
-        public static OverlapResult Overlaps(this BoxCollider obb1, BoxCollider obb2)
+        public static OverlapResult Overlaps(this in BoxCollider obb1, in BoxCollider obb2)
         {
             // Получаем оси обеих рамок
             Span<float3> axes1 = stackalloc float3[3];
@@ -71,12 +71,13 @@ namespace NativeTrees
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static bool OverlapOnAxis(BoxCollider obb1, BoxCollider obb2, float3 axis, out float overlapDepth)
+        private static bool OverlapOnAxis(in BoxCollider obb1, BoxCollider obb2, float3 axis, out float overlapDepth)
         {
             float projection1 = math.dot(obb1.Center, axis);
             float projection2 = math.dot(obb2.Center, axis);
 
             float radius1 = ProjectRadius(obb1, axis);
+            obb2.Center = axis;
             float radius2 = ProjectRadius(obb2, axis);
 
             float distance = abs(projection1 - projection2);
@@ -88,7 +89,7 @@ namespace NativeTrees
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static float ProjectRadius(BoxCollider boxCollider, float3 axis)
+        private static float ProjectRadius(in BoxCollider boxCollider, float3 axis)
         {
             // Радиус OBB на данной оси — это сумма проекций локальных осей, умноженных на размеры
             return

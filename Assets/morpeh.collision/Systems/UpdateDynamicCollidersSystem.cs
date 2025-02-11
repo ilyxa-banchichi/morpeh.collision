@@ -64,8 +64,8 @@ namespace Scellecs.Morpeh.Collision.Systems
             public void Execute(int index)
             {
                 var entity = Colliders[index];
-                ref var collider = ref ColliderComponents.Get(entity);
-                ref var transform = ref TransformComponents.Get(entity);
+                ref ColliderComponent collider = ref ColliderComponents.Get(entity);
+                ref TransformComponent transform = ref TransformComponents.Get(entity);
                 
                 switch (collider.WorldBounds.Type)
                 {

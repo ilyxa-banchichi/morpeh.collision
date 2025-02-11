@@ -68,9 +68,9 @@ namespace Scellecs.Morpeh.Collision.Systems
             public void Execute(int index)
             {
                 var entity = Colliders[index];
-                ref var collider = ref ColliderComponents.Get(entity);
-                ref var rigidbody = ref RigidbodyComponents.Get(entity);
-                ref var transform = ref TransformComponents.Get(entity);
+                ref ColliderComponent collider = ref ColliderComponents.Get(entity);
+                ref RigidbodyComponent rigidbody = ref RigidbodyComponents.Get(entity);
+                ref TransformComponent transform = ref TransformComponents.Get(entity);
 
                 foreach (var overlap in collider.OverlapResult)
                 {
@@ -81,10 +81,10 @@ namespace Scellecs.Morpeh.Collision.Systems
                     if (!RigidbodyComponents.Has(other)) continue;
                     if (!ColliderComponents.Has(other)) continue;
                     
-                    ref var otherRigidbody = ref RigidbodyComponents.Get(other);
+                    ref RigidbodyComponent otherRigidbody = ref RigidbodyComponents.Get(other);
                     if (rigidbody.Weight > otherRigidbody.Weight) continue;
 
-                    ref var otherCollider = ref ColliderComponents.Get(other);
+                    ref ColliderComponent otherCollider = ref ColliderComponents.Get(other);
                     var vec = collider.Center - otherCollider.Center;
                     var dir = math.sign(math.dot(vec, o.Axis));
                     if (otherCollider.WorldBounds.Type == ColliderType.Terrain)

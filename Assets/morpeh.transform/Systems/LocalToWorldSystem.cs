@@ -75,7 +75,7 @@ namespace Scellecs.Morpeh.Transforms.Systems
         public void Execute(int index)
         {
             var entityId = rootFilter[index];
-            ref var transform = ref transformStash.Get(entityId);
+            ref TransformComponent transform = ref transformStash.Get(entityId);
 
             transform.LocalToWorld = float4x4.TRS(
                 transform.LocalPosition,
@@ -97,7 +97,7 @@ namespace Scellecs.Morpeh.Transforms.Systems
         {
             var entityId = parentFilter[index];
             var children = childStash.Get(entityId);
-            ref var transform = ref transformStash.Get(entityId);
+            ref TransformComponent transform = ref transformStash.Get(entityId);
 
             for (int i = 0; i < children.Value.Length; i++)
             {
@@ -107,7 +107,7 @@ namespace Scellecs.Morpeh.Transforms.Systems
 
         private void ChildLocalToWorldFromTransformMatrix(in float4x4 parentLocalToWorld, Entity childEntity)
         {
-            ref var transform = ref transformStash.Get(childEntity);
+            ref TransformComponent transform = ref transformStash.Get(childEntity);
             var hasParent = parentStash.Has(childEntity);
 
             if (hasParent)
@@ -121,7 +121,7 @@ namespace Scellecs.Morpeh.Transforms.Systems
                 transform.LocalToWorld = ltw;
             }
 
-            var children = childStash.Get(childEntity, out bool hasChildren);
+            ChildComponent children = childStash.Get(childEntity, out bool hasChildren);
 
             if (hasChildren)
             {

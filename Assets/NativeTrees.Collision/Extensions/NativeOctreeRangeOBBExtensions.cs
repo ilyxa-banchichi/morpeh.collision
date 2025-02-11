@@ -1,10 +1,12 @@
 using System;
+using System.Runtime.CompilerServices;
 using Unity.Collections;
 
 namespace NativeTrees
 {
     public static class NativeOctreeRangeOBBExtensions
     {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void RangeColliderUnique<T>(this NativeOctree<T> octree, Collider range,
             NativeParallelHashSet<OverlapHolder<T>> results, int mask = ~0) 
             where T : unmanaged, IEquatable<T>, ILayerProvider, IColliderProvider

@@ -25,7 +25,7 @@ namespace Scellecs.Morpeh.Collision.Systems
         private Stash<CreateBoxColliderRequest> _createBoxColliderRequests;
         private Stash<ColliderComponent> _colliderComponents;
         private Stash<StaticColliderTag> _staticColliderTags;
-        private Stash<TriggerTag> _triggerTags;
+        private Stash<TriggerColliderTag> _triggerTags;
         private Stash<RigidbodyComponent> _rigidbodyComponents;
         private Stash<CollisionEventsComponent> _collisionEventsComponents;
         private Stash<TransformComponent> _transformComponents;
@@ -40,7 +40,7 @@ namespace Scellecs.Morpeh.Collision.Systems
             _createBoxColliderRequests = World.GetStash<CreateBoxColliderRequest>();
             _colliderComponents = World.GetStash<ColliderComponent>();
             _staticColliderTags = World.GetStash<StaticColliderTag>();
-            _triggerTags = World.GetStash<TriggerTag>();
+            _triggerTags = World.GetStash<TriggerColliderTag>();
             _rigidbodyComponents = World.GetStash<RigidbodyComponent>();
             _collisionEventsComponents = World.GetStash<CollisionEventsComponent>();
             _transformComponents = World.GetStash<TransformComponent>();
@@ -50,7 +50,7 @@ namespace Scellecs.Morpeh.Collision.Systems
         {
             foreach (var entity in _requests)
             {
-                ref var request = ref _createBoxColliderRequests.Get(entity);
+                ref CreateBoxColliderRequest request = ref _createBoxColliderRequests.Get(entity);
                 
                 AddColliderComponent(entity, request);
                 AddCollisionEventsComponent(entity, request);
@@ -67,8 +67,8 @@ namespace Scellecs.Morpeh.Collision.Systems
 
         private void AddColliderComponent(Entity entity, CreateBoxColliderRequest request)
         {
-            ref var collider = ref _colliderComponents.Add(entity);
-            ref var transform = ref _transformComponents.Get(entity);
+            ref ColliderComponent collider = ref _colliderComponents.Add(entity);
+            ref TransformComponent transform = ref _transformComponents.Get(entity);
             collider.Layer = request.Layer;
             var capacity = 5;
             
@@ -204,21 +204,21 @@ namespace Scellecs.Morpeh.Collision.Systems
         
         private void AddCollisionEventsComponent(Entity entity, CreateBoxColliderRequest request)
         {
-            ref var events = ref _collisionEventsComponents.Add(entity);
+            ref CollisionEventsComponent events = ref _collisionEventsComponents.Add(entity);
             var capacity = 5;
             if (!events.OnCollisionEnter.IsCreated)
-                events.OnCollisionEnter = new NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>>(capacity, Allocator.Persistent);
+                events.OnCollisionEnter = new NativeParallelHashSet<EntityHolder<Entity>>(capacity, Allocator.Persistent);
             
             if (!events.OnCollisionStay.IsCreated)
-                events.OnCollisionStay = new NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>>(capacity, Allocator.Persistent);
+                events.OnCollisionStay = new NativeParallelHashSet<EntityHolder<Entity>>(capacity, Allocator.Persistent);
             
             if (!events.OnCollisionExit.IsCreated)
-                events.OnCollisionExit = new NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>>(capacity, Allocator.Persistent);
+                events.OnCollisionExit = new NativeParallelHashSet<EntityHolder<Entity>>(capacity, Allocator.Persistent);
         }
         
         private void AddRigidbodyComponent(Entity entity, CreateBoxColliderRequest request)
         {
-            ref var rigidbody = ref _rigidbodyComponents.Add(entity);
+            ref RigidbodyComponent rigidbody = ref _rigidbodyComponents.Add(entity);
             rigidbody.Weight = !request.IsStatic ? request.Weight : int.MaxValue;
             var fp = request.FreezePosition;
             rigidbody.FreezePosition = new int3(fp.x ? 0 : 1, fp.y ? 0 : 1, fp.z ? 0: 1);

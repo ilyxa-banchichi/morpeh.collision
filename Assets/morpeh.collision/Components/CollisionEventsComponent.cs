@@ -12,18 +12,18 @@ namespace Scellecs.Morpeh.Collision.Components
     [System.Serializable]
     public struct CollisionEventsComponent : IComponent, IDisposable
     {
-        public NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>> OnCollisionEnter;
-        public NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>> OnCollisionStay;
-        public NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>> OnCollisionExit;
+        public NativeParallelHashSet<EntityHolder<Entity>> OnCollisionEnter;
+        public NativeParallelHashSet<EntityHolder<Entity>> OnCollisionStay;
+        public NativeParallelHashSet<EntityHolder<Entity>> OnCollisionExit;
 
 #if UNITY_EDITOR
         [ShowInInspector]
-        private OverlapHolder<EntityHolder<Entity>>[] _onCollisionEnter
+        private EntityHolder<Entity>[] _onCollisionEnter
         {
             get
             {
                 var array = OnCollisionEnter.ToNativeArray(Allocator.Temp);
-                OverlapHolder<EntityHolder<Entity>>[] e = array.ToArray();
+                EntityHolder<Entity>[] e = array.ToArray();
                 array.Dispose();
 
                 return e;
@@ -31,12 +31,12 @@ namespace Scellecs.Morpeh.Collision.Components
         }
         
         [ShowInInspector]
-        private OverlapHolder<EntityHolder<Entity>>[] _onCollisionStay
+        private EntityHolder<Entity>[] _onCollisionStay
         {
             get
             {
                 var array = OnCollisionStay.ToNativeArray(Allocator.Temp);
-                OverlapHolder<EntityHolder<Entity>>[] e = array.ToArray();
+                EntityHolder<Entity>[] e = array.ToArray();
                 array.Dispose();
 
                 return e;
@@ -44,12 +44,12 @@ namespace Scellecs.Morpeh.Collision.Components
         }
         
         [ShowInInspector]
-        private OverlapHolder<EntityHolder<Entity>>[] _onCollisionExit
+        private EntityHolder<Entity>[] _onCollisionExit
         {
             get
             {
                 var array = OnCollisionExit.ToNativeArray(Allocator.Temp);
-                OverlapHolder<EntityHolder<Entity>>[] e = array.ToArray();
+                EntityHolder<Entity>[] e = array.ToArray();
                 array.Dispose();
 
                 return e;

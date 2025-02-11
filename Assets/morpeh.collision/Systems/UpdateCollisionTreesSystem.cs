@@ -52,7 +52,7 @@ namespace Scellecs.Morpeh.Collision.Systems
         {
             foreach (var octree in _octrees)
             {
-                ref var cOctree = ref _octreeComponents.Get(octree);
+                ref OctreeComponent cOctree = ref _octreeComponents.Get(octree);
 
                 var staticCollidersCount = _staticColliders.GetLengthSlow();
                 if (staticCollidersCount != cOctree.LastStaticCollidersCount)
@@ -119,7 +119,7 @@ namespace Scellecs.Morpeh.Collision.Systems
                 for (int i = 0; i < Colliders.length; i++)
                 {
                     var entity = Colliders[i];
-                    ref var collider = ref ColliderComponents.Get(entity);
+                    ref ColliderComponent collider = ref ColliderComponents.Get(entity);
                     
                     var entityHolder = new EntityHolder<Entity>(entity, collider.Layer, collider.WorldBounds);
                     Octree.Insert(entityHolder, ColliderCastUtils.ToAABB(collider.WorldBounds));
