@@ -1,3 +1,4 @@
+using System.Data;
 using NativeTrees;
 using Scellecs.Morpeh.Addons.Systems;
 using Scellecs.Morpeh.Collision.Components;
@@ -52,8 +53,14 @@ namespace Scellecs.Morpeh.Collision.Systems
             {
                 ref CreateBoxColliderRequest request = ref _createBoxColliderRequests.Get(entity);
                 
+                if (request.Data.Type == ColliderType.None)
+                {
+                    Debug.LogException(new DataException($"CreateBoxColliderRequest is not valid on {entity.ToString()}. Collider type is None"));
+                    continue;
+                }
+                
                 AddColliderComponent(entity, request);
-                AddCollisionEventsComponent(entity, request);
+                AddCollisionEventsComponent(entity);
                 
                 if (request.IsStatic)
                     _staticColliderTags.Add(entity);
@@ -78,36 +85,37 @@ namespace Scellecs.Morpeh.Collision.Systems
             if (!collider.LastOverlapResult.IsCreated)
                 collider.LastOverlapResult = new NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>>(capacity, Allocator.Persistent);
             
-            collider.OriginalBounds.Type = collider.WorldBounds.Type = request.Type;
-            switch (request.Type)
+            collider.OriginalBounds.Type = collider.WorldBounds.Type = request.Data.Type;
+            switch (request.Data.Type)
             {
                 case ColliderType.Box:
-                    CreateBoxCollider(ref collider, request, transform);
+                    CreateBoxCollider(ref collider, request.Data.Center, request.Data.Size, transform);
                     break;
                 
                 case ColliderType.Sphere:
-                    CreateSphereCollider(ref collider, request, transform);
+                    CreateSphereCollider(ref collider, request.Data.Center, request.Data.Radius, transform);
                     break;
                 
                 case ColliderType.Capsule:
-                    CreateCapsuleCollider(ref collider, request, transform);
+                    CreateCapsuleCollider(ref collider, request.Data.Center, request.Data.Radius, request.Data.Height, transform);
                     break;
                 
                 case ColliderType.Terrain:
-                    CreateTerrainCollider(ref collider, request, transform);
+                    CreateTerrainCollider(ref collider, request.Data.TerrainData, transform);
                     break;
             };
             
             // Object.Destroy(request.Collider);
         }
 
-        private void CreateBoxCollider(ref ColliderComponent collider, 
-            CreateBoxColliderRequest request, TransformComponent transform)
+        private void CreateBoxCollider(ref ColliderComponent collider, float3 center, float3 size,
+            TransformComponent transform)
         {
-            UnityEngine.BoxCollider boxCollider = request.Collider as UnityEngine.BoxCollider;
-            var extents = boxCollider.size * 0.5f;
-
-            BoxCollider original = new BoxCollider(new AABB(boxCollider.center - extents, boxCollider.center + extents), quaternion.identity);
+            var extents = size * 0.5f;
+            var min = center - extents;
+            var max = center + extents;
+            
+            BoxCollider original = new BoxCollider(new AABB(min, max), quaternion.identity);
             BoxCollider* originalPtr = (BoxCollider*)UnsafeUtility.Malloc(sizeof(BoxCollider), 4, Allocator.Persistent);
             *originalPtr = original;
 
@@ -122,12 +130,10 @@ namespace Scellecs.Morpeh.Collision.Systems
             collider.Center = worldPtr->Center;
         }
         
-        private void CreateSphereCollider(ref ColliderComponent collider, 
-            CreateBoxColliderRequest request, TransformComponent transform)
+        private void CreateSphereCollider(ref ColliderComponent collider, float3 center, 
+            float radius, TransformComponent transform)
         {
-            UnityEngine.SphereCollider sphereCollider = request.Collider as UnityEngine.SphereCollider;
-            
-            SphereCollider original = new SphereCollider(sphereCollider.center, sphereCollider.radius);
+            SphereCollider original = new SphereCollider(center, radius);
             SphereCollider* originalPtr = (SphereCollider*)UnsafeUtility.Malloc(sizeof(SphereCollider), 4, Allocator.Persistent);
             *originalPtr = original;
             
@@ -142,12 +148,10 @@ namespace Scellecs.Morpeh.Collision.Systems
             collider.Center = worldPtr->Center;
         }
         
-        private void CreateCapsuleCollider(ref ColliderComponent collider, 
-            CreateBoxColliderRequest request, TransformComponent transform)
+        private void CreateCapsuleCollider(ref ColliderComponent collider, float3 center, 
+            float radius, float height, TransformComponent transform)
         {
-            UnityEngine.CapsuleCollider capsuleCollider = request.Collider as UnityEngine.CapsuleCollider;
-            
-            CapsuleCollider original = new CapsuleCollider(capsuleCollider.center, capsuleCollider.radius, capsuleCollider.height, quaternion.identity);
+            CapsuleCollider original = new CapsuleCollider(center, radius, height, quaternion.identity);
             CapsuleCollider* originalPtr = (CapsuleCollider*)UnsafeUtility.Malloc(sizeof(CapsuleCollider), 4, Allocator.Persistent);
             *originalPtr = original;
             
@@ -164,11 +168,8 @@ namespace Scellecs.Morpeh.Collision.Systems
         }
         
         private void CreateTerrainCollider(ref ColliderComponent collider, 
-            CreateBoxColliderRequest request, TransformComponent transform)
+            TerrainData terrainData, TransformComponent transform)
         {
-            var terrainCollider = request.Collider as UnityEngine.TerrainCollider;
-            var terrainData = terrainCollider.terrainData;
-            
             TerrainCollider world = new TerrainCollider();
             world.Width = terrainData.heightmapResolution;
             world.Height = terrainData.heightmapResolution;
@@ -181,7 +182,6 @@ namespace Scellecs.Morpeh.Collision.Systems
             world.MinHeight = float.MaxValue;
             world.MaxHeight = float.MinValue;
 
-            // Заполняем высотную карту
             for (int z = 0; z < world.Height; z++)
             {
                 for (int x = 0; x < world.Width; x++)
@@ -202,7 +202,7 @@ namespace Scellecs.Morpeh.Collision.Systems
             collider.Center = aabb.Center;
         }
         
-        private void AddCollisionEventsComponent(Entity entity, CreateBoxColliderRequest request)
+        private void AddCollisionEventsComponent(Entity entity)
         {
             ref CollisionEventsComponent events = ref _collisionEventsComponents.Add(entity);
             var capacity = 5;

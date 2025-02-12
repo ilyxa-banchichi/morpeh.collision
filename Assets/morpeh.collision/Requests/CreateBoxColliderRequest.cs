@@ -1,5 +1,5 @@
+using System;
 using NativeTrees;
-using NativeTrees.Unity;
 using TriInspector;
 using Unity.IL2CPP.CompilerServices;
 using Unity.Mathematics;
@@ -17,10 +17,8 @@ namespace Scellecs.Morpeh.Collision.Requests
     [System.Serializable]
     public struct CreateBoxColliderRequest : IComponent, IValidatableWithGameObject
     {
-        [ReadOnly]
-        public ColliderType Type;
-        
-        public UnityEngine.Collider Collider;
+        [ReadOnly, InlineProperty, HideLabel]
+        public NewColliderData Data;
         
         [ReadOnly]
         public int Layer;
@@ -39,19 +37,72 @@ namespace Scellecs.Morpeh.Collision.Requests
 
         public void OnValidate(GameObject gameObject)
         {
-            Collider = gameObject.GetComponent<UnityEngine.Collider>();
-            if (Collider is BoxCollider)
-                Type = ColliderType.Box;
-            else if (Collider is SphereCollider)
-                Type = ColliderType.Sphere;
-            else if (Collider is CapsuleCollider)
-                Type = ColliderType.Capsule;
-            else if (Collider is TerrainCollider)
-                Type = ColliderType.Terrain;
-            
             Layer = gameObject.layer;
             IsStatic = gameObject.isStatic;
             Weight = math.clamp(Weight, 1, int.MaxValue);
+            Data = default;
+            
+            var collider = gameObject.GetComponent<UnityEngine.Collider>();
+            if (collider is BoxCollider boxCollider)
+                Data = NewColliderData.CreateBoxData(boxCollider.center,boxCollider.size);
+            else if (collider is SphereCollider sphereCollider)
+                Data = NewColliderData.CreateSphereData(sphereCollider.center, sphereCollider.radius);
+            else if (collider is CapsuleCollider capsuleCollider)
+                Data = NewColliderData.CreateCapsuleData(capsuleCollider.center, capsuleCollider.radius, capsuleCollider.height);
+            else if (collider is TerrainCollider terrainCollider)
+                Data = NewColliderData.CreateTerrainData(terrainCollider.terrainData);
+        }
+    }
+
+    [Serializable]
+    public readonly struct NewColliderData
+    {
+        public readonly ColliderType Type;
+        
+        [InlineProperty]
+        public readonly float3 Center;
+        
+        [InlineProperty]
+        public readonly float3 Size;
+        
+        public readonly float Radius;
+        public readonly float Height;
+        public readonly TerrainData TerrainData;
+
+        private NewColliderData(
+            ColliderType type,
+            float3 center = default, 
+            float3 size = default, 
+            float radius = default, 
+            float height = default, 
+            TerrainData terrainData = default)
+        {
+            Type = type;
+            Center = center;
+            Size = size;
+            Radius = radius;
+            Height = height;
+            TerrainData = terrainData;
+        }
+
+        public static NewColliderData CreateBoxData(float3 center, float3 size)
+        {
+            return new NewColliderData(ColliderType.Box, center: center, size: size);
+        }
+
+        public static NewColliderData CreateSphereData(float3 center, float radius)
+        {
+            return new NewColliderData(ColliderType.Sphere, center: center, radius: radius);
+        }
+
+        public static NewColliderData CreateCapsuleData(float3 center, float radius, float height)
+        {
+            return new NewColliderData(ColliderType.Capsule, center: center, radius: radius, height: height);
+        }
+        
+        public static NewColliderData CreateTerrainData(TerrainData terrainData)
+        {
+            return new NewColliderData(ColliderType.Terrain, terrainData: terrainData);
         }
     }
 }
