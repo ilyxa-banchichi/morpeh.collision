@@ -11,65 +11,75 @@ namespace NativeTrees
             NativeParallelHashSet<OverlapHolder<T>> results, int mask = ~0) 
             where T : unmanaged, IEquatable<T>, ILayerProvider, IColliderProvider
         {
-            var vistor = new RangeColliderUniqueVisitor<T>(results, range, mask);
-            octree.Range(ColliderCastUtils.ToAABB(range), ref vistor);
+            if (range.Type == ColliderType.Box)
+            {
+                var boxRangeColliderUniqueVisitor = new BoxRangeColliderUniqueVisitor<T>(
+                    ref ColliderCastUtils.ToBoxColliderRef(range), mask, results);
+                octree.Range(ColliderCastUtils.ToAABB(range), ref boxRangeColliderUniqueVisitor);
+            }
+            else if (range.Type == ColliderType.Sphere)
+            {
+                var sphereRangeColliderUniqueVisitor = new SphereRangeColliderUniqueVisitor<T>(
+                    ref ColliderCastUtils.ToSphereColliderRef(range), mask, results);
+                octree.Range(ColliderCastUtils.ToAABB(range), ref sphereRangeColliderUniqueVisitor);
+            }
+            else if (range.Type == ColliderType.Capsule)
+            {
+                var capsuleRangeColliderUniqueVisitor = new CapsuleRangeColliderUniqueVisitor<T>(
+                    ref ColliderCastUtils.ToCapsuleColliderRef(range), mask, results);
+                octree.Range(ColliderCastUtils.ToAABB(range), ref capsuleRangeColliderUniqueVisitor);
+            }
+#if UNITY_EDITOR
+            else if (range.Type == ColliderType.Terrain)
+                throw new ArgumentException("Terrain collider cannot be dynamic");
+#endif
         }
 
-        struct RangeColliderUniqueVisitor<T> : IOctreeRangeVisitor<T> 
+        private readonly struct BaseRangeColliderUniqueVisitor<T> where T : unmanaged, ILayerProvider
+        {
+            private readonly int _mask;
+            
+            public BaseRangeColliderUniqueVisitor(int mask)
+            {
+                _mask = mask;
+            }
+
+            public bool ShouldCollide(ref T obj, ref AABB aabb1, ref AABB aabb2)
+            {
+                if (!LayerUtils.ShouldCollide(obj.Layer, _mask))
+                    return false;
+
+                if (!aabb1.Overlaps(aabb2))
+                    return false;
+
+                return true;
+            }
+        }
+
+        private readonly struct BoxRangeColliderUniqueVisitor<T> : IOctreeRangeVisitor<T> 
             where T : unmanaged, IEquatable<T>, ILayerProvider, IColliderProvider
         {
-            public NativeParallelHashSet<OverlapHolder<T>> Results;
-            
-            private readonly int _mask;
-            private readonly ColliderType _type;
+            private readonly NativeParallelHashSet<OverlapHolder<T>> _results;
+            private readonly BaseRangeColliderUniqueVisitor<T> _base;
             private readonly BoxCollider _boxCollider;
-            private readonly SphereCollider _sphereCollider;
-            private CapsuleCollider _capsuleCollider;
 
-            public RangeColliderUniqueVisitor(
-                NativeParallelHashSet<OverlapHolder<T>> results, 
-                Collider range, 
-                int mask)
+            public BoxRangeColliderUniqueVisitor(ref BoxCollider range, int mask,
+                NativeParallelHashSet<OverlapHolder<T>> results)
             {
-                this.Results = results;
-                this._mask = mask;
-
-                _type = range.Type;
-                _boxCollider = default;
-                _sphereCollider = default;
-                _capsuleCollider = default;
-                
-                if (_type == ColliderType.Box)
-                    _boxCollider = ColliderCastUtils.ToBoxColliderRef(range);
-                else if (_type == ColliderType.Sphere)
-                    _sphereCollider = ColliderCastUtils.ToSphereColliderRef(range);
-                else if (_type == ColliderType.Capsule)
-                    _capsuleCollider = ColliderCastUtils.ToCapsuleColliderRef(range);
-#if UNITY_EDITOR
-                else if (_type == ColliderType.Terrain)
-                    throw new ArgumentException("Terrain collider cannot be dynamic");
-#endif
+                _results = results;
+                _base = new BaseRangeColliderUniqueVisitor<T>(mask);
+                _boxCollider = range;
             }
 
             public bool OnVisit(T obj, AABB aabb1, AABB aabb2)
             {
-                if (!LayerUtils.ShouldCollide(obj.Layer, _mask))
+                if (!_base.ShouldCollide(ref obj, ref aabb1, ref aabb2))
                     return true;
 
-                if (!aabb1.Overlaps(aabb2))
-                    return true;
-
-                OverlapResult overlapResult = default;
-                if (_type == ColliderType.Box)
-                    overlapResult = OverlapBox(obj);
-                else if (_type == ColliderType.Sphere)
-                    overlapResult = OverlapSphere(obj);
-                else if (_type == ColliderType.Capsule)
-                    overlapResult = OverlapCapsule(obj);
-                
+                var overlapResult = OverlapBox(ref obj);
                 if (overlapResult.IsIntersecting)
                 {
-                    Results.Add(new OverlapHolder<T>()
+                    _results.Add(new OverlapHolder<T>()
                     {
                         Overlap = overlapResult,
                         Obj = obj
@@ -79,7 +89,8 @@ namespace NativeTrees
                 return true; // always keep iterating, we want to catch all objects
             }
 
-            private OverlapResult OverlapBox(T obj)
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            private OverlapResult OverlapBox(ref T obj)
             {
                 if (obj.Collider.Type == ColliderType.Box)
                 {
@@ -104,8 +115,43 @@ namespace NativeTrees
 
                 return default;
             }
-            
-            private OverlapResult OverlapSphere(T obj)
+        }
+        
+        private readonly struct SphereRangeColliderUniqueVisitor<T> : IOctreeRangeVisitor<T> 
+            where T : unmanaged, IEquatable<T>, ILayerProvider, IColliderProvider
+        {
+            private readonly NativeParallelHashSet<OverlapHolder<T>> _results;
+            private readonly BaseRangeColliderUniqueVisitor<T> _base;
+            private readonly SphereCollider _sphereCollider;
+
+            public SphereRangeColliderUniqueVisitor(ref SphereCollider range, int mask,
+                NativeParallelHashSet<OverlapHolder<T>> results)
+            {
+                _results = results;
+                _base = new BaseRangeColliderUniqueVisitor<T>(mask);
+                _sphereCollider = range;
+            }
+
+            public bool OnVisit(T obj, AABB aabb1, AABB aabb2)
+            {
+                if (!_base.ShouldCollide(ref obj, ref aabb1, ref aabb2))
+                    return true;
+
+                var overlapResult = OverlapSphere(ref obj);
+                if (overlapResult.IsIntersecting)
+                {
+                    _results.Add(new OverlapHolder<T>()
+                    {
+                        Overlap = overlapResult,
+                        Obj = obj
+                    });   
+                }
+
+                return true; // always keep iterating, we want to catch all objects
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            private OverlapResult OverlapSphere(ref T obj)
             {
                 if (obj.Collider.Type == ColliderType.Box)
                 {
@@ -130,8 +176,43 @@ namespace NativeTrees
 
                 return default;
             }
-            
-            private OverlapResult OverlapCapsule(T obj)
+        }
+        
+        private readonly struct CapsuleRangeColliderUniqueVisitor<T> : IOctreeRangeVisitor<T> 
+            where T : unmanaged, IEquatable<T>, ILayerProvider, IColliderProvider
+        {
+            private readonly NativeParallelHashSet<OverlapHolder<T>> _results;
+            private readonly BaseRangeColliderUniqueVisitor<T> _base;
+            private readonly CapsuleCollider _capsuleCollider;
+
+            public CapsuleRangeColliderUniqueVisitor(ref CapsuleCollider range, int mask,
+                NativeParallelHashSet<OverlapHolder<T>> results)
+            {
+                _results = results;
+                _base = new BaseRangeColliderUniqueVisitor<T>(mask);
+                _capsuleCollider = range;
+            }
+
+            public bool OnVisit(T obj, AABB aabb1, AABB aabb2)
+            {
+                if (!_base.ShouldCollide(ref obj, ref aabb1, ref aabb2))
+                    return true;
+
+                var overlapResult = OverlapCapsule(ref obj);
+                if (overlapResult.IsIntersecting)
+                {
+                    _results.Add(new OverlapHolder<T>()
+                    {
+                        Overlap = overlapResult,
+                        Obj = obj
+                    });   
+                }
+
+                return true; // always keep iterating, we want to catch all objects
+            }
+
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            private OverlapResult OverlapCapsule(ref T obj)
             {
                 if (obj.Collider.Type == ColliderType.Box)
                 {

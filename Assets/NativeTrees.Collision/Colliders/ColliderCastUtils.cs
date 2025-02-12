@@ -9,23 +9,19 @@ namespace NativeTrees
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static AABB ToAABB(Collider collider)
         {
-            if (collider.Type == ColliderType.Box)
-                return (AABB)(ToBoxColliderRef(collider));
-
-            if (collider.Type == ColliderType.Sphere)
-                return (AABB)(ToSphereColliderRef(collider));
-            
-            if (collider.Type == ColliderType.Capsule)
-                return (AABB)(ToCapsuleColliderRef(collider));
-            
-            if (collider.Type == ColliderType.Terrain)
-                return (AABB)(ToTerrainColliderRef(collider));
-
+            return collider.Type switch
+            {
+                ColliderType.None   => default,
+                ColliderType.Box     => (AABB)ToBoxColliderRef(collider),
+                ColliderType.Sphere  => (AABB)ToSphereColliderRef(collider),
+                ColliderType.Capsule => (AABB)ToCapsuleColliderRef(collider),
+                ColliderType.Terrain => (AABB)ToTerrainColliderRef(collider),
 #if UNITY_EDITOR
-            throw new InvalidCastException($"Cannot convert collider {collider.Type} ({(int)collider.Type}) to AABB");
+                _ => throw new InvalidCastException($"Cannot convert collider {collider.Type} ({(int)collider.Type}) to AABB")
+#else
+                _ => default
 #endif
-
-            return default;
+            };
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

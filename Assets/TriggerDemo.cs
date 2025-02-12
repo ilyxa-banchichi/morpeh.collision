@@ -11,7 +11,7 @@ public class TriggerDemo : MonoBehaviour
     private float3 _lastHitPoint;
     private Ray _lastRay;
 
-    protected void Start()
+    protected unsafe void Start()
     {
         _octree = World.Default.Filter.With<OctreeComponent>().Build();
     }
