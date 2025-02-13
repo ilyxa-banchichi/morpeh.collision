@@ -95,7 +95,7 @@ namespace NativeTrees
             // Интерполяция по Z
             float h = math.lerp(hx0, hx1, tz);
 
-            return h;
+            return h + collider.Translation.y;
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

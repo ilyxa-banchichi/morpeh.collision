@@ -14,7 +14,8 @@ namespace NativeTrees
         {
             tMin = float.MinValue;
             
-            float maxDist = 1000.0f;
+            // ToDo: Scale with min octant size
+            float maxDist = 100.0f;
             float stepSize = terrainCollider.ScaleX * 0.5f;
             
             float3 position = ray.origin;
@@ -74,11 +75,11 @@ namespace NativeTrees
         
         public static bool IntersectsRay(this BoxCollider boxCollider, in PrecomputedRay ray, out float tMin)
         {
-            tMin = float.MinValue;
-            float tMax = float.MaxValue;
-
+            tMin = float.NegativeInfinity;
+            var tMax = float.PositiveInfinity;
+    
             float3 p = boxCollider.Center - ray.origin;
-
+    
             for (int i = 0; i < 3; i++)
             {
                 float3 axis = i == 0 ? boxCollider.X : (i == 1 ? boxCollider.Y : boxCollider.Z);
@@ -86,29 +87,27 @@ namespace NativeTrees
 
                 float e = math.dot(axis, p);
                 float f = math.dot(axis, ray.dir);
-
-                if (math.abs(f) > 1e-6f)
+        
+                if (math.abs(f) > 1e-6f) // Avoid division by zero
                 {
                     float t1 = (e - extent) / f;
                     float t2 = (e + extent) / f;
-
-                    if (t1 > t2)
-                        (t1, t2) = (t2, t1);
-
+            
+                    if (t1 > t2) (t1, t2) = (t2, t1);
+            
                     tMin = math.max(tMin, t1);
                     tMax = math.min(tMax, t2);
-
+            
                     if (tMin > tMax)
                         return false;
                 }
-                else
+                else if (-e - extent > 0 || -e + extent < 0)
                 {
-                    if (-extent > e || e > extent)
-                        return false;
+                    return false;
                 }
             }
-
-            return tMin >= 0;
+    
+            return tMax > 0;
         }
     }
 }

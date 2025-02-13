@@ -7,6 +7,14 @@ namespace Scellecs.Morpeh.Collision
 {
     public class CollisionFeature : LateUpdateFeature
     {
+        private readonly ICollisionService _collisionService;
+        
+        public CollisionFeature(ICollisionService collisionService)
+        {
+            _collisionService = collisionService;
+            _collisionService.Initialize(World.Default);
+        }
+        
         protected override void Initialize()
         {
             RegisterRequest<CreateBoxColliderRequest>();

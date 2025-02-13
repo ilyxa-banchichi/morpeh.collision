@@ -105,7 +105,8 @@ namespace Scellecs.Morpeh.Collision.Systems
                     break;
             };
             
-            // Object.Destroy(request.Collider);
+            // if (request.ColliderObject)
+            //     Object.Destroy(request.ColliderObject);
         }
 
         private void CreateBoxCollider(ref ColliderComponent collider, float3 center, float3 size,
@@ -115,13 +116,13 @@ namespace Scellecs.Morpeh.Collision.Systems
             var min = center - extents;
             var max = center + extents;
             
-            BoxCollider original = new BoxCollider(new AABB(min, max), quaternion.identity);
+            BoxCollider original = new BoxCollider(new AABB(min, max), quaternion.identity, 1f);
             BoxCollider* originalPtr = (BoxCollider*)UnsafeUtility.Malloc(sizeof(BoxCollider), 4, Allocator.Persistent);
             *originalPtr = original;
 
             collider.OriginalBounds.Bounds = originalPtr;
 
-            BoxCollider world = new BoxCollider((AABB)original, transform.Position(), transform.Rotation());
+            BoxCollider world = new BoxCollider((AABB)original, transform.Position(), transform.Rotation(), transform.Scale());
             BoxCollider* worldPtr = (BoxCollider*)UnsafeUtility.Malloc(sizeof(BoxCollider), 4, Allocator.Persistent);
             *worldPtr = world;
                 
@@ -133,13 +134,13 @@ namespace Scellecs.Morpeh.Collision.Systems
         private void CreateSphereCollider(ref ColliderComponent collider, float3 center, 
             float radius, TransformComponent transform)
         {
-            SphereCollider original = new SphereCollider(center, radius);
+            SphereCollider original = new SphereCollider(center, radius, 1f);
             SphereCollider* originalPtr = (SphereCollider*)UnsafeUtility.Malloc(sizeof(SphereCollider), 4, Allocator.Persistent);
             *originalPtr = original;
             
             collider.OriginalBounds.Bounds = originalPtr;
             
-            SphereCollider world = new SphereCollider(original.Center + transform.Position(), original.Radius);
+            SphereCollider world = new SphereCollider(original.Center + transform.Position(), original.Radius, transform.Scale());
             SphereCollider* worldPtr = (SphereCollider*)UnsafeUtility.Malloc(sizeof(SphereCollider), 4, Allocator.Persistent);
             *worldPtr = world;
             

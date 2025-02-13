@@ -146,7 +146,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313449394}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b070465798164511b204dcd4a2a6bad5, type: 3}
   m_Name: 
@@ -205,7 +205,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &370160832
 MeshRenderer:
@@ -267,7 +267,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 79.94, y: 0.49, z: 47.38}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.58, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -306,18 +306,18 @@ MonoBehaviour:
             z: 0
             w: 1
         LocalScale:
-          x: 1
-          y: 1
+          x: 1.3
+          y: 1.58
           z: 1
         LocalToWorld:
           c0:
-            x: 1
+            x: 1.3
             y: 0
             z: 0
             w: 0
           c1:
             x: 0
-            y: 1
+            y: 1.58
             z: 0
             w: 0
           c2:
@@ -333,8 +333,8 @@ MonoBehaviour:
     - rid: 2877120923901624330
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
       data:
-        Type: 2
-        Collider: {fileID: 370160830}
+        ManualSetupUnityCollider: 0
+        ColliderObject: {fileID: 370160830}
         Layer: 0
         IsStatic: 0
         IsTrigger: 0
@@ -516,8 +516,8 @@ MonoBehaviour:
     - rid: 2877120923901624333
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
       data:
-        Type: 3
-        Collider: {fileID: 528060060}
+        ManualSetupUnityCollider: 0
+        ColliderObject: {fileID: 528060060}
         Layer: 0
         IsStatic: 0
         IsTrigger: 0
@@ -897,11 +897,11 @@ MonoBehaviour:
     - rid: 2877120923901624321
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
       data:
-        Type: 2
-        Collider: {fileID: 1053926435}
+        ManualSetupUnityCollider: 0
+        ColliderObject: {fileID: 1053926435}
         Layer: 0
         IsStatic: 0
-        IsTrigger: 1
+        IsTrigger: 0
         Weight: 1
         FreezePosition:
           x: 0
@@ -1080,11 +1080,11 @@ MonoBehaviour:
     - rid: 2877120923901624327
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
       data:
-        Type: 3
-        Collider: {fileID: 1210086755}
+        ManualSetupUnityCollider: 0
+        ColliderObject: {fileID: 1210086755}
         Layer: 0
         IsStatic: 0
-        IsTrigger: 1
+        IsTrigger: 0
         Weight: 1
         FreezePosition:
           x: 0
@@ -1106,7 +1106,7 @@ GameObject:
   - component: {fileID: 1243762734}
   - component: {fileID: 1243762733}
   - component: {fileID: 1243762736}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1182,7 +1182,7 @@ Transform:
   m_GameObject: {fileID: 1243762732}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.45, y: 0, z: -0.4}
+  m_LocalPosition: {x: -2.45, y: -50, z: -0.4}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1213,7 +1213,7 @@ MonoBehaviour:
         IgnoreParentDestroyed: 0
         LocalPosition:
           x: -2.45
-          y: 0
+          y: -50
           z: -0.4
         LocalRotation:
           value:
@@ -1243,15 +1243,15 @@ MonoBehaviour:
             w: 0
           c3:
             x: -2.45
-            y: 0
+            y: -50
             z: -0.4
             w: 1
     - rid: 1350995583743033345
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
       data:
-        Type: 4
-        Collider: {fileID: 1243762733}
-        Layer: 0
+        ManualSetupUnityCollider: 0
+        ColliderObject: {fileID: 1243762733}
+        Layer: 6
         IsStatic: 1
         IsTrigger: 0
         Weight: 1
@@ -1430,11 +1430,11 @@ MonoBehaviour:
     - rid: 2877120923901624324
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
       data:
-        Type: 1
-        Collider: {fileID: 1573854362}
+        ManualSetupUnityCollider: 0
+        ColliderObject: {fileID: 1573854362}
         Layer: 0
         IsStatic: 0
-        IsTrigger: 1
+        IsTrigger: 0
         Weight: 1
         FreezePosition:
           x: 0
@@ -1483,7 +1483,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1748089273
 MeshRenderer:
@@ -1543,13 +1543,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748089270}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 81.93, y: 0.49, z: 47.68}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.46062407, y: -0.61100787, z: 0.26705638, w: 0.58581215}
+  m_LocalPosition: {x: 83.71, y: 0.49, z: 46.54}
+  m_LocalScale: {x: 2, y: 1.5, z: 1.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 120, y: 70, z: 150}
 --- !u!114 &1748089276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,45 +1574,45 @@ MonoBehaviour:
       data:
         IgnoreParentDestroyed: 0
         LocalPosition:
-          x: 81.93
+          x: 83.71
           y: 0.49
-          z: 47.68
+          z: 46.54
         LocalRotation:
           value:
-            x: 0
-            y: 0
-            z: 0
-            w: 1
+            x: 0.46062407
+            y: -0.61100787
+            z: 0.26705638
+            w: 0.58581215
         LocalScale:
-          x: 1
-          y: 1
-          z: 1
+          x: 2.0000007
+          y: 1.5000002
+          z: 1.8000004
         LocalToWorld:
           c0:
-            x: 1
-            y: 0
-            z: 0
+            x: 0.22140117
+            y: -0.5000004
+            z: 1.9237945
             w: 0
           c1:
-            x: 0
-            y: 1
-            z: 0
+            x: -1.3136697
+            y: 0.6495192
+            z: 0.31999692
             w: 0
           c2:
-            x: 0
-            y: 0
-            z: 1
+            x: -0.84572387
+            y: -1.5588462
+            z: -0.30781853
             w: 0
           c3:
-            x: 81.93
+            x: 83.71
             y: 0.49
-            z: 47.68
+            z: 46.54
             w: 1
     - rid: 2877120923901624336
       type: {class: CreateBoxColliderRequest, ns: Scellecs.Morpeh.Collision.Requests, asm: Scellecs.Morpeh.Collision}
       data:
-        Type: 1
-        Collider: {fileID: 1748089271}
+        ManualSetupUnityCollider: 0
+        ColliderObject: {fileID: 1748089271}
         Layer: 0
         IsStatic: 0
         IsTrigger: 0

@@ -1,0 +1,17 @@
+{
+    "name": "Scellecs.Morpeh.Collision.VContainer",
+    "rootNamespace": "Scellecs.Morpeh.Collision.VContainer",
+    "references": [
+        "GUID:428d1579b1a674286af444e00bb8497a",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

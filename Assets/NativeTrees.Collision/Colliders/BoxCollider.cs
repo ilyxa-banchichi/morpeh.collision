@@ -13,16 +13,16 @@ namespace NativeTrees
         public float3 Y;
         public float3 Z;
         
-        public BoxCollider(AABB aabb, float3 position, quaternion rotation) 
-            : this(new AABB(aabb.min + position, aabb.max + position), rotation) { }
+        public BoxCollider(AABB aabb, float3 position, quaternion rotation, float3 scale) 
+            : this(new AABB(aabb.min + position, aabb.max + position), rotation, scale) { }
 
-        public BoxCollider(AABB aabb, quaternion rotation)
+        public BoxCollider(AABB aabb, quaternion rotation, float3 scale)
         {
             // Центр OBB совпадает с центром AABB
             Center = aabb.Center;
 
             // Половина размеров AABB (Extents)
-            Extents = aabb.Size * 0.5f;
+            Extents = aabb.Size * 0.5f * scale;
 
             // Локальные оси AABB преобразуются с учетом вращения
             float3x3 rotationMatrix = new float3x3(rotation);

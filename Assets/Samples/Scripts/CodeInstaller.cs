@@ -12,7 +12,12 @@ namespace Samples.Scripts
 {
     public unsafe class CodeInstaller : BaseFeaturesInstaller
     {
-        protected override void InitializeShared() { }
+        public static ICollisionService CollisionService;
+
+        protected override void InitializeShared()
+        {
+            CollisionService = new CollisionService();
+        }
 
         protected override UpdateFeature[] InitializeUpdateFeatures()
         {
@@ -32,7 +37,7 @@ namespace Samples.Scripts
         {
             return new LateUpdateFeature[]
             {
-                new CollisionFeature(),
+                new CollisionFeature(CollisionService),
                 new HierarchyFeature(),
                 new TransformFeature(),
                 new SampleLateFeature(),

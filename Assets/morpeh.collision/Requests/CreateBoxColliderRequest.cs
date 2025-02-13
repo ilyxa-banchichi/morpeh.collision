@@ -17,6 +17,11 @@ namespace Scellecs.Morpeh.Collision.Requests
     [System.Serializable]
     public struct CreateBoxColliderRequest : IComponent, IValidatableWithGameObject
     {
+        public bool ManualSetupUnityCollider;
+        
+        [ShowIf(nameof(ManualSetupUnityCollider), true)]
+        public UnityEngine.Collider ColliderObject;
+        
         [ReadOnly, InlineProperty, HideLabel]
         public NewColliderData Data;
         
@@ -26,30 +31,36 @@ namespace Scellecs.Morpeh.Collision.Requests
         [ReadOnly]
         public bool IsStatic;
         
+        [ReadOnly]
         public bool IsTrigger;
+
+        private bool IsTriggerOrStatic => IsStatic || IsTrigger;
         
         [Title("Rigidbody")]
-        [ShowIf(nameof(IsTrigger), false)]
+        [ShowIf(nameof(IsTriggerOrStatic), false)]
         public int Weight;
         
-        [ShowIf(nameof(IsTrigger), false)]
+        [ShowIf(nameof(IsTriggerOrStatic), false)]
         public bool3 FreezePosition;
 
         public void OnValidate(GameObject gameObject)
         {
-            Layer = gameObject.layer;
-            IsStatic = gameObject.isStatic;
+            if (!ManualSetupUnityCollider)
+                ColliderObject = gameObject.GetComponent<UnityEngine.Collider>();
+            
+            Layer = ColliderObject.gameObject.layer;
+            IsStatic = ColliderObject.gameObject.isStatic;
+            IsTrigger = ColliderObject.isTrigger;
             Weight = math.clamp(Weight, 1, int.MaxValue);
             Data = default;
             
-            var collider = gameObject.GetComponent<UnityEngine.Collider>();
-            if (collider is BoxCollider boxCollider)
+            if (ColliderObject is BoxCollider boxCollider)
                 Data = NewColliderData.CreateBoxData(boxCollider.center,boxCollider.size);
-            else if (collider is SphereCollider sphereCollider)
+            else if (ColliderObject is SphereCollider sphereCollider)
                 Data = NewColliderData.CreateSphereData(sphereCollider.center, sphereCollider.radius);
-            else if (collider is CapsuleCollider capsuleCollider)
+            else if (ColliderObject is CapsuleCollider capsuleCollider)
                 Data = NewColliderData.CreateCapsuleData(capsuleCollider.center, capsuleCollider.radius, capsuleCollider.height);
-            else if (collider is TerrainCollider terrainCollider)
+            else if (ColliderObject is TerrainCollider terrainCollider)
                 Data = NewColliderData.CreateTerrainData(terrainCollider.terrainData);
         }
     }

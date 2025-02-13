@@ -739,7 +739,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Standalone: MORPEH;MORPEH_BURST
+    Standalone: MORPEH;MORPEH_BURST;MORPEH_ADDONS_VCONTAINER
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

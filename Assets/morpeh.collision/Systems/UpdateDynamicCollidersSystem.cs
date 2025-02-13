@@ -74,7 +74,8 @@ namespace Scellecs.Morpeh.Collision.Systems
                         boxPtr = new BoxCollider(
                             ColliderCastUtils.ToAABB(collider.OriginalBounds),
                             transform.Position(),
-                            transform.Rotation()
+                            transform.Rotation(),
+                            transform.Scale()
                         );
 
                         collider.Center = boxPtr.Center;
@@ -86,7 +87,8 @@ namespace Scellecs.Morpeh.Collision.Systems
                         ref var original = ref ColliderCastUtils.ToSphereColliderRef(collider.OriginalBounds);
                         spherePtr = new SphereCollider(
                             original.Center + transform.Position(),
-                            original.Radius
+                            original.Radius,
+                            transform.Scale()
                         );
 
                         collider.Center = spherePtr.Center;

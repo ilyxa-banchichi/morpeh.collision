@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.bartofzo.nativetrees": "https://github.com/bartofzo/NativeTrees.git?path=/Packages/NativeTrees",
+    "jp.hadashikick.vcontainer": "https://github.com/hadashiA/VContainer.git?path=VContainer/Assets/VContainer#1.13.2",
     "com.codewriter.triinspector": "https://github.com/codewriter-packages/Tri-Inspector.git",
     "com.scellecs.morpeh": "https://github.com/scellecs/morpeh.git?path=Scellecs.Morpeh#2024.1.0",
     "com.unity.2d.sprite": "1.0.0",
