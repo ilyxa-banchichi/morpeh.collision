@@ -7,6 +7,7 @@ namespace NativeTrees
     public unsafe struct Collider : IDisposable
     {
         public void* Bounds;
+        public AABB AABB;
         public ColliderType Type;
 
         public void Dispose()
@@ -16,8 +17,15 @@ namespace NativeTrees
                 ref var terrain = ref ColliderCastUtils.ToTerrainColliderRef(this);
                     terrain.Dispose();
             }
-            
-            UnsafeUtility.Free(Bounds, Allocator.Persistent);
+
+            if (Bounds != null)
+            {
+                UnsafeUtility.Free(Bounds, Allocator.Persistent);
+                Bounds = null;
+            }
+
+            AABB = default;
+            Type = ColliderType.None;
         }
     }
 }

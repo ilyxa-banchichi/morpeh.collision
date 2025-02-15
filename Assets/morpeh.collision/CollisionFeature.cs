@@ -29,7 +29,7 @@ namespace Scellecs.Morpeh.Collision
             AddSystem(new TreeTraversalSystem());
             AddSystem(new CollisionResolutionSystem());
             AddSystem(new UpdateCollisionEventsSystem());
-
+            
             MarkComponentsDisposable();
         }
         

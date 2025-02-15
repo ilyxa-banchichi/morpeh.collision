@@ -15,11 +15,6 @@ namespace NativeTrees
             Radius = radius * maxScale;
         }
 
-        public static explicit operator AABB(SphereCollider boxCollider)
-        {
-            return new AABB(boxCollider.Center - new float3(boxCollider.Radius), boxCollider.Center + new float3(boxCollider.Radius));
-        }
-
         public bool Equals(SphereCollider other)
         {
             return Center.Equals(other.Center) && Radius.Equals(other.Radius);

@@ -16,7 +16,7 @@ namespace Scellecs.Morpeh.Collision.Systems
     public sealed class UpdateCollisionTreesSystem : LateUpdateSystem
     {
         private const float sz = 500;
-        private static readonly AABB WorldBounds = new AABB(new float3(-sz, -sz, -sz), new float3(sz, sz, sz));
+        private static readonly AABB WorldBounds = new AABB(new float3(0f, -100, 0), new float3(250, 250, 250));
         
         private Filter _dynamicColliders;
         private Filter _staticColliders;
@@ -122,7 +122,7 @@ namespace Scellecs.Morpeh.Collision.Systems
                     ref ColliderComponent collider = ref ColliderComponents.Get(entity);
                     
                     var entityHolder = new EntityHolder<Entity>(entity, collider.Layer, collider.WorldBounds);
-                    Octree.Insert(entityHolder, ColliderCastUtils.ToAABB(collider.WorldBounds));
+                    Octree.Insert(entityHolder, collider.WorldBounds.AABB);
                 }
             }
         }

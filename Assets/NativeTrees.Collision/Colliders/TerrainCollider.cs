@@ -5,8 +5,9 @@ using Unity.Mathematics;
 
 namespace NativeTrees
 {
-    public struct TerrainCollider : IEquatable<TerrainCollider>, IDisposable
+    public unsafe struct TerrainCollider : IEquatable<TerrainCollider>, IDisposable
     {
+        public float* HeightMapPtr;
         public NativeArray<float> HeightMap;  // Массив высот
         public int Width;  // Ширина террейна (по оси X)
         public int Height;  // Высота террейна (по оси Z)
@@ -19,17 +20,10 @@ namespace NativeTrees
         public void Dispose()
         {
             if (HeightMap.IsCreated)
+            {
                 HeightMap.Dispose();
-        }
-        
-        public static explicit operator AABB(TerrainCollider terrainCollider)
-        {
-            // Минимальные и максимальные значения по оси X и Z
-            float3 min = new float3(0, terrainCollider.MinHeight, 0);
-            float3 max = new float3(terrainCollider.ScaleX * (terrainCollider.Width - 1), terrainCollider.MaxHeight, terrainCollider.ScaleZ * (terrainCollider.Height - 1));
-
-            // Возвращаем AABB для всего террейна
-            return new AABB(min + terrainCollider.Translation, max + terrainCollider.Translation);
+                HeightMapPtr = null;
+            }
         }
 
         public bool Equals(TerrainCollider other)
@@ -48,7 +42,7 @@ namespace NativeTrees
         }
     }
 
-    public static class TerrainColliderExtensions
+    public static unsafe class TerrainColliderExtensions
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static float GetHeightAtIndex(this TerrainCollider collider, int ix, int iz)
@@ -83,10 +77,10 @@ namespace NativeTrees
             float tz = gridZ - z0;
 
             // Значения высот в четырех углах
-            float h00 = collider.HeightMap[z0 * collider.Width + x0];
-            float h10 = collider.HeightMap[z0 * collider.Width + x1];
-            float h01 = collider.HeightMap[z1 * collider.Width + x0];
-            float h11 = collider.HeightMap[z1 * collider.Width + x1];
+            float h00 = collider.HeightMapPtr[z0 * collider.Width + x0];
+            float h10 = collider.HeightMapPtr[z0 * collider.Width + x1];
+            float h01 = collider.HeightMapPtr[z1 * collider.Width + x0];
+            float h11 = collider.HeightMapPtr[z1 * collider.Width + x1];
 
             // Интерполяция по X
             float hx0 = math.lerp(h00, h10, tx);

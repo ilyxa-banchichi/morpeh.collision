@@ -15,19 +15,19 @@ namespace NativeTrees
             {
                 var boxRangeColliderUniqueVisitor = new BoxRangeColliderUniqueVisitor<T>(
                     ref ColliderCastUtils.ToBoxColliderRef(range), mask, results);
-                octree.Range(ColliderCastUtils.ToAABB(range), ref boxRangeColliderUniqueVisitor);
+                octree.Range(range.AABB, ref boxRangeColliderUniqueVisitor);
             }
             else if (range.Type == ColliderType.Sphere)
             {
                 var sphereRangeColliderUniqueVisitor = new SphereRangeColliderUniqueVisitor<T>(
                     ref ColliderCastUtils.ToSphereColliderRef(range), mask, results);
-                octree.Range(ColliderCastUtils.ToAABB(range), ref sphereRangeColliderUniqueVisitor);
+                octree.Range(range.AABB, ref sphereRangeColliderUniqueVisitor);
             }
             else if (range.Type == ColliderType.Capsule)
             {
                 var capsuleRangeColliderUniqueVisitor = new CapsuleRangeColliderUniqueVisitor<T>(
                     ref ColliderCastUtils.ToCapsuleColliderRef(range), mask, results);
-                octree.Range(ColliderCastUtils.ToAABB(range), ref capsuleRangeColliderUniqueVisitor);
+                octree.Range(range.AABB, ref capsuleRangeColliderUniqueVisitor);
             }
 #if UNITY_EDITOR
             else if (range.Type == ColliderType.Terrain)

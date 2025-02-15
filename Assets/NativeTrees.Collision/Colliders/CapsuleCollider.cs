@@ -10,12 +10,12 @@ namespace NativeTrees
         public float Height;    // Высота капсулы (расстояние между центрами сфер на концах)
         public quaternion Rotation;
 
-        public CapsuleCollider(float3 center, float radius, float height, quaternion rotation)
+        public CapsuleCollider(float3 center, float radius, float height, quaternion orientation)
         {
             Center = center;
             Radius = radius;
             Height = height;
-            Rotation = rotation;
+            Rotation = orientation;
         }
         
         /// <summary>
@@ -30,28 +30,6 @@ namespace NativeTrees
             // Определяем центры сфер
             topSphere = Center + up * halfHeight;
             bottomSphere = Center - up * halfHeight;
-        }
-        
-        public static explicit operator AABB(CapsuleCollider capsuleCollider)
-        {
-            // Вычисляем центры верхней и нижней сфер капсулы
-            capsuleCollider.GetSphereCenters(out float3 topSphere, out float3 bottomSphere);
-
-            // Максимальное смещение по радиусу вдоль всех осей
-            float3 radiusOffset = new float3(capsuleCollider.Radius, capsuleCollider.Radius, capsuleCollider.Radius);
-
-            // Учитываем вращение: расширяем AABB для направления вращенной капсулы
-            Span<float3> sphereExtremes = stackalloc float3[]
-            {
-                math.mul(capsuleCollider.Rotation, topSphere - capsuleCollider.Center),
-                math.mul(capsuleCollider.Rotation, bottomSphere - capsuleCollider.Center)
-            };
-
-            // Вычисляем крайние точки
-            float3 capsuleMin = math.min(sphereExtremes[0], sphereExtremes[1]) - radiusOffset + capsuleCollider.Center;
-            float3 capsuleMax = math.max(sphereExtremes[0], sphereExtremes[1]) + radiusOffset + capsuleCollider.Center;
-
-            return new AABB(capsuleMin, capsuleMax);
         }
 
         public bool Equals(CapsuleCollider other)

@@ -66,19 +66,27 @@ namespace Scellecs.Morpeh.Collision.Requests
     }
 
     [Serializable]
-    public readonly struct NewColliderData
+    public struct NewColliderData
     {
-        public readonly ColliderType Type;
+        [field: SerializeField]
+        public ColliderType Type { get; private set; }
+
+        [field: InlineProperty]
+        [field: SerializeField]
+        public float3 Center { get; private set; }
         
-        [InlineProperty]
-        public readonly float3 Center;
+        [field: InlineProperty]
+        [field: SerializeField]
+        public float3 Size { get; private set; }
         
-        [InlineProperty]
-        public readonly float3 Size;
+        [field: SerializeField]
+        public float Radius { get; private set; }
         
-        public readonly float Radius;
-        public readonly float Height;
-        public readonly TerrainData TerrainData;
+        [field: SerializeField]
+        public float Height { get; private set; }
+        
+        [field: SerializeField]
+        public TerrainData TerrainData { get; private set; }
 
         private NewColliderData(
             ColliderType type,

@@ -17,6 +17,7 @@ namespace Scellecs.Morpeh.Transform.Components
         public float3 LocalScale;
 
         public float4x4 LocalToWorld;
+        public float4x4 ParentLocalToWorld;
 
         public void OnValidate(GameObject gameObject)
         {

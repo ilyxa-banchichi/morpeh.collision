@@ -85,7 +85,7 @@ namespace Scellecs.Morpeh.Collision.Systems
                     if (rigidbody.Weight > otherRigidbody.Weight) continue;
 
                     ref ColliderComponent otherCollider = ref ColliderComponents.Get(other);
-                    var vec = collider.Center - otherCollider.Center;
+                    var vec = collider.WorldCenter - otherCollider.WorldCenter;
                     var dir = math.sign(math.dot(vec, o.Axis));
                     if (otherCollider.WorldBounds.Type == ColliderType.Terrain)
                         dir = 1f;

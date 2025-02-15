@@ -77,11 +77,8 @@ namespace Scellecs.Morpeh.Transforms.Systems
             var entityId = rootFilter[index];
             ref TransformComponent transform = ref transformStash.Get(entityId);
 
-            transform.LocalToWorld = float4x4.TRS(
-                transform.LocalPosition,
-                transform.LocalRotation,
-                transform.LocalScale
-            );
+            transform.ParentLocalToWorld = float4x4.identity;
+            transform.UpdateLocalToWorld();
         }
     }
 
@@ -112,13 +109,8 @@ namespace Scellecs.Morpeh.Transforms.Systems
 
             if (hasParent)
             {
-                var trs = float4x4.TRS(
-                    transform.LocalPosition,
-                    transform.LocalRotation,
-                    transform.LocalScale
-                );
-                var ltw = math.mul(parentLocalToWorld, trs);
-                transform.LocalToWorld = ltw;
+                transform.ParentLocalToWorld = parentLocalToWorld;
+                transform.UpdateLocalToWorld();
             }
 
             ChildComponent children = childStash.Get(childEntity, out bool hasChildren);

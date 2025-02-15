@@ -23,7 +23,7 @@ namespace Samples.Scripts
         {
             return new UpdateFeature[]
             {
-                new SampleFeature()
+                new SampleFeature(CollisionService)
             };
             return Array.Empty<UpdateFeature>();
         }
@@ -42,6 +42,7 @@ namespace Samples.Scripts
                 new TransformFeature(),
                 new SampleLateFeature(),
             };
+            return Array.Empty<LateUpdateFeature>();
         }
         
         protected void OnDrawGizmos()
@@ -52,21 +53,13 @@ namespace Samples.Scripts
             {
                 ref var tree = ref octree.GetComponent<OctreeComponent>();
                 
-                Gizmos.color = Color.white;
-                // if (tree.DynamicColliders.IsValid)
+                Gizmos.color = Color.black;
+                if (tree.DynamicColliders.IsValid())
                     tree.DynamicColliders.DrawGizmos();
                 
-                Gizmos.color = Color.yellow;
-                // if (tree.StaticColliders.IsValid)
+                Gizmos.color = Color.blue;
+                if (tree.StaticColliders.IsValid())
                     tree.StaticColliders.DrawGizmos();
-                
-                // Gizmos.color = Color.magenta;
-                // if (tree.DynamicRigidbodies.IsValid)
-                //     tree.DynamicTriggers.DrawGizmos();
-                //
-                // Gizmos.color = Color.cyan;
-                // if (tree.StaticRigidbodies.IsValid)
-                //     tree.StaticTriggers.DrawGizmos();
             }
             
             foreach (var entity in defaultWorld.Filter.With<ColliderComponent>().Build())
@@ -75,12 +68,12 @@ namespace Samples.Scripts
                 if (collider.WorldBounds.Type == ColliderType.Box)
                 {
                     var obb = ColliderCastUtils.ToBoxColliderRef(collider.WorldBounds);
-                    GizmoExtensions.DrawOBB(obb, Color.blue);
+                    GizmoExtensions.DrawOBB(obb, Color.green);
                 }
                 else if (collider.WorldBounds.Type == ColliderType.Sphere)
                 {
                     var sphere = ColliderCastUtils.ToSphereColliderRef(collider.WorldBounds);
-                    GizmoExtensions.DrawSphere(sphere, Color.blue);
+                    GizmoExtensions.DrawSphere(sphere, Color.green);
                 }
                 else if (collider.WorldBounds.Type == ColliderType.Terrain)
                 {

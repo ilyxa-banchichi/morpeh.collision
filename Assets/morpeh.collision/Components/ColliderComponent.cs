@@ -17,7 +17,7 @@ namespace Scellecs.Morpeh.Collision.Components
          public Collider OriginalBounds;
          public Collider WorldBounds;
          
-         public float3 Center;
+         public float3 WorldCenter;
         
          public int Layer;
          public NativeParallelHashSet<OverlapHolder<EntityHolder<Entity>>> OverlapResult;

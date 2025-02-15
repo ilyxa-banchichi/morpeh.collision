@@ -105,8 +105,8 @@ namespace Scellecs.Morpeh.Collision.Systems
                     break;
             };
             
-            // if (request.ColliderObject)
-            //     Object.Destroy(request.ColliderObject);
+            if (request.ColliderObject)
+                Object.Destroy(request.ColliderObject);
         }
 
         private void CreateBoxCollider(ref ColliderComponent collider, float3 center, float3 size,
@@ -121,14 +121,16 @@ namespace Scellecs.Morpeh.Collision.Systems
             *originalPtr = original;
 
             collider.OriginalBounds.Bounds = originalPtr;
+            collider.OriginalBounds.AABB = original.ToAABB();
 
-            BoxCollider world = new BoxCollider((AABB)original, transform.Position(), transform.Rotation(), transform.Scale());
+            BoxCollider world = new BoxCollider(original.ToAABB(), transform.Position(), transform.Rotation(), transform.Scale());
             BoxCollider* worldPtr = (BoxCollider*)UnsafeUtility.Malloc(sizeof(BoxCollider), 4, Allocator.Persistent);
             *worldPtr = world;
                 
             collider.WorldBounds.Bounds = worldPtr;
+            collider.WorldBounds.AABB = world.ToAABB();;
                 
-            collider.Center = worldPtr->Center;
+            collider.WorldCenter = worldPtr->Center;
         }
         
         private void CreateSphereCollider(ref ColliderComponent collider, float3 center, 
@@ -139,14 +141,16 @@ namespace Scellecs.Morpeh.Collision.Systems
             *originalPtr = original;
             
             collider.OriginalBounds.Bounds = originalPtr;
+            collider.OriginalBounds.AABB = original.ToAABB();
             
             SphereCollider world = new SphereCollider(original.Center + transform.Position(), original.Radius, transform.Scale());
             SphereCollider* worldPtr = (SphereCollider*)UnsafeUtility.Malloc(sizeof(SphereCollider), 4, Allocator.Persistent);
             *worldPtr = world;
             
             collider.WorldBounds.Bounds = worldPtr;
+            collider.WorldBounds.AABB = world.ToAABB();;
 
-            collider.Center = worldPtr->Center;
+            collider.WorldCenter = worldPtr->Center;
         }
         
         private void CreateCapsuleCollider(ref ColliderComponent collider, float3 center, 
@@ -157,15 +161,17 @@ namespace Scellecs.Morpeh.Collision.Systems
             *originalPtr = original;
             
             collider.OriginalBounds.Bounds = originalPtr;
+            collider.OriginalBounds.AABB = original.ToAABB();
             
             CapsuleCollider world = new CapsuleCollider(original.Center + transform.Position(), original.Radius, original.Height, transform.Rotation());
             CapsuleCollider* worldPtr = (CapsuleCollider*)UnsafeUtility.Malloc(sizeof(CapsuleCollider), 4, Allocator.Persistent);
             *worldPtr = world;
             
+            var aabb = world.ToAABB();
             collider.WorldBounds.Bounds = worldPtr;
+            collider.WorldBounds.AABB = aabb;
 
-            var aabb = ColliderCastUtils.ToAABB(collider.WorldBounds);
-            collider.Center = aabb.Center;
+            collider.WorldCenter = aabb.Center;
         }
         
         private void CreateTerrainCollider(ref ColliderComponent collider, 
@@ -179,6 +185,7 @@ namespace Scellecs.Morpeh.Collision.Systems
             world.Translation = transform.Position();
 
             world.HeightMap = new NativeArray<float>(world.Width * world.Height, Allocator.Persistent);
+            world.HeightMapPtr = (float*)world.HeightMap.GetUnsafePtr();
             
             world.MinHeight = float.MaxValue;
             world.MaxHeight = float.MinValue;
@@ -198,9 +205,10 @@ namespace Scellecs.Morpeh.Collision.Systems
             *worldPtr = world;
             
             collider.WorldBounds.Bounds = worldPtr;
+            var aabb = world.ToAABB();
+            collider.WorldBounds.AABB = aabb;
 
-            var aabb = ColliderCastUtils.ToAABB(collider.WorldBounds);
-            collider.Center = aabb.Center;
+            collider.WorldCenter = aabb.Center;
         }
         
         private void AddCollisionEventsComponent(Entity entity)

@@ -72,13 +72,14 @@ namespace Scellecs.Morpeh.Collision.Systems
                     case ColliderType.Box:
                         ref var boxPtr = ref ColliderCastUtils.ToBoxColliderRef(collider.WorldBounds);
                         boxPtr = new BoxCollider(
-                            ColliderCastUtils.ToAABB(collider.OriginalBounds),
+                            collider.OriginalBounds.AABB,
                             transform.Position(),
                             transform.Rotation(),
                             transform.Scale()
                         );
 
-                        collider.Center = boxPtr.Center;
+                        collider.WorldCenter = boxPtr.Center;
+                        collider.WorldBounds.AABB = boxPtr.ToAABB();
                         
                         break;
                 
@@ -91,7 +92,8 @@ namespace Scellecs.Morpeh.Collision.Systems
                             transform.Scale()
                         );
 
-                        collider.Center = spherePtr.Center;
+                        collider.WorldCenter = spherePtr.Center;
+                        collider.WorldBounds.AABB = spherePtr.ToAABB();
                         
                         break;
                     
@@ -102,7 +104,8 @@ namespace Scellecs.Morpeh.Collision.Systems
                             originalCapsule.Center + transform.Position(), 
                             originalCapsule.Radius, originalCapsule.Height, transform.Rotation());
 
-                        collider.Center = capsule.Center;
+                        collider.WorldCenter = capsule.Center;
+                        collider.WorldBounds.AABB = capsule.ToAABB();
                         
                         break;
                     
