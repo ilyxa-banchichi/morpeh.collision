@@ -1,0 +1,21 @@
+{
+    "name": "Scellecs.Morpeh.Transform",
+    "rootNamespace": "Scellecs.Morpeh.Transform",
+    "references": [
+        "GUID:a86b7bc1621154fd7962605d3da05c6c",
+        "GUID:324caed91501a9c47a04ebfd87b68794",
+        "GUID:3377deebfb0acde45876d12c6e3d27cc",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:2665a8d13d1b3f18800f46e256720795",
+        "GUID:e0cd26848372d4e5c891c569017e11f1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
